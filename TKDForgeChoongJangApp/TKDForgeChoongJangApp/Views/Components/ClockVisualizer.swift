@@ -68,18 +68,24 @@ struct ClockVisualizer: View {
 struct HourMarker: View {
     let hour: Int
     let size: CGFloat
-    
+
+    // Angle for this hour (12 = top, 3 = right, etc.)
+    private var angleDegrees: Double { Double(hour) * 30 }
+    private var angleRadians: CGFloat { CGFloat(angleDegrees * .pi / 180) }
+    private var radius: CGFloat { size / 2 - 24 }
+
     var body: some View {
-        VStack {
+        ZStack {
             Text("\(hour)")
                 .font(.system(size: 14, weight: .semibold, design: .rounded))
                 .foregroundColor(.white.opacity(0.6))
-            Spacer()
+                // Position the number on the circle using trig so it aligns
+                .position(
+                    x: size / 2 + radius * sin(angleRadians),
+                    y: size / 2 - radius * cos(angleRadians)
+                )
         }
-        .frame(height: size / 2 - 20)
-        .rotationEffect(.degrees(Double(hour) * 30))
-        .offset(y: -size / 2 + 20)
-        .rotationEffect(.degrees(-Double(hour) * 30))
+        .frame(width: size, height: size)
     }
 }
 
@@ -88,38 +94,39 @@ struct DirectionArrow: View {
     let color: Color
     let isDashed: Bool
     let size: CGFloat
-    
-    private var angle: Double {
-        // Convert hour to degrees (12 o'clock = 0°, clockwise)
-        return Double(hour) * 30 - 90
-    }
-    
+
+    // Convert hour to degrees (12 o'clock = 0°, clockwise)
+    private var angle: Double { Double(hour) * 30 - 90 }
+    private var radius: CGFloat { size / 2 - 30 }
+
     var body: some View {
         ZStack {
-            // Arrow line
+            // Arrow line from the center of the clock outwards
             if isDashed {
                 Path { path in
-                    path.move(to: CGPoint(x: 0, y: 0))
-                    path.addLine(to: CGPoint(x: size / 2 - 30, y: 0))
+                    path.move(to: CGPoint(x: size / 2, y: size / 2))
+                    path.addLine(to: CGPoint(x: size / 2 + radius, y: size / 2))
                 }
                 .stroke(color, style: StrokeStyle(lineWidth: 3, dash: [8, 6]))
             } else {
                 Path { path in
-                    path.move(to: CGPoint(x: 0, y: 0))
-                    path.addLine(to: CGPoint(x: size / 2 - 30, y: 0))
+                    path.move(to: CGPoint(x: size / 2, y: size / 2))
+                    path.addLine(to: CGPoint(x: size / 2 + radius, y: size / 2))
                 }
                 .stroke(color, lineWidth: 3)
             }
-            
-            // Arrow head
+
+            // Arrow head at the end of the line
             Path { path in
-                path.move(to: CGPoint(x: size / 2 - 30, y: 0))
-                path.addLine(to: CGPoint(x: size / 2 - 45, y: -8))
-                path.addLine(to: CGPoint(x: size / 2 - 45, y: 8))
+                let tip = CGPoint(x: size / 2 + radius, y: size / 2)
+                path.move(to: tip)
+                path.addLine(to: CGPoint(x: tip.x - 15, y: tip.y - 8))
+                path.addLine(to: CGPoint(x: tip.x - 15, y: tip.y + 8))
                 path.closeSubpath()
             }
             .fill(color)
         }
+        .frame(width: size, height: size)
         .rotationEffect(.degrees(angle))
     }
 }
