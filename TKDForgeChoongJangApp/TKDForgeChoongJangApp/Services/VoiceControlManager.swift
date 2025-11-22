@@ -28,28 +28,34 @@ class VoiceControlManager: NSObject, ObservableObject {
     
     override init() {
         super.init()
-        requestAuthorization()
+        // Authorization is now requested on-demand in startListening()
+        // to avoid issues when the view is first created.
     }
-    
-    func requestAuthorization() {
+
+    func requestAuthorization(completion: (() -> Void)? = nil) {
         SFSpeechRecognizer.requestAuthorization { [weak self] authStatus in
             DispatchQueue.main.async {
                 self?.isAuthorized = authStatus == .authorized
+                completion?()
             }
         }
     }
-    
+
     func startListening() {
-        guard isAuthorized else {
-            requestAuthorization()
+        if !isAuthorized {
+            // Request authorization first, then start listening if granted
+            requestAuthorization { [weak self] in
+                guard let self = self, self.isAuthorized else { return }
+                self.startListening()
+            }
             return
         }
-        
+
         if audioEngine.isRunning {
             stopListening()
             return
         }
-        
+
         do {
             try startRecording()
             isListening = true
