@@ -1,0 +1,471 @@
+[
+  {
+    "id": 1,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Step R, Block",
+    "description": "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
+    "pdfPage": 14,
+    "facing": 12,
+    "direction": 3
+  },
+  {
+    "id": 2,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Block",
+    "description": "Stay there. Side Front Block (Left hand).",
+    "pdfPage": 16,
+    "facing": 12,
+    "direction": 3
+  },
+  {
+    "id": 3,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Slow Punch",
+    "description": "Bring Right foot to Left foot (Feet together). Angle Punch: Slowly punch across your chest to the Right (3:00) with your Right fist.",
+    "pdfPage": 18,
+    "facing": 12,
+    "direction": 3
+  },
+  {
+    "id": 4,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Step L, Poke",
+    "description": "Step Forward (to 12:00) with Left foot. Double finger thrust to eyes (Right hand).",
+    "pdfPage": 20,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 5,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Step R, Poke",
+    "description": "Step Forward (to 12:00) with Right foot. Double finger thrust to eyes (Left hand).",
+    "pdfPage": 22,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 6,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Backfist",
+    "description": "Stay there. Strike Front (12:00) with Right Backfist.",
+    "pdfPage": 24,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 7,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Step L, Block",
+    "description": "Step Forward (to 12:00) with Left foot. Rising Block (Left arm).",
+    "pdfPage": 26,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 8,
+    "phase": "Phase 1: Opening Attacks",
+    "title": "Step R, Punch",
+    "description": "Step Forward (to 12:00) with Right foot. Middle Punch (Right fist).",
+    "pdfPage": 28,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 9,
+    "phase": "Phase 2: The Ground Kick",
+    "title": "Slide Back",
+    "description": "Slide/Step Backwards (towards 6:00). Land in an L-Stance, but keep facing the Front (12:00). Guarding Block.",
+    "pdfPage": 30,
+    "facing": 12,
+    "direction": 6
+  },
+  {
+    "id": 10,
+    "phase": "Phase 2: The Ground Kick",
+    "title": "Kick",
+    "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
+    "pdfPage": 32,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 11,
+    "phase": "Phase 2: The Ground Kick",
+    "title": "Spear Hand",
+    "description": "Land forward in a Low Stance. Spear Finger Thrust to Front (12:00).",
+    "pdfPage": 34,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 12,
+    "phase": "Phase 2: The Ground Kick",
+    "title": "Ground Kick",
+    "description": "Drop to your Left Knee. Place both hands on the floor. Execute a High Turning Kick with your Right foot towards the Front (12:00).",
+    "pdfPage": 36,
+    "facing": 12,
+    "direction": 12,
+    "stanceDetails": "Signature Move: Keep hands planted."
+  },
+  {
+    "id": 13,
+    "phase": "Phase 2: The Ground Kick",
+    "title": "Ground Punch",
+    "description": "Land the kicking foot forward. Keep Left hand on the floor. Punch high with Right Fist to Front (12:00).",
+    "pdfPage": 38,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 14,
+    "phase": "Phase 3: The Retreat",
+    "title": "Turn & Elbow",
+    "description": "Stand up and turn Right (180°) to face the Back (6:00). Strike with your Left Elbow backwards (towards the Front/12:00). Looking over shoulder.",
+    "pdfPage": 40,
+    "facing": 6,
+    "direction": 12
+  },
+  {
+    "id": 15,
+    "phase": "Phase 3: The Retreat",
+    "title": "Turn & Guard",
+    "description": "Pivot on your feet, turning Right to face Front (12:00) again. L-Stance. Guarding Block.",
+    "pdfPage": 42,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 16,
+    "phase": "Phase 3: The Retreat",
+    "title": "Step Back",
+    "description": "Step Backwards (towards 6:00). L-Stance facing Front. Scooping Block (Left palm).",
+    "pdfPage": 44,
+    "facing": 12,
+    "direction": 6
+  },
+  {
+    "id": 17,
+    "phase": "Phase 3: The Retreat",
+    "title": "Step Back",
+    "description": "Step Backwards (towards 6:00). L-Stance facing Front. Knife-hand Strike (Right hand).",
+    "pdfPage": 46,
+    "facing": 12,
+    "direction": 6
+  },
+  {
+    "id": 18,
+    "phase": "Phase 3: The Retreat",
+    "title": "Turn X-Block",
+    "description": "Turn Left (180°) to face the Back (6:00). Step Left. X-Fist Pressing Block.",
+    "pdfPage": 49,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 19,
+    "phase": "Phase 3: The Retreat",
+    "title": "Knee Kick",
+    "description": "Grab head and smash Right Knee towards Back (6:00).",
+    "pdfPage": 51,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 20,
+    "phase": "Phase 3: The Retreat",
+    "title": "Turn & Guard",
+    "description": "Land foot. Turn Left (180°) to face Front (12:00). Guarding Block.",
+    "pdfPage": 53,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 21,
+    "phase": "Phase 3: The Retreat",
+    "title": "Slide & Elbow",
+    "description": "Slide your Right foot forward. Turn your body to face the Back (6:00). Strike with Right Elbow backwards (towards Front/12:00).",
+    "pdfPage": 55,
+    "facing": 6,
+    "direction": 12
+  },
+  {
+    "id": 22,
+    "phase": "Phase 3: The Retreat",
+    "title": "Turn & Guard",
+    "description": "Pivot Left to face Front (12:00). Guarding Block.",
+    "pdfPage": 57,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 23,
+    "phase": "Phase 3: The Retreat",
+    "title": "Side Kick",
+    "description": "Side Piercing Kick (Right foot) to Front (12:00).",
+    "pdfPage": 59,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 24,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Land & Press",
+    "description": "Land the kick. Pivot to face the Back (6:00). Rear Foot Stance. Twin Palm Pressing Block.",
+    "pdfPage": 61,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 25,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Step & Strike",
+    "description": "Step forward to Back (6:00). High Block, then Backfist Strike (Right hand).",
+    "pdfPage": 63,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 26,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Turn & Spear",
+    "description": "Turn Left (180°) to face Front (12:00). High Spear Finger Thrust (Left hand).",
+    "pdfPage": 67,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 27,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Kick",
+    "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
+    "pdfPage": 69,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 28,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Land & Turn",
+    "description": "Land the kick. Pivot your feet to face the Back (6:00). Slow motion stance preparation.",
+    "pdfPage": 71,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 29,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Stamp & Strike",
+    "description": "Stamp forward to Back (6:00). Back Hand Downward Strike (Left hand).",
+    "pdfPage": 73,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 30,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Palm Smash",
+    "description": "Stay facing Back. Smash Right Fist into Left Palm.",
+    "pdfPage": 75,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 31,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Stamp & Strike",
+    "description": "Step and Stamp forward to Back (6:00). Back Hand Downward Strike (Right hand).",
+    "pdfPage": 77,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 32,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Palm Smash",
+    "description": "Stay facing Back. Smash Left Fist into Right Palm.",
+    "pdfPage": 79,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 33,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Turn & Stamp",
+    "description": "Turn Left (180°) to face Front (12:00). Stamp. Knife Hand Strike (Left).",
+    "pdfPage": 81,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 34,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Slip & Backfist",
+    "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Right).",
+    "pdfPage": 83,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 35,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Step & Stamp",
+    "description": "Step forward towards Front (12:00). Stamp. Knife Hand Strike (Right).",
+    "pdfPage": 85,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 36,
+    "phase": "Phase 4: The Stamping Attacks",
+    "title": "Slip & Backfist",
+    "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Left).",
+    "pdfPage": 87,
+    "facing": 12,
+    "direction": 12
+  },
+  {
+    "id": 37,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Turn Low Block",
+    "description": "Turn Left (180°) to face Back (6:00). Low Reverse Knife-hand Block.",
+    "pdfPage": 89,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 38,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "9-Block",
+    "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
+    "pdfPage": 91,
+    "facing": 6,
+    "direction": 12
+  },
+  {
+    "id": 39,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Step Low Block",
+    "description": "Step forward towards Back (6:00). Low Reverse Knife-hand Block.",
+    "pdfPage": 93,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 40,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "9-Block",
+    "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
+    "pdfPage": 95,
+    "facing": 6,
+    "direction": 12
+  },
+  {
+    "id": 41,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Twin Strike",
+    "description": "Move Right foot backwards. You are now standing at C, looking at C (Back/6:00). Twin Horizontal Knife-hand Strike.",
+    "pdfPage": 97,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 42,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Arc-Hand",
+    "description": "Stay facing Back (6:00). High Arc-hand Strike (Right hand).",
+    "pdfPage": 99,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 43,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Kick",
+    "description": "Front Snap Kick (Right foot) to Back (6:00).",
+    "pdfPage": 101,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 44,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Land Arc-Hand",
+    "description": "Land forward towards Back (6:00). High Arc-hand Strike (Left hand).",
+    "pdfPage": 103,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 45,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Kick",
+    "description": "Front Snap Kick (Left foot) to Back (6:00).",
+    "pdfPage": 105,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 46,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Land Punch",
+    "description": "Land forward towards Back (6:00). Middle Punch (Right fist).",
+    "pdfPage": 107,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 47,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Punch",
+    "description": "Stay there. Middle Punch (Left fist). Fast motion.",
+    "pdfPage": 109,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 48,
+    "phase": "Phase 5: The 9-Shape Blocks",
+    "title": "Twin Knuckle",
+    "description": "Bring Right foot to Left. Feet together facing Back (6:00). Twin Fore-knuckle Fist Punch (Crescent shape to sides).",
+    "pdfPage": 111,
+    "facing": 6,
+    "direction": 6
+  },
+  {
+    "id": 49,
+    "phase": "Phase 6: The Finish",
+    "title": "Turn Left",
+    "description": "Turn Left to face the Right Wall (3:00). Step out. Low Knife-hand Block.",
+    "pdfPage": 113,
+    "facing": 3,
+    "direction": 3
+  },
+  {
+    "id": 50,
+    "phase": "Phase 6: The Finish",
+    "title": "Open Punch",
+    "description": "Stay there. High Open Fist Punch to Right Wall (3:00).",
+    "pdfPage": 115,
+    "facing": 3,
+    "direction": 3
+  },
+  {
+    "id": 51,
+    "phase": "Phase 6: The Finish",
+    "title": "Turn Right",
+    "description": "Turn Right (180°) to face the Left Wall (9:00). Step out. Low Knife-hand Block.",
+    "pdfPage": 117,
+    "facing": 9,
+    "direction": 9
+  },
+  {
+    "id": 52,
+    "phase": "Phase 6: The Finish",
+    "title": "Open Punch",
+    "description": "Stay there. High Open Fist Punch to Left Wall (9:00).",
+    "pdfPage": 119,
+    "facing": 9,
+    "direction": 9
+  }
+]
