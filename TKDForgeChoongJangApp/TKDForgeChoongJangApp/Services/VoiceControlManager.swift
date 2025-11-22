@@ -75,7 +75,9 @@ class VoiceControlManager: NSObject, ObservableObject {
         recognitionTask = nil
         
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+        try audioSession.setCategory(.playAndRecord,
+                                     mode: .spokenAudio,
+                                     options: [.duckOthers, .defaultToSpeaker])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
@@ -93,7 +95,12 @@ class VoiceControlManager: NSObject, ObservableObject {
             if let result = result {
                 let transcription = result.bestTranscription.formattedString.lowercased()
                 self.lastCommand = transcription
-                self.processCommand(transcription)
+
+                // Use only the most recently spoken word to decide the command
+                if let lastSegment = result.bestTranscription.segments.last {
+                    let lastWord = lastSegment.substring.lowercased()
+                    self.processCommand(lastWord)
+                }
             }
             
             if error != nil || result?.isFinal == true {
@@ -101,6 +108,7 @@ class VoiceControlManager: NSObject, ObservableObject {
                 inputNode.removeTap(onBus: 0)
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                self.isListening = false
             }
         }
         
