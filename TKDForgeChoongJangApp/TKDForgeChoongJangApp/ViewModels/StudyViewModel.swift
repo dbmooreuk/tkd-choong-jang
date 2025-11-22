@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class StudyViewModel: ObservableObject {
     @Published var currentMoveIndex: Int = 0

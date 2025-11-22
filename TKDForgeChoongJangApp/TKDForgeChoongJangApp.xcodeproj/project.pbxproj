@@ -10,9 +10,22 @@
 		1983AC572ED1E10F00CC5F7F /* TKDForgeChoongJangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKDForgeChoongJangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1983ACB32ED1E74900CC5F7F /* Exceptions for "TKDForgeChoongJangApp" folder in "TKDForgeChoongJangApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1983AC562ED1E10F00CC5F7F /* TKDForgeChoongJangApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1983AC592ED1E10F00CC5F7F /* TKDForgeChoongJangApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1983ACB32ED1E74900CC5F7F /* Exceptions for "TKDForgeChoongJangApp" folder in "TKDForgeChoongJangApp" target */,
+			);
 			path = TKDForgeChoongJangApp;
 			sourceTree = "<group>";
 		};

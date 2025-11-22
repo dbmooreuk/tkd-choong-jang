@@ -5,9 +5,11 @@
 //  Created by TKD Forge
 //
 
-import Foundation
+
 import Speech
-import AVFoundation
+import Foundation
+import Combine
+import AVFoundation 
 
 class VoiceControlManager: NSObject, ObservableObject {
     @Published var isListening = false

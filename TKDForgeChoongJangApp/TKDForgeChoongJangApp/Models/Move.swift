@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Move: Identifiable, Codable {
+struct Move: Identifiable, Codable, Equatable { 
     let id: Int
     let phase: String
     let title: String
