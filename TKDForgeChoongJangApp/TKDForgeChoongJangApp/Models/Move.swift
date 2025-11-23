@@ -16,6 +16,10 @@ struct Move: Identifiable, Codable, Equatable {
     let facing: Int
     let direction: Int
     let stanceDetails: String?
+    let text1: String?
+    let text2: String?
+    let text3: String?
+    let text4: String?
 
     // Computed property for image name
     var imageName: String {

@@ -9,13 +9,24 @@ import SwiftUI
 
 struct MoveCard: View {
     let move: Move
-    
+
     var body: some View {
         VStack(spacing: 24) {
-            // Clock Visualizer
+            // Clock Visualizer + directional hints
             ClockVisualizer(facing: move.facing, direction: move.direction)
                 .padding(.top, 20)
-            
+
+            // Optional directional hint texts (text1–text4)
+            if move.text1 != nil || move.text2 != nil || move.text3 != nil || move.text4 != nil {
+                VStack(alignment: .leading, spacing: 8) {
+                    DirectionHintRow(text: move.text1)
+                    DirectionHintRow(text: move.text2)
+                    DirectionHintRow(text: move.text3)
+                    DirectionHintRow(text: move.text4)
+                }
+                .padding(.horizontal, 24)
+            }
+
             // Phase Badge (optional)
             if let phase = move.phase, !phase.isEmpty {
                 Text(phase)
@@ -34,7 +45,7 @@ struct MoveCard: View {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color.white.opacity(0.05))
                     .frame(height: 200)
-                
+
                 // Placeholder or actual image
                 if let image = UIImage(named: move.imageName) {
                     Image(uiImage: image)
@@ -47,7 +58,7 @@ struct MoveCard: View {
                         Image(systemName: "figure.martial.arts")
                             .font(.system(size: 60))
                             .foregroundColor(.white.opacity(0.3))
-                        
+
                         Text("Move \(move.id)")
                             .font(.system(size: 16, weight: .medium, design: .rounded))
                             .foregroundColor(.white.opacity(0.5))
@@ -55,13 +66,13 @@ struct MoveCard: View {
                 }
             }
             .padding(.horizontal, 20)
-            
+
             // Move Title
             Text(move.title)
                 .font(.system(size: 28, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
-            
+
             // Move Description
             ScrollView {
                 VStack(spacing: 12) {
@@ -71,13 +82,13 @@ struct MoveCard: View {
                         .multilineTextAlignment(.center)
                         .lineSpacing(6)
                         .padding(.horizontal, 30)
-                    
+
                     if let stanceDetails = move.stanceDetails {
                         HStack(spacing: 8) {
                             Image(systemName: "star.fill")
                                 .font(.system(size: 12))
                                 .foregroundColor(.yellow)
-                            
+
                             Text(stanceDetails)
                                 .font(.system(size: 14, weight: .medium, design: .rounded))
                                 .foregroundColor(.yellow)
@@ -108,6 +119,37 @@ struct MoveCard: View {
     }
 }
 
+struct DirectionHintRow: View {
+    let text: String?
+
+    private var parts: (label: String, value: String)? {
+        guard let raw = text?.trimmingCharacters(in: .whitespacesAndNewlines), !raw.isEmpty else {
+            return nil
+        }
+        let components = raw.split(separator: "/", maxSplits: 1).map { String($0).trimmingCharacters(in: .whitespaces) }
+        if components.count == 2 {
+            return (label: components[0], value: components[1])
+        } else {
+            return (label: raw, value: "")
+        }
+    }
+
+    var body: some View {
+        if let parts = parts {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(parts.label)
+                    .font(.system(size: 13, weight: .semibold, design: .rounded))
+                    .foregroundColor(.white.opacity(0.8))
+                if !parts.value.isEmpty {
+                    Text(parts.value)
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(.orange)
+                }
+            }
+        }
+    }
+}
+
 #Preview {
     ZStack {
         Color.black
@@ -119,7 +161,11 @@ struct MoveCard: View {
             pdfPage: 14,
             facing: 12,
             direction: 3,
-            stanceDetails: nil
+            stanceDetails: nil,
+            text1: "Turn/Left",
+            text2: "Face/12 o'clock",
+            text3: "Slide back/6 o'clock",
+            text4: "Jump back/6 o'clock"
         ))
     }
 }
