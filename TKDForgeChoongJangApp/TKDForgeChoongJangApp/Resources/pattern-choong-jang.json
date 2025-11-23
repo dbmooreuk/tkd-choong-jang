@@ -2,7 +2,7 @@
   {
     "id": 1,
     "phase": "Phase 1: Opening Attacks",
-    "title": "Step R, vBlock",
+    "title": "Step R, Block",
     "description": "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
     "pdfPage": 14,
     "facing": 12,
@@ -24,7 +24,7 @@
     "description": "Bring Right foot to Left foot (Feet together). Angle Punch: Slowly punch across your chest to the Right (3:00) with your Right fist.",
     "pdfPage": 18,
     "facing": 12,
-    "direction": 9
+    "direction": 3
   },
   {
     "id": 4,

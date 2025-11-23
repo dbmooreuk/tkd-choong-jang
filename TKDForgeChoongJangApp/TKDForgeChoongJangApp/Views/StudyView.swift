@@ -141,6 +141,8 @@ struct StudyView: View {
                         .environmentObject(dataStore)
                 }
                 .onChange(of: viewModel.currentMove) { _, newMove in
+                    // Only speak when the user explicitly changes moves
+                    // via buttons or voice command handlers.
                     if viewModel.isVoiceControlEnabled, let move = newMove {
                         voiceControl.speak(move.description)
                     }

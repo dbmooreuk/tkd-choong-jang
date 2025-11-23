@@ -122,6 +122,11 @@ class VoiceControlManager: NSObject, ObservableObject {
     }
     
     private func processCommand(_ command: String) {
+        // Prevent a feedback loop where the app hears its own spoken
+        // instructions and keeps auto-advancing through the moves.
+        // Only react to commands when the synthesizer is not speaking.
+        guard !synthesizer.isSpeaking else { return }
+
         if command.contains("next") {
             onNextCommand?()
         } else if command.contains("back") || command.contains("previous") {
@@ -130,7 +135,7 @@ class VoiceControlManager: NSObject, ObservableObject {
             onRepeatCommand?()
         }
     }
-    
+
     func speak(_ text: String) {
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
