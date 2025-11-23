@@ -15,16 +15,7 @@ struct PatternInfoView: View {
     
     var body: some View {
         ZStack {
-            // Background
-            LinearGradient(
-                colors: [
-                    Color(red: 0.12, green: 0.14, blue: 0.17),
-                    Color(red: 0.18, green: 0.20, blue: 0.24)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+            AppBackground()
             
             VStack(spacing: 0) {
                 // Header with back button
@@ -45,9 +36,9 @@ struct PatternInfoView: View {
                             .scaledToFit()
                             .frame(width: 60, height: 60)
 
-                        Text("TKD FORGE")
-                            .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.white.opacity(0.8))
+//                        Text("TKD FORGE")
+//                            .font(.system(size: 16, weight: .bold, design: .rounded))
+//                            .foregroundColor(.white.opacity(0.8))
                     }
 
                     Spacer()
@@ -66,8 +57,8 @@ struct PatternInfoView: View {
                         // Pattern Name
                         VStack(spacing: 8) {
                             Text(patternInfo.name)
-                                .font(.system(size: 48, weight: .bold, design: .rounded))
-                                .foregroundColor(.orange)
+                                .font(.system(size: 26, weight: .bold, design: .rounded))
+                                .foregroundColor(Color("brandOrange"))
 
                             Text(patternInfo.belt)
                                 .font(.system(size: 16, weight: .medium, design: .rounded))
@@ -115,11 +106,7 @@ struct PatternInfoView: View {
                     .padding(40)
                     .background(
                         RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.white.opacity(0.05))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.orange.opacity(0.3), lineWidth: 1)
-                            )
+                            .fill(Color("brandDarkOverlay"))
                     )
                     .padding(.horizontal, 30)
                     .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 10)
@@ -154,23 +141,16 @@ struct PatternInfoView: View {
                     appState.navigateToStudy()
                 }) {
                     HStack(spacing: 12) {
-                        Image(systemName: "play.fill")
-                            .font(.system(size: 20))
-                        
+
                         Text("Begin Study")
                             .font(.system(size: 20, weight: .semibold, design: .rounded))
                     }
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 18)
-                    .background(
-                        LinearGradient(
-                            colors: [Color.orange, Color.orange.opacity(0.8)],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .cornerRadius(16)
+                    .background(Color("brandOrange"))
+                  
+                    .cornerRadius(8)
                     .shadow(color: .orange.opacity(0.4), radius: 15, x: 0, y: 8)
                 }
                 .padding(.horizontal, 30)
@@ -194,4 +174,3 @@ struct PatternInfoView: View {
     PatternInfoView(dataStore: PatternDataStore(), patternId: "choong-jang")
         .environmentObject(AppState())
 }
-

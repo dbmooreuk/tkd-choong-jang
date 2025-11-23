@@ -14,8 +14,9 @@ struct SplashView: View {
     var body: some View {
         ZStack {
             // Background
-            Color(red: 0.15, green: 0.17, blue: 0.2)
-                .ignoresSafeArea()
+//            Color(red: 0.15, green: 0.17, blue: 0.2)
+//                .ignoresSafeArea()
+            AppBackground()
             
             VStack(spacing: 30) {
                 // Logo
@@ -28,13 +29,13 @@ struct SplashView: View {
                 
                 // App Name
                 VStack(spacing: 8) {
-                    Text("TKD FORGE")
-                        .font(.system(size: 36, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
+//                    Text("TKD FORGE")
+//                        .font(.system(size: 36, weight: .bold, design: .rounded))
+//                        .foregroundColor(.white)
 
                     Text("Patterns Trainer")
                         .font(.system(size: 24, weight: .medium, design: .rounded))
-                        .foregroundColor(.orange)
+                        .foregroundColor(Color("brandOrange"))
                 }
                 .opacity(opacity)
             }

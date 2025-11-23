@@ -17,14 +17,15 @@ struct StudyView: View {
     var body: some View {
         ZStack {
             // Background
-            LinearGradient(
-                colors: [
-                    Color(red: 0.12, green: 0.14, blue: 0.17),
-                    Color(red: 0.18, green: 0.20, blue: 0.24)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+//            LinearGradient(
+//                colors: [
+//                    Color(red: 0.12, green: 0.14, blue: 0.17),
+//                    Color(red: 0.18, green: 0.20, blue: 0.24)
+//                ],
+//                startPoint: .topLeading,
+//                endPoint: .bottomTrailing
+//            )
+            AppBackground()
             .ignoresSafeArea()
 
             VStack(spacing: 0) {

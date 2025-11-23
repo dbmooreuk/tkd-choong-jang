@@ -15,13 +15,7 @@ struct PatternListView: View {
     
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(
-                gradient: Gradient(colors: [Color.black, Color(red: 0.1, green: 0.1, blue: 0.2)]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            AppBackground()
             
             VStack(spacing: 0) {
                 // Header
@@ -31,7 +25,7 @@ struct PatternListView: View {
                     }) {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(.orange)
+                            .foregroundColor(.white)
                     }
                     
                     Spacer()
@@ -49,11 +43,11 @@ struct PatternListView: View {
                     }) {
                         Image(systemName: "arrow.clockwise")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(.orange)
+                            .foregroundColor(.white)
                     }
                 }
                 .padding()
-                .background(Color.black.opacity(0.3))
+                .background(Color.black.opacity(0))
                 
                 // Pattern List
                 ScrollView {
@@ -70,7 +64,10 @@ struct PatternListView: View {
                     }
                     .padding()
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color.clear)
             }
+            .background(Color.clear)
             
             // Loading overlay
             if storeManager.isLoading {
@@ -142,7 +139,7 @@ struct PatternRow: View {
                     
                     Text(pattern.belt)
                         .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(.orange)
+                        .foregroundColor(Color("brandOrange"))
                 }
                 
                 Spacer()
@@ -155,17 +152,17 @@ struct PatternRow: View {
                 } else if let price = pattern.price {
                     Text(String(format: "£%.2f", price))
                         .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(.orange)
+                        .foregroundColor(Color("brandYellow"))
                 }
             }
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.white.opacity(0.1))
+                    .fill(Color.white.opacity(0))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(isPurchased ? Color.green.opacity(0.5) : Color.orange.opacity(0.3), lineWidth: 1)
+                    .stroke(isPurchased ? Color.green.opacity(1) : Color(Color("brandYellow")).opacity(1), lineWidth: 1)
             )
         }
     }

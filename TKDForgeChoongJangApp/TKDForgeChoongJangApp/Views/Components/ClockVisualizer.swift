@@ -22,11 +22,11 @@ struct ClockVisualizer: View {
         ZStack {
             // Clock face background
             Circle()
-                .fill(Color.white.opacity(0.05))
-                .overlay(
-                    Circle()
-                        .stroke(Color.white.opacity(0.3), lineWidth: 2)
-                )
+                .fill(Color("brandDarkOverlay"))
+//                .overlay(
+//                    Circle()
+////                        .stroke(Color.white.opacity(0.3), lineWidth: 2)
+//                )
 
             // Hour markers
             ForEach(1...12, id: \.self) { hour in
@@ -34,9 +34,9 @@ struct ClockVisualizer: View {
             }
 
             // Center dot
-            Circle()
-                .fill(Color.white)
-                .frame(width: 12, height: 12)
+//            Circle()
+//                .fill(Color.white)
+//                .frame(width: 12, height: 12)
 
 
             // Center man figure (rotates with facing)
@@ -52,27 +52,6 @@ struct ClockVisualizer: View {
             // Facing arrow (Blue Solid)
             DirectionArrow(hour: facing, color: .blue, isDashed: false, size: clockSize)
 
-            // Legend
-            VStack(spacing: 8) {
-                HStack(spacing: 8) {
-                    Rectangle()
-                        .fill(Color.blue)
-                        .frame(width: 30, height: 3)
-                    Text("Facing")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(.white.opacity(0.8))
-                }
-
-                HStack(spacing: 8) {
-                    DashedLine()
-                        .stroke(Color.red, style: StrokeStyle(lineWidth: 3, dash: [5, 5]))
-                        .frame(width: 30, height: 3)
-                    Text("Direction")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(.white.opacity(0.8))
-                }
-            }
-            .offset(y: clockSize / 2 + 40)
         }
         .frame(width: clockSize, height: clockSize)
     }

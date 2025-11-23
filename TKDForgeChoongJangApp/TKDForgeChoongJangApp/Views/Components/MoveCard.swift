@@ -11,21 +11,52 @@ struct MoveCard: View {
     let move: Move
 
     var body: some View {
-        VStack(spacing: 24) {
-            // Clock Visualizer + directional hints
-            ClockVisualizer(facing: move.facing, direction: move.direction)
-                .padding(.top, 20)
+        VStack(spacing: 20) {
+            // Top row: clock + directional hints panel
+            HStack(alignment: .top, spacing: 16) {
+                ClockVisualizer(facing: move.facing, direction: move.direction)
+                    .padding(.top, 4)
 
-            // Optional directional hint texts (text1–text4)
-            if move.text1 != nil || move.text2 != nil || move.text3 != nil || move.text4 != nil {
-                VStack(alignment: .leading, spacing: 8) {
-                    DirectionHintRow(text: move.text1)
-                    DirectionHintRow(text: move.text2)
-                    DirectionHintRow(text: move.text3)
-                    DirectionHintRow(text: move.text4)
+                if move.text1 != nil || move.text2 != nil || move.text3 != nil || move.text4 != nil {
+                    VStack(alignment: .leading, spacing: 12) {
+                        DirectionHintRow(text: move.text1)
+                        DirectionHintRow(text: move.text2)
+                        DirectionHintRow(text: move.text3)
+                        DirectionHintRow(text: move.text4)
+                    }
+                    .padding(16)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(Color.white.opacity(0.04))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 24)
+                                    .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                            )
+                    )
                 }
-                .padding(.horizontal, 24)
             }
+            .padding(.horizontal, 16)
+            .padding(.top, 8)
+
+            // Legend row under clock
+            HStack(spacing: 16) {
+                HStack(spacing: 6) {
+                    Rectangle()
+                        .fill(Color.blue)
+                        .frame(width: 24, height: 3)
+                    Text("Facing")
+                }
+                HStack(spacing: 6) {
+                    Rectangle()
+                        .fill(Color.orange)
+                        .frame(width: 24, height: 3)
+                    Text("Move direction")
+                }
+            }
+            .font(.system(size: 12, weight: .medium, design: .rounded))
+            .foregroundColor(.white.opacity(0.8))
+            .padding(.horizontal, 24)
 
             // Phase Badge (optional)
             if let phase = move.phase, !phase.isEmpty {
@@ -44,14 +75,14 @@ struct MoveCard: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color.white.opacity(0.05))
-                    .frame(height: 200)
+                    .frame(height: 220)
 
                 // Placeholder or actual image
                 if let image = UIImage(named: move.imageName) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 200)
+                        .frame(height: 220)
                         .cornerRadius(20)
                 } else {
                     VStack(spacing: 12) {
@@ -65,11 +96,11 @@ struct MoveCard: View {
                     }
                 }
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 8)
 
             // Move Title
             Text(move.title)
-                .font(.system(size: 28, weight: .bold, design: .rounded))
+                .font(.system(size: 24, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
 
@@ -81,7 +112,7 @@ struct MoveCard: View {
                         .foregroundColor(.white.opacity(0.9))
                         .multilineTextAlignment(.center)
                         .lineSpacing(6)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, 24)
 
                     if let stanceDetails = move.stanceDetails {
                         HStack(spacing: 8) {
@@ -105,7 +136,7 @@ struct MoveCard: View {
             }
             .frame(maxHeight: 120)
         }
-        .padding(.vertical, 30)
+        .padding(.vertical, 24)
         .background(
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.white.opacity(0.05))
@@ -152,7 +183,7 @@ struct DirectionHintRow: View {
 
 #Preview {
     ZStack {
-        Color.black
+        AppBackground()
         MoveCard(move: Move(
             id: 1,
             phase: "Phase 1: Opening Attacks",
