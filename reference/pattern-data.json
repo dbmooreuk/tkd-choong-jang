@@ -1,55 +1,43 @@
 [
   {
     "id": 1,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Step R, Block",
     "description": "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
-    "pdfPage": 14,
     "facing": 12,
     "direction": 3
   },
   {
     "id": 2,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Block",
     "description": "Stay there. Side Front Block (Left hand).",
-    "pdfPage": 16,
     "facing": 12,
     "direction": 3
   },
   {
     "id": 3,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Slow Punch",
     "description": "Bring Right foot to Left foot (Feet together). Angle Punch: Slowly punch across your chest to the Right (3:00) with your Right fist.",
-    "pdfPage": 18,
     "facing": 12,
     "direction": 3
   },
   {
     "id": 4,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Step L, Poke",
     "description": "Step Forward (to 12:00) with Left foot. Double finger thrust to eyes (Right hand).",
-    "pdfPage": 20,
     "facing": 12,
     "direction": 12
   },
   {
     "id": 5,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Step R, Poke",
     "description": "Step Forward (to 12:00) with Right foot. Double finger thrust to eyes (Left hand).",
-    "pdfPage": 22,
     "facing": 12,
     "direction": 12
   },
   {
     "id": 6,
-    "phase": "Phase 1: Opening Attacks",
     "title": "Backfist",
     "description": "Stay there. Strike Front (12:00) with Right Backfist.",
-    "pdfPage": 24,
     "facing": 12,
     "direction": 12
   },

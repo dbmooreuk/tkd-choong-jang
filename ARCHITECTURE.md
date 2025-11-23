@@ -28,12 +28,15 @@ Responsibilities:
 
 **Key Properties:**
 - `id`: Unique identifier (1-52)
-- `phase`: Grouping category
 - `title`: Short move name
 - `description`: Detailed instructions
 - `facing`: Clock hour for body facing
 - `direction`: Clock hour for movement direction
 - `stanceDetails`: Optional special notes
+
+Optional metadata (may be omitted in JSON):
+- `phase`: Grouping/category label for the move
+- `pdfPage`: Original reference page number
 
 #### PatternData.swift
 ```
@@ -109,7 +112,7 @@ Responsibilities:
 
 **MoveCard**
 - Clock at top
-- Phase badge
+- Optional phase badge (shown only when `phase` is present)
 - Move image (or placeholder)
 - Title and description
 - Optional stance details

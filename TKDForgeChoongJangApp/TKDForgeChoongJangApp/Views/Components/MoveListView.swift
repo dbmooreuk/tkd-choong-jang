@@ -72,9 +72,11 @@ struct MoveListItem: View {
                     .font(.system(size: 16, weight: .semibold, design: .rounded))
                     .foregroundColor(.white)
                 
-                Text(move.phase)
-                    .font(.system(size: 12, weight: .medium, design: .rounded))
-                    .foregroundColor(.white.opacity(0.6))
+                if let phase = move.phase, !phase.isEmpty {
+                    Text(phase)
+                        .font(.system(size: 12, weight: .medium, design: .rounded))
+                        .foregroundColor(.white.opacity(0.6))
+                }
             }
             
             Spacer()

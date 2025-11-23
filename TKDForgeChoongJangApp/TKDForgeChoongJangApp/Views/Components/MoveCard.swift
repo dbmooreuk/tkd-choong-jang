@@ -16,17 +16,19 @@ struct MoveCard: View {
             ClockVisualizer(facing: move.facing, direction: move.direction)
                 .padding(.top, 20)
             
-            // Phase Badge
-            Text(move.phase)
-                .font(.system(size: 12, weight: .semibold, design: .rounded))
-                .foregroundColor(.orange)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 6)
-                .background(
-                    Capsule()
-                        .fill(Color.orange.opacity(0.2))
-                )
-            
+            // Phase Badge (optional)
+            if let phase = move.phase, !phase.isEmpty {
+                Text(phase)
+                    .font(.system(size: 12, weight: .semibold, design: .rounded))
+                    .foregroundColor(.orange)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 6)
+                    .background(
+                        Capsule()
+                            .fill(Color.orange.opacity(0.2))
+                    )
+            }
+
             // Move Image
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
