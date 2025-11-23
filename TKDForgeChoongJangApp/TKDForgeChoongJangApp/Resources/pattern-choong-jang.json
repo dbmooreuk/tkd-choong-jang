@@ -9,6 +9,10 @@
     "id": 1,
     "title": "Step R, Block",
     "description": "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
+    "text1": "Turn/Right",
+    "text2": "Face/12 o'clock",
+    "text3": "Slide back/6 o'clock",
+    "text4": "Jump back/6 o'clock",
     "facing": 12,
     "direction": 3
   },
@@ -16,6 +20,10 @@
     "id": 2,
     "title": "Block",
     "description": "Stay there. Side Front Block (Left hand).",
+    "text1": "Turn/Left",
+    "text2": "Face/12 o'clock",
+    "text3": "Slide back/6 o'clock",
+    "text4": "Jump back/6 o'clock",
     "facing": 12,
     "direction": 3
   },

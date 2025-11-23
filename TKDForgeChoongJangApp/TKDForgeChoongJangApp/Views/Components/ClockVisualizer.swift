@@ -10,9 +10,14 @@ import SwiftUI
 struct ClockVisualizer: View {
     let facing: Int
     let direction: Int
-    
+
     private let clockSize: CGFloat = 200
-    
+
+
+    private var facingRotationAngle: Double {
+        Double(facing % 12) * 30
+    }
+
     var body: some View {
         ZStack {
             // Clock face background
@@ -22,23 +27,31 @@ struct ClockVisualizer: View {
                     Circle()
                         .stroke(Color.white.opacity(0.3), lineWidth: 2)
                 )
-            
+
             // Hour markers
             ForEach(1...12, id: \.self) { hour in
                 HourMarker(hour: hour, size: clockSize)
             }
-            
+
             // Center dot
             Circle()
                 .fill(Color.white)
                 .frame(width: 12, height: 12)
-            
+
+
+            // Center man figure (rotates with facing)
+            Image("man")
+                .resizable()
+                .scaledToFit()
+                .frame(width: clockSize * 0.4, height: clockSize * 0.4)
+                .rotationEffect(.degrees(facingRotationAngle))
+
             // Direction arrow (Red Dashed)
             DirectionArrow(hour: direction, color: .red, isDashed: true, size: clockSize)
-            
+
             // Facing arrow (Blue Solid)
             DirectionArrow(hour: facing, color: .blue, isDashed: false, size: clockSize)
-            
+
             // Legend
             VStack(spacing: 8) {
                 HStack(spacing: 8) {
@@ -49,7 +62,7 @@ struct ClockVisualizer: View {
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(.white.opacity(0.8))
                 }
-                
+
                 HStack(spacing: 8) {
                     DashedLine()
                         .stroke(Color.red, style: StrokeStyle(lineWidth: 3, dash: [5, 5]))
