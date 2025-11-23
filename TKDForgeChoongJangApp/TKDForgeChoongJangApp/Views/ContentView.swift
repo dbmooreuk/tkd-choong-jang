@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var dataStore = PatternDataStore()
+    @StateObject private var storeManager = StoreManager()
     @State private var studyViewModel: StudyViewModel?
 
     var body: some View {
@@ -18,9 +19,12 @@ struct ContentView: View {
             switch appState.currentScreen {
             case .splash:
                 SplashView()
-            case .patternInfo:
-                PatternInfoView()
-                    .environmentObject(dataStore)
+            case .about:
+                AboutView()
+            case .patternList:
+                PatternListView(dataStore: dataStore, storeManager: storeManager)
+            case .patternInfo(let patternId):
+                PatternInfoView(dataStore: dataStore, patternId: patternId)
             case .study:
                 if let viewModel = studyViewModel {
                     StudyView(viewModel: viewModel)
@@ -32,11 +36,12 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            // Initialize studyViewModel with the dataStore
-            if studyViewModel == nil {
+            appState.completeSplash()
+        }
+        .onChange(of: appState.currentScreen) { _, newScreen in
+            if case .study = newScreen {
                 studyViewModel = StudyViewModel(dataStore: dataStore)
             }
-            appState.completeSplash()
         }
     }
 }

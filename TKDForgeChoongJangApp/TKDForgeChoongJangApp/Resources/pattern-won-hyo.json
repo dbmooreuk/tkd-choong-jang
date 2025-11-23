@@ -1,0 +1,37 @@
+{
+  "id": "won-hyo",
+  "name": "Won-Hyo",
+  "belt": "Green Belt Pattern",
+  "meaning": "Dummy data for the Won-Hyo pattern used for development and testing.",
+  "numberOfMoves": 28,
+  "moves": [
+    {
+      "id": 1,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "Ready Stance",
+      "description": "Begin in a ready stance facing 12:00.",
+      "pdfPage": 1,
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 2,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "Front Kick",
+      "description": "Execute a front snap kick with the right leg towards 12:00.",
+      "pdfPage": 2,
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 3,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "Knife-Hand Strike",
+      "description": "Land forward and perform a knife-hand strike towards 3:00.",
+      "pdfPage": 3,
+      "facing": 3,
+      "direction": 3
+    }
+  ]
+}
+

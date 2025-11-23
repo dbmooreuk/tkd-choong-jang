@@ -31,8 +31,8 @@ struct SplashView: View {
                     Text("TKD FORGE")
                         .font(.system(size: 36, weight: .bold, design: .rounded))
                         .foregroundColor(.white)
-                    
-                    Text("Choong-Jang")
+
+                    Text("Patterns Trainer")
                         .font(.system(size: 24, weight: .medium, design: .rounded))
                         .foregroundColor(.orange)
                 }

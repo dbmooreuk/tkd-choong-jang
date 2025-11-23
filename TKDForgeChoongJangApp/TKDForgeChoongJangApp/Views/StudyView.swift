@@ -31,7 +31,7 @@ struct StudyView: View {
                     // Top Bar
                     HStack {
                         Button(action: {
-                            appState.navigateToPatternInfo()
+                            appState.navigateBack()
                         }) {
                             Image(systemName: "chevron.left")
                                 .font(.system(size: 20, weight: .semibold))
@@ -41,7 +41,7 @@ struct StudyView: View {
 
                         Spacer()
 
-                        Text("Choong-Jang")
+                        Text(dataStore.patternInfo?.name ?? "Pattern")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .foregroundColor(.white)
 

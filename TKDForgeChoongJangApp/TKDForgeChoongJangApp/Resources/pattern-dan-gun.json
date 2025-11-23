@@ -1,0 +1,37 @@
+{
+  "id": "dan-gun",
+  "name": "Dan-Gun",
+  "belt": "1st Dan Black Belt",
+  "meaning": "Dummy data for the Dan-Gun pattern used for development and testing.",
+  "numberOfMoves": 21,
+  "moves": [
+    {
+      "id": 1,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "Low Block",
+      "description": "Step into a walking stance towards 12:00 and perform a low block with the left arm.",
+      "pdfPage": 1,
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 2,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "Middle Punch",
+      "description": "Step forward to 12:00 with the right foot and execute a middle punch with the right fist.",
+      "pdfPage": 2,
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 3,
+      "phase": "Phase 1: Opening Sequence",
+      "title": "High Block",
+      "description": "Turn to face 3:00 and perform a high block with the left arm.",
+      "pdfPage": 3,
+      "facing": 3,
+      "direction": 3
+    }
+  ]
+}
+

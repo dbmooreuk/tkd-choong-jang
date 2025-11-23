@@ -1,0 +1,33 @@
+[
+  {
+    "id": "choong-jang",
+    "name": "Choong-Jang",
+    "belt": "2nd Dan Black Belt",
+    "meaning": "Choong-Jang is the pseudonym of General Kim Duk Ryang who lived during the Lee Dynasty, 14th century.",
+    "numberOfMoves": 52,
+    "jsonFile": "pattern-choong-jang.json",
+    "productId": "com.tkdforge.patterns.choongjang",
+    "price": 2.99
+  },
+  {
+    "id": "dan-gun",
+    "name": "Dan-Gun",
+    "belt": "1st Dan Black Belt",
+    "meaning": "Dan-Gun honours the legendary founder of Korea. This is a dummy entry used as an example pattern.",
+    "numberOfMoves": 21,
+    "jsonFile": "pattern-dan-gun.json",
+    "productId": "com.tkdforge.patterns.dangun",
+    "price": null
+  },
+  {
+    "id": "won-hyo",
+    "name": "Won-Hyo",
+    "belt": "Green Belt Pattern",
+    "meaning": "Won-Hyo is named after the monk who introduced Buddhism to the Silla Dynasty. This is a dummy entry used as an example pattern.",
+    "numberOfMoves": 28,
+    "jsonFile": "pattern-won-hyo.json",
+    "productId": "com.tkdforge.patterns.wonhyo",
+    "price": 1.99
+  }
+]
+

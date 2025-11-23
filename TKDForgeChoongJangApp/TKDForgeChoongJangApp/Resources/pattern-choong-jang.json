@@ -1,4 +1,10 @@
-[
+{
+  "id": "choong-jang",
+  "name": "Choong-Jang",
+  "belt": "2nd Dan Black Belt",
+  "meaning": "Choong-Jang is the pseudonym of General Kim Duk Ryang who lived during the Lee Dynasty, 14th century.",
+  "numberOfMoves": 52,
+  "moves": [
   {
     "id": 1,
     "phase": "Phase 1: Opening Attacks",
@@ -468,4 +474,5 @@
     "facing": 9,
     "direction": 9
   }
-]
+  ]
+}

@@ -11,7 +11,9 @@ A premium iOS application for mastering the Taekwondo pattern Choong-Jang (2nd D
 **TKD Forge - Choong Jang** is a comprehensive study app designed to help Taekwondo practitioners memorize and perfect the 52 movements of the Choong-Jang pattern. The app features an innovative directional clock system, voice control for hands-free practice, and a beautiful dark mode interface.
 
 ### Pattern Information
-- **Name**: Choong-Jang
+This app is driven entirely by JSON pattern files. The current release focuses on **Choong-Jang**, and the same data model can be reused for additional patterns (for example Dan-Gun and Won-Hyo).
+
+**Choong-Jang (current pattern)**
 - **Belt Level**: 2nd Dan Black Belt
 - **Number of Moves**: 52
 - **Meaning**: Choong-Jang is the pseudonym of General Kim Duk Ryang who lived during the Lee Dynasty, 14th century.

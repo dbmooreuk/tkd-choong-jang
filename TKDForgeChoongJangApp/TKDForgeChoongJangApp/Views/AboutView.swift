@@ -1,0 +1,95 @@
+//
+//  AboutView.swift
+//  TKD Forge
+//
+//  Created by TKD Forge
+//
+
+import SwiftUI
+
+struct AboutView: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        ZStack {
+            // Background gradient
+            LinearGradient(
+                gradient: Gradient(colors: [Color.black, Color(red: 0.1, green: 0.1, blue: 0.2)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+            
+            VStack(spacing: 30) {
+                Spacer()
+                
+                // Logo
+                Image("tkd-forge-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .shadow(color: .orange.opacity(0.5), radius: 20)
+                
+                // App Title
+                VStack(spacing: 8) {
+                    Text("TKD FORGE")
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                    
+                    Text("Master Your Patterns")
+                        .font(.system(size: 18, weight: .medium, design: .rounded))
+                        .foregroundColor(.orange)
+                }
+                
+                // Description
+                VStack(spacing: 16) {
+                    Text("Learn and perfect your Taekwondo patterns with interactive study tools, voice control, and visual guides.")
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundColor(.white.opacity(0.8))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 40)
+                    
+                    Text("Each pattern includes detailed move descriptions, visual clock diagrams, and step-by-step guidance.")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(.white.opacity(0.6))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 40)
+                }
+                
+                Spacer()
+                
+                // Call to Action Button
+                Button(action: {
+                    appState.navigateToPatternList()
+                }) {
+                    HStack {
+                        Text("Explore Patterns")
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        Image(systemName: "arrow.right.circle.fill")
+                            .font(.system(size: 20))
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 16)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color.orange, Color.red]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .cornerRadius(30)
+                    .shadow(color: .orange.opacity(0.5), radius: 10, x: 0, y: 5)
+                }
+                
+                Spacer()
+            }
+        }
+    }
+}
+
+#Preview {
+    AboutView()
+        .environmentObject(AppState())
+}
+
