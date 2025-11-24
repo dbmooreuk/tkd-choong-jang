@@ -25,7 +25,7 @@ struct PatternInfoView: View {
                     }) {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(.orange)
+                            .foregroundColor(.white)
                     }
 
                     Spacer()
@@ -48,7 +48,7 @@ struct PatternInfoView: View {
                         .frame(width: 44, height: 44)
                 }
                 .padding(.horizontal)
-                .padding(.top, 60)
+                .padding(.top, 0)
                 .padding(.bottom, 20)
                 
                 // Pattern Info Card
@@ -87,17 +87,17 @@ struct PatternInfoView: View {
 
                         // Move Count
                         HStack(spacing: 12) {
-                            Image(systemName: "figure.martial.arts")
-                                .font(.system(size: 32))
-                                .foregroundColor(.orange)
+//                            Image(systemName: "figure.martial.arts")
+//                                .font(.system(size: 32))
+//                                .foregroundColor(.orange)
 
-                            VStack(alignment: .leading, spacing: 4) {
+                            VStack(alignment: .center, spacing: 4) {
                                 Text("\(patternInfo.numberOfMoves)")
                                     .font(.system(size: 36, weight: .bold, design: .rounded))
                                     .foregroundColor(.white)
 
                                 Text("Movements")
-                                    .font(.system(size: 14, weight: .medium, design: .rounded))
+                                    .font(.system(size: 16, weight: .medium, design: .rounded))
                                     .foregroundColor(.white.opacity(0.7))
                             }
                         }
@@ -150,7 +150,7 @@ struct PatternInfoView: View {
                     .padding(.vertical, 18)
                     .background(Color("brandOrange"))
                   
-                    .cornerRadius(8)
+                    .cornerRadius(30)
                     .shadow(color: .orange.opacity(0.4), radius: 15, x: 0, y: 8)
                 }
                 .padding(.horizontal, 30)

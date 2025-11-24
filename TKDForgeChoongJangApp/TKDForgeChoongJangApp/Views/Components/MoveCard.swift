@@ -28,16 +28,21 @@ struct MoveCard: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(
                         RoundedRectangle(cornerRadius: 24)
-                            .fill(Color.white.opacity(0.04))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 24)
-                                    .stroke(Color.white.opacity(0.12), lineWidth: 1)
-                            )
+                            .fill(Color("brandDark"))
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 24)
+//                                    .stroke(Color.white.opacity(0.12), lineWidth: 1)
+//                            )
                     )
                 }
             }
+            .padding(12)
+            .background(
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(Color("brandDarkOverlay"))
+            )
             .padding(.horizontal, 16)
-            .padding(.top, 8)
+            .padding(.top, 16)
 
             // Legend row under clock
             HStack(spacing: 16) {
@@ -72,31 +77,31 @@ struct MoveCard: View {
             }
 
             // Move Image
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white.opacity(0.05))
-                    .frame(height: 220)
-
-                // Placeholder or actual image
-                if let image = UIImage(named: move.imageName) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 220)
-                        .cornerRadius(20)
-                } else {
-                    VStack(spacing: 12) {
-                        Image(systemName: "figure.martial.arts")
-                            .font(.system(size: 60))
-                            .foregroundColor(.white.opacity(0.3))
-
-                        Text("Move \(move.id)")
-                            .font(.system(size: 16, weight: .medium, design: .rounded))
-                            .foregroundColor(.white.opacity(0.5))
-                    }
-                }
-            }
-            .padding(.horizontal, 8)
+//            ZStack {
+//                RoundedRectangle(cornerRadius: 20)
+//                    .fill(Color.white.opacity(0.05))
+//                    .frame(height: 220)
+//
+//                // Placeholder or actual image
+//                if let image = UIImage(named: move.imageName) {
+//                    Image(uiImage: image)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(height: 220)
+//                        .cornerRadius(20)
+//                } else {
+//                    VStack(spacing: 12) {
+//                        Image(systemName: "figure.martial.arts")
+//                            .font(.system(size: 60))
+//                            .foregroundColor(.white.opacity(0.3))
+//
+//                        Text("Move \(move.id)")
+//                            .font(.system(size: 16, weight: .medium, design: .rounded))
+//                            .foregroundColor(.white.opacity(0.5))
+//                    }
+//                }
+//            }
+//            .padding(.horizontal, 8)
 
             // Move Title
             Text(move.title)
@@ -136,16 +141,16 @@ struct MoveCard: View {
             }
             .frame(maxHeight: 120)
         }
-        .padding(.vertical, 24)
-        .background(
-            RoundedRectangle(cornerRadius: 30)
-                .fill(Color.white.opacity(0.05))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color.orange.opacity(0.3), lineWidth: 1)
-                )
-        )
-        .padding(.horizontal, 20)
+        .padding(.vertical,0)
+//        .background(
+//            RoundedRectangle(cornerRadius: 30)
+//                .fill(Color.white.opacity(0.05))
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 30)
+//                        .stroke(Color.orange.opacity(0.3), lineWidth: 1)
+//                )
+//        )
+        .padding(.horizontal, 0)
         .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 10)
     }
 }
@@ -167,14 +172,18 @@ struct DirectionHintRow: View {
 
     var body: some View {
         if let parts = parts {
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 0) {
+                
                 Text(parts.label)
                     .font(.system(size: 13, weight: .semibold, design: .rounded))
                     .foregroundColor(.white.opacity(0.8))
+                
+                
                 if !parts.value.isEmpty {
                     Text(parts.value)
                         .font(.system(size: 15, weight: .bold, design: .rounded))
                         .foregroundColor(.orange)
+
                 }
             }
         }

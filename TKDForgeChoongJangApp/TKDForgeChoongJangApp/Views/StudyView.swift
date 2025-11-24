@@ -152,3 +152,19 @@ struct StudyView: View {
     }
 }
 
+#Preview {
+    let store = PatternDataStore()
+    // Configure store with sample data
+    // store.patternInfo = PatternInfo(name: "Choong-Jang", belt: "Red", numberOfMoves: 52, meaning: "...")
+    // store.moves = [Move(...), Move(...), ...]
+
+    let vm = StudyViewModel(dataStore: store)
+    // Optionally set current move index for testing animations and states
+     vm.currentMoveIndex = 3
+
+    return StudyView(viewModel: vm)
+        .environmentObject(AppState())
+        .environmentObject(store)
+}
+
+

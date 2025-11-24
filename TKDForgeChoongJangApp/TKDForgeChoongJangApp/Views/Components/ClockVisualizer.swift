@@ -22,7 +22,7 @@ struct ClockVisualizer: View {
         ZStack {
             // Clock face background
             Circle()
-                .fill(Color("brandDarkOverlay"))
+                .fill(Color("brandDark"))
 //                .overlay(
 //                    Circle()
 ////                        .stroke(Color.white.opacity(0.3), lineWidth: 2)
@@ -47,10 +47,10 @@ struct ClockVisualizer: View {
                 .rotationEffect(.degrees(facingRotationAngle))
 
             // Direction arrow (Red Dashed)
-            DirectionArrow(hour: direction, color: .red, isDashed: true, size: clockSize)
+            DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: true, size: clockSize)
 
             // Facing arrow (Blue Solid)
-            DirectionArrow(hour: facing, color: .blue, isDashed: false, size: clockSize)
+            DirectionArrow(hour: facing, color: Color("brandBlue"), isDashed: false, size: clockSize)
 
         }
         .frame(width: clockSize, height: clockSize)
@@ -70,7 +70,7 @@ struct HourMarker: View {
         ZStack {
             Text("\(hour)")
                 .font(.system(size: 14, weight: .semibold, design: .rounded))
-                .foregroundColor(.white.opacity(0.6))
+                .foregroundColor(.white.opacity(0.9))
                 // Position the number on the circle using trig so it aligns
                 .position(
                     x: size / 2 + radius * sin(angleRadians),
