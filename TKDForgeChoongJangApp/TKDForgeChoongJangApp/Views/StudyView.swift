@@ -131,7 +131,11 @@ struct StudyView: View {
                                     }
                                 }
                             } else {
+                                // When the user turns voice control off, stop
+                                // both listening and any speech that is
+                                // currently playing.
                                 voiceControl.stopListening()
+                                voiceControl.stopSpeaking()
                             }
                         }) {
                             Image(systemName: viewModel.isVoiceControlEnabled ? "mic.fill" : "mic.slash.fill")

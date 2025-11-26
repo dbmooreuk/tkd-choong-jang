@@ -122,16 +122,29 @@ class VoiceControlManager: NSObject, ObservableObject {
     }
     
     private func processCommand(_ command: String) {
+        // Normalise for safety, although the caller already lowercases.
+        let cmd = command.lowercased()
+
+        // "Stop" should always work, even while speaking – it just
+        // interrupts the current utterance but does not change the move.
+        if cmd.contains("stop") {
+            stopSpeaking()
+            return
+        }
+
         // Prevent a feedback loop where the app hears its own spoken
         // instructions and keeps auto-advancing through the moves.
-        // Only react to commands when the synthesizer is not speaking.
+        // Only react to other commands when the synthesizer is not speaking.
         guard !synthesizer.isSpeaking else { return }
 
-        if command.contains("next") {
+        if cmd.contains("next") {
             onNextCommand?()
-        } else if command.contains("back") || command.contains("previous") {
+        } else if cmd.contains("back") || cmd.contains("previous") {
             onBackCommand?()
-        } else if command.contains("repeat") || command.contains("again") {
+        } else if cmd.contains("repeat") || cmd.contains("again") ||
+                    cmd.contains("start") || cmd.contains("play") {
+            // Treat "start" and "play" the same as "repeat":
+            // read out the current move from the current card.
             onRepeatCommand?()
         }
     }
