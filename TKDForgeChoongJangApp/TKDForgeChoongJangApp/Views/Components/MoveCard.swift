@@ -46,16 +46,16 @@ struct MoveCard: View {
 
             // Legend row under clock
             HStack(spacing: 16) {
+//                HStack(spacing: 6) {
+//                    Rectangle()
+//                        .fill(Color.blue)
+//                        .frame(width: 24, height: 3)
+//                    Text("Facing")
+//                }
                 HStack(spacing: 6) {
-                    Rectangle()
-                        .fill(Color.blue)
-                        .frame(width: 24, height: 3)
-                    Text("Facing")
-                }
-                HStack(spacing: 6) {
-                    Rectangle()
-                        .fill(Color.orange)
-                        .frame(width: 24, height: 3)
+                    Circle()
+                        .fill(Color("brandYellow"))
+                        .frame(width: 12, height: 12)
                     Text("Move direction")
                 }
             }

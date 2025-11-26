@@ -61,18 +61,19 @@ struct StudyView: View {
                     .padding(.top, 16)
                     .padding(.bottom, 10)
 
-                    // Progress Bar
-                    ProgressView(value: viewModel.progress)
-                        .tint(.orange)
-                        .padding(.horizontal, 20)
+                    HStack(alignment: .center) {
+                        ProgressView(value: viewModel.progress)
+                            .tint(.orange)
 
-                    // Move Counter
-                    Text(viewModel.moveNumber)
-                        .font(.system(size: 16, weight: .medium, design: .rounded))
-                        .foregroundColor(.white.opacity(0.7))
-                        .padding(.top, 8)
+                        Text(viewModel.moveNumber)
+                            .font(.system(size: 16, weight: .medium, design: .rounded))
+                            .foregroundColor(.white.opacity(0.7))
+                            .padding(.leading, 8)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 8)
 
-                    Spacer()
+//                    Spacer()
 
                     // Main Card
                     if let move = viewModel.currentMove {

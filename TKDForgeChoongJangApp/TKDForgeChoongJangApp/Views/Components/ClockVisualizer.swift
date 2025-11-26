@@ -34,9 +34,9 @@ struct ClockVisualizer: View {
             }
 
             // Center dot
-//            Circle()
-//                .fill(Color.white)
-//                .frame(width: 12, height: 12)
+            Circle()
+                .fill(Color("brandYellow"))
+                .frame(width: 12, height: 12)
 
 
             // Center man figure (rotates with facing)
@@ -48,11 +48,11 @@ struct ClockVisualizer: View {
 
             // Direction arrow (Red Dashed)
             if let direction = direction {
-                DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: true, size: clockSize)
+                DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: false, size: clockSize)
             }
 
             // Facing arrow (Blue Solid)
-            DirectionArrow(hour: facing, color: Color("brandBlue"), isDashed: false, size: clockSize)
+//            DirectionArrow(hour: facing, color: Color("brandBlue"), isDashed: false, size: clockSize)
 
         }
         .frame(width: clockSize, height: clockSize)

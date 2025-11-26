@@ -6,9 +6,10 @@
   "numberOfMoves": 52,
   "moves": [
   {
-        "id": 0,
-    "title": "Start Position",
-    "description": "Closed Stance A",
+    "id": 0,
+    "moveNumber": "Start Position",
+    "title": "Closed Ready Stance A",
+    "description": "Start in a closed ready stance A",
     "text1": null,
     "text2": null,
     "text3": null,
@@ -18,6 +19,7 @@
   },
   {
     "id": 1,
+    "moveNumber": "1",
     "title": "Step R, Block",
     "description": "Step right into a sitting stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
     "text1": "Step/Right",
@@ -29,6 +31,7 @@
   },
   {
     "id": 2,
+    "moveNumber": "2",
     "title": "Block",
     "description": "Stay in position. Perform a Side Front Block (Left hand).",
     "text1": "Face/12 o'clock",
@@ -40,6 +43,7 @@
   },
   {
     "id": 3,
+    "moveNumber": "3",
     "title": "Slow Punch",
     "description": "Bring Right foot to Left foot (Feet together). Angle Punch: Slowly punch across your chest to the Right (3:00) with your Right fist.",
     "facing": 12,
@@ -47,6 +51,7 @@
   },
   {
     "id": 4,
+    "moveNumber": "4",
     "title": "Step L, Poke",
     "description": "Step Forward (to 12:00) with Left foot. Double finger thrust to eyes (Right hand).",
     "facing": 12,
@@ -54,6 +59,7 @@
   },
   {
     "id": 5,
+    "moveNumber": "5",
     "title": "Step R, Poke",
     "description": "Step Forward (to 12:00) with Right foot. Double finger thrust to eyes (Left hand).",
     "facing": 12,
@@ -61,6 +67,7 @@
   },
   {
     "id": 6,
+    "moveNumber": "6",
     "title": "Backfist",
     "description": "Stay there. Strike Front (12:00) with Right Backfist.",
     "facing": 12,
@@ -68,6 +75,7 @@
   },
   {
     "id": 7,
+    "moveNumber": "7",
     "title": "Step L, Block",
     "description": "Step Forward (to 12:00) with Left foot. Rising Block (Left arm).",
     "facing": 12,
@@ -75,6 +83,7 @@
   },
   {
     "id": 8,
+    "moveNumber": "8",
     "title": "Step R, Punch",
     "description": "Step Forward (to 12:00) with Right foot. Middle Punch (Right fist).",
     "facing": 12,
@@ -82,6 +91,7 @@
   },
   {
     "id": 9,
+    "moveNumber": "9",
     "title": "Slide Back",
     "description": "Slide/Step Backwards (towards 6:00). Land in an L-Stance, but keep facing the Front (12:00). Guarding Block.",
     "facing": 12,
@@ -89,6 +99,7 @@
   },
   {
     "id": 10,
+    "moveNumber": "10",
     "title": "Kick",
     "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
     "facing": 12,
@@ -96,6 +107,7 @@
   },
   {
     "id": 11,
+    "moveNumber": "11",
     "title": "Spear Hand",
     "description": "Land forward in a Low Stance. Spear Finger Thrust to Front (12:00).",
     "facing": 12,
@@ -103,6 +115,7 @@
   },
   {
     "id": 12,
+    "moveNumber": "12",
     "title": "Ground Kick",
     "description": "Drop to your Left Knee. Place both hands on the floor. Execute a High Turning Kick with your Right foot towards the Front (12:00).",
     "facing": 12,
@@ -111,6 +124,7 @@
   },
   {
     "id": 13,
+    "moveNumber": "13",
     "title": "Ground Punch",
     "description": "Land the kicking foot forward. Keep Left hand on the floor. Punch high with Right Fist to Front (12:00).",
     "facing": 12,
@@ -118,6 +132,7 @@
   },
   {
     "id": 14,
+    "moveNumber": "14",
     "title": "Turn & Elbow",
     "description": "Stand up and turn Right (180°) to face the Back (6:00). Strike with your Left Elbow backwards (towards the Front/12:00). Looking over shoulder.",
     "facing": 6,
@@ -125,6 +140,7 @@
   },
   {
     "id": 15,
+    "moveNumber": "15",
     "title": "Turn & Guard",
     "description": "Pivot on your feet, turning Right to face Front (12:00) again. L-Stance. Guarding Block.",
     "facing": 12,
@@ -132,6 +148,7 @@
   },
   {
     "id": 16,
+    "moveNumber": "16",
     "title": "Step Back",
     "description": "Step Backwards (towards 6:00). L-Stance facing Front. Scooping Block (Left palm).",
     "facing": 12,
@@ -139,6 +156,7 @@
   },
   {
     "id": 17,
+    "moveNumber": "17",
     "title": "Step Back",
     "description": "Step Backwards (towards 6:00). L-Stance facing Front. Knife-hand Strike (Right hand).",
     "facing": 12,
@@ -146,6 +164,7 @@
   },
   {
     "id": 18,
+    "moveNumber": "18",
     "title": "Turn X-Block",
     "description": "Turn Left (180°) to face the Back (6:00). Step Left. X-Fist Pressing Block.",
     "facing": 6,
@@ -153,6 +172,7 @@
   },
   {
     "id": 19,
+    "moveNumber": "19",
     "title": "Knee Kick",
     "description": "Grab head and smash Right Knee towards Back (6:00).",
     "facing": 6,
@@ -160,6 +180,7 @@
   },
   {
     "id": 20,
+    "moveNumber": "20",
     "title": "Turn & Guard",
     "description": "Land foot. Turn Left (180°) to face Front (12:00). Guarding Block.",
     "facing": 12,
@@ -167,6 +188,7 @@
   },
   {
     "id": 21,
+    "moveNumber": "21",
     "title": "Slide & Elbow",
     "description": "Slide your Right foot forward. Turn your body to face the Back (6:00). Strike with Right Elbow backwards (towards Front/12:00).",
     "facing": 6,
@@ -174,6 +196,7 @@
   },
   {
     "id": 22,
+    "moveNumber": "22",
     "title": "Turn & Guard",
     "description": "Pivot Left to face Front (12:00). Guarding Block.",
     "facing": 12,
@@ -181,6 +204,7 @@
   },
   {
     "id": 23,
+    "moveNumber": "23",
     "title": "Side Kick",
     "description": "Side Piercing Kick (Right foot) to Front (12:00).",
     "facing": 12,
@@ -188,6 +212,7 @@
   },
   {
     "id": 24,
+    "moveNumber": "24",
     "title": "Land & Press",
     "description": "Land the kick. Pivot to face the Back (6:00). Rear Foot Stance. Twin Palm Pressing Block.",
     "facing": 6,
@@ -195,6 +220,7 @@
   },
   {
     "id": 25,
+    "moveNumber": "25",
     "title": "Step & Strike",
     "description": "Step forward to Back (6:00). High Block, then Backfist Strike (Right hand).",
     "facing": 6,
@@ -202,6 +228,7 @@
   },
   {
     "id": 26,
+    "moveNumber": "26",
     "title": "Turn & Spear",
     "description": "Turn Left (180°) to face Front (12:00). High Spear Finger Thrust (Left hand).",
     "facing": 12,
@@ -209,6 +236,7 @@
   },
   {
     "id": 27,
+    "moveNumber": "27",
     "title": "Kick",
     "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
     "facing": 12,
@@ -216,6 +244,7 @@
   },
   {
     "id": 28,
+    "moveNumber": "28",
     "title": "Land & Turn",
     "description": "Land the kick. Pivot your feet to face the Back (6:00). Slow motion stance preparation.",
     "facing": 6,
@@ -223,6 +252,7 @@
   },
   {
     "id": 29,
+    "moveNumber": "29",
     "title": "Stamp & Strike",
     "description": "Stamp forward to Back (6:00). Back Hand Downward Strike (Left hand).",
     "facing": 6,
@@ -230,6 +260,7 @@
   },
   {
     "id": 30,
+    "moveNumber": "30",
     "title": "Palm Smash",
     "description": "Stay facing Back. Smash Right Fist into Left Palm.",
     "facing": 6,
@@ -237,6 +268,7 @@
   },
   {
     "id": 31,
+    "moveNumber": "31",
     "title": "Stamp & Strike",
     "description": "Step and Stamp forward to Back (6:00). Back Hand Downward Strike (Right hand).",
     "facing": 6,
@@ -244,6 +276,7 @@
   },
   {
     "id": 32,
+    "moveNumber": "32",
     "title": "Palm Smash",
     "description": "Stay facing Back. Smash Left Fist into Right Palm.",
     "facing": 6,
@@ -251,6 +284,7 @@
   },
   {
     "id": 33,
+    "moveNumber": "33",
     "title": "Turn & Stamp",
     "description": "Turn Left (180°) to face Front (12:00). Stamp. Knife Hand Strike (Left).",
     "facing": 12,
@@ -258,6 +292,7 @@
   },
   {
     "id": 34,
+    "moveNumber": "34",
     "title": "Slip & Backfist",
     "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Right).",
     "facing": 12,
@@ -265,6 +300,7 @@
   },
   {
     "id": 35,
+    "moveNumber": "35",
     "title": "Step & Stamp",
     "description": "Step forward towards Front (12:00). Stamp. Knife Hand Strike (Right).",
     "facing": 12,
@@ -272,6 +308,7 @@
   },
   {
     "id": 36,
+    "moveNumber": "36",
     "title": "Slip & Backfist",
     "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Left).",
     "facing": 12,
@@ -279,6 +316,7 @@
   },
   {
     "id": 37,
+    "moveNumber": "37",
     "title": "Turn Low Block",
     "description": "Turn Left (180°) to face Back (6:00). Low Reverse Knife-hand Block.",
     "facing": 6,
@@ -286,6 +324,7 @@
   },
   {
     "id": 38,
+    "moveNumber": "38",
     "title": "9-Block",
     "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
     "facing": 6,
@@ -293,6 +332,7 @@
   },
   {
     "id": 39,
+    "moveNumber": "39",
     "title": "Step Low Block",
     "description": "Step forward towards Back (6:00). Low Reverse Knife-hand Block.",
     "facing": 6,
@@ -300,6 +340,7 @@
   },
   {
     "id": 40,
+    "moveNumber": "40",
     "title": "9-Block",
     "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
     "facing": 6,
@@ -307,6 +348,7 @@
   },
   {
     "id": 41,
+    "moveNumber": "41",
     "title": "Twin Strike",
     "description": "Move Right foot backwards. You are now standing at C, looking at C (Back/6:00). Twin Horizontal Knife-hand Strike.",
     "facing": 6,
@@ -314,6 +356,7 @@
   },
   {
     "id": 42,
+    "moveNumber": "42",
     "title": "Arc-Hand",
     "description": "Stay facing Back (6:00). High Arc-hand Strike (Right hand).",
     "facing": 6,
@@ -321,6 +364,7 @@
   },
   {
     "id": 43,
+    "moveNumber": "43",
     "title": "Kick",
     "description": "Front Snap Kick (Right foot) to Back (6:00).",
     "facing": 6,
@@ -328,6 +372,7 @@
   },
   {
     "id": 44,
+    "moveNumber": "44",
     "title": "Land Arc-Hand",
     "description": "Land forward towards Back (6:00). High Arc-hand Strike (Left hand).",
     "facing": 6,
@@ -335,6 +380,7 @@
   },
   {
     "id": 45,
+    "moveNumber": "45",
     "title": "Kick",
     "description": "Front Snap Kick (Left foot) to Back (6:00).",
     "facing": 6,
@@ -342,6 +388,7 @@
   },
   {
     "id": 46,
+    "moveNumber": "46",
     "title": "Land Punch",
     "description": "Land forward towards Back (6:00). Middle Punch (Right fist).",
     "facing": 6,
@@ -349,6 +396,7 @@
   },
   {
     "id": 47,
+    "moveNumber": "47",
     "title": "Punch",
     "description": "Stay there. Middle Punch (Left fist). Fast motion.",
     "facing": 6,
@@ -356,6 +404,7 @@
   },
   {
     "id": 48,
+    "moveNumber": "48",
     "title": "Twin Knuckle",
     "description": "Bring Right foot to Left. Feet together facing Back (6:00). Twin Fore-knuckle Fist Punch (Crescent shape to sides).",
     "facing": 6,
@@ -363,6 +412,7 @@
   },
   {
     "id": 49,
+    "moveNumber": "49",
     "title": "Turn Left",
     "description": "Turn Left to face the Right Wall (3:00). Step out. Low Knife-hand Block.",
     "facing": 3,
@@ -370,6 +420,7 @@
   },
   {
     "id": 50,
+    "moveNumber": "50",
     "title": "Open Punch",
     "description": "Stay there. High Open Fist Punch to Right Wall (3:00).",
     "facing": 3,
@@ -377,6 +428,7 @@
   },
   {
     "id": 51,
+    "moveNumber": "51",
     "title": "Turn Right",
     "description": "Turn Right (180°) to face the Left Wall (9:00). Step out. Low Knife-hand Block.",
     "facing": 9,
@@ -384,6 +436,7 @@
   },
   {
     "id": 52,
+    "moveNumber": "52",
     "title": "Open Punch",
     "description": "Stay there. High Open Fist Punch to Left Wall (9:00).",
     "facing": 9,
