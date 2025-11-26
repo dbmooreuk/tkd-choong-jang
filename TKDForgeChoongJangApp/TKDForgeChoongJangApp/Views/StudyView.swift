@@ -61,22 +61,35 @@ struct StudyView: View {
                     .padding(.top, 16)
                     .padding(.bottom, 10)
 
-                    HStack(alignment: .center) {
-                        ProgressView(value: viewModel.progress)
-                            .tint(.orange)
-
-                        Text(viewModel.moveNumber)
-                            .font(.system(size: 16, weight: .medium, design: .rounded))
-                            .foregroundColor(.white.opacity(0.7))
-                            .padding(.leading, 8)
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 8)
+                    ProgressView(value: viewModel.progress)
+                        .tint(.green)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
 
 //                    Spacer()
 
                     // Main Card
                     if let move = viewModel.currentMove {
+                        
+                        // Move number lozenge above the card (only if moveNumber is present)
+                        if let moveNumber = move.moveNumber {
+                            HStack {
+                                Spacer()
+                                Text("Move: \(moveNumber)")
+                                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 14)
+                                    .padding(.vertical, 6)
+                                    .background(
+                                        Capsule()
+                                            .fill(Color.white.opacity(0.15))
+                                    )
+                                Spacer()
+                            }
+                            .padding(.bottom, 8)
+                            .padding(.top, 16)
+                        }
+
                         MoveCard(move: move)
                             .transition(.asymmetric(
                                 insertion: .move(edge: .trailing).combined(with: .opacity),
@@ -88,14 +101,14 @@ struct StudyView: View {
                     Spacer()
 
                     // Navigation Controls
-                    HStack(spacing: 40) {
+                    HStack(spacing: 86) {
                         // Previous Button
                         Button(action: {
                             viewModel.previousMove()
                         }) {
                             Image(systemName: "chevron.left.circle.fill")
                                 .font(.system(size: 50))
-                                .foregroundColor(viewModel.currentMoveIndex > 0 ? .orange : .gray.opacity(0.3))
+                                .foregroundColor(viewModel.currentMoveIndex > 0 ? Color("brandOrange") : Color("brandDarkOverlay"))
                         }
                         .disabled(viewModel.currentMoveIndex == 0)
 
@@ -123,7 +136,7 @@ struct StudyView: View {
                         }) {
                             Image(systemName: viewModel.isVoiceControlEnabled ? "mic.fill" : "mic.slash.fill")
                                 .font(.system(size: 40))
-                                .foregroundColor(viewModel.isVoiceControlEnabled ? .red : .white.opacity(0.5))
+                                .foregroundColor(viewModel.isVoiceControlEnabled ? .green : Color("brandDarkOverlay"))
                         }
 
                         // Next Button
@@ -132,7 +145,7 @@ struct StudyView: View {
                         }) {
                             Image(systemName: "chevron.right.circle.fill")
                                 .font(.system(size: 50))
-                                .foregroundColor(viewModel.currentMoveIndex < dataStore.moves.count - 1 ? .orange : .gray.opacity(0.3))
+                                .foregroundColor(viewModel.currentMoveIndex < dataStore.moves.count - 1 ? Color("brandOrange") : Color("brandDarkOverlay"))
                         }
                         .disabled(viewModel.currentMoveIndex >= dataStore.moves.count - 1)
                     }
@@ -167,5 +180,4 @@ struct StudyView: View {
         .environmentObject(AppState())
         .environmentObject(store)
 }
-
 

@@ -67,7 +67,7 @@ struct AboutView: View {
                     .padding(.vertical, 16)
                     .background(Color("brandOrange"))
                     .cornerRadius(30)
-                    .shadow(color: .orange.opacity(0.5), radius: 10, x: 0, y: 5)
+//                    .shadow(color: .orange.opacity(0.5), radius: 10, x: 0, y: 5)
                 }
                 
                 Spacer()

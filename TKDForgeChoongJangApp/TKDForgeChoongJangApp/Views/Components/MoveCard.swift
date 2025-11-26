@@ -105,7 +105,7 @@ struct MoveCard: View {
 
             // Move Title
             Text(move.title)
-                .font(.system(size: 24, weight: .bold, design: .rounded))
+                .font(.system(size: 22, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
 
@@ -195,6 +195,7 @@ struct DirectionHintRow: View {
         AppBackground()
         MoveCard(move: Move(
             id: 1,
+            moveNumber: "1",
             phase: "Phase 1: Opening Attacks",
             title: "Step R, Block",
             description: "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",

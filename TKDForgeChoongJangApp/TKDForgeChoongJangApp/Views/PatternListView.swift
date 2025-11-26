@@ -143,7 +143,7 @@ struct PatternRow: View {
                     
                     Text(pattern.belt)
                         .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(Color("brandOrange"))
+                        .foregroundColor (.white.opacity(0.75))
                 }
                 
                 Spacer()

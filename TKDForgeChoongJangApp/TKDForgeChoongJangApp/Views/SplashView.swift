@@ -33,9 +33,9 @@ struct SplashView: View {
 //                        .font(.system(size: 36, weight: .bold, design: .rounded))
 //                        .foregroundColor(.white)
 
-                    Text("Patterns Trainer")
-                        .font(.system(size: 24, weight: .medium, design: .rounded))
-                        .foregroundColor(Color("brandOrange"))
+//                    Text("Patterns Trainer")
+//                        .font(.system(size: 24, weight: .medium, design: .rounded))
+//                        .foregroundColor(Color("brandOrange"))
                 }
                 .opacity(opacity)
             }

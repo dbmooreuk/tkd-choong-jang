@@ -9,6 +9,7 @@ import Foundation
 
 struct Move: Identifiable, Codable, Equatable {
     let id: Int
+    let moveNumber: String?
     let phase: String?
     let title: String
     let description: String
