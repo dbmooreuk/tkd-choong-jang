@@ -2,14 +2,14 @@
   "id": "choong-jang",
   "name": "Choong-Jang",
   "belt": "2nd Dan Black Belt",
-  "meaning": "Choong-Jang is the pseudonym of General Kim Duk Ryang who lived during the Lee Dynasty, 14th century.",
+  "meaning": "Choong-Jang is the pseudonym given to General Kim Duk Ryang who lived during the Yi Dynasty, 14th Century.This pattern ends with a left-hand attack to symbolise the tragedy of his death at 27 in prison before he was able to reach full maturity.",
   "numberOfMoves": 52,
   "moves": [
   {
     "id": 0,
     "moveNumber": "Start Position",
     "title": "Closed Ready Stance A",
-    "description": "Start in a closed ready stance A",
+    "description": "Keep your feet together. Maintain good posture with shoulders back and eyes forward.",
     "text1": null,
     "text2": null,
     "text3": null,
@@ -20,8 +20,8 @@
   {
     "id": 1,
     "moveNumber": "1",
-    "title": "Step R, Block",
-    "description": "Step right into a sitting stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
+    "title": "Block",
+    "description": "Move the right foot to a sitting stance while executing a right side front block, at the same time executing left downward block.",
     "text1": "Step/Right",
     "text2": "Face/12 o'clock",
     "text3": null,
@@ -32,8 +32,8 @@
   {
     "id": 2,
     "moveNumber": "2",
-    "title": "Block",
-    "description": "Stay in position. Perform a Side Front Block (Left hand).",
+    "title": "Side block",
+    "description": "Maintain a sitting stance. Execute a left side front block, at the same time executing right downward block.",
     "text1": "Face/12 o'clock",
     "text2": null,
     "text3": null,
@@ -44,24 +44,24 @@
   {
     "id": 3,
     "moveNumber": "3",
-    "title": "Slow Punch",
-    "description": "Bring Right foot to Left foot (Feet together). Angle Punch: Slowly punch across your chest to the Right (3:00) with your Right fist.",
+    "title": "Slow punch",
+    "description": "Bring right foot to left foot. Slowly execute an angle punch across your chest with your left fist.",
     "facing": 12,
-    "direction": 3
+    "direction": 9
   },
   {
     "id": 4,
     "moveNumber": "4",
-    "title": "Step L, Poke",
-    "description": "Step Forward (to 12:00) with Left foot. Double finger thrust to eyes (Right hand).",
+    "title": "Double finger thrust",
+    "description": "Step forward with the left foot to a walking stance while executing a reverse high section thrust with a double finger.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 5,
     "moveNumber": "5",
-    "title": "Step R, Poke",
-    "description": "Step Forward (to 12:00) with Right foot. Double finger thrust to eyes (Left hand).",
+    "title": "Double finger thrust",
+    "description": "Step forward with the right foot to a walking stance while executing a reverse high section thrust with a double finger.",
     "facing": 12,
     "direction": 12
   },
@@ -69,15 +69,15 @@
     "id": 6,
     "moveNumber": "6",
     "title": "Backfist",
-    "description": "Stay there. Strike Front (12:00) with Right Backfist.",
+    "description": "Maintain your foot position while executing a right fist front strike.",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 7,
     "moveNumber": "7",
-    "title": "Step L, Block",
-    "description": "Step Forward (to 12:00) with Left foot. Rising Block (Left arm).",
+    "title": "Rising block",
+    "description": "Step forward with the left foot to a walking stance while executing a outer forearm rising block",
     "facing": 12,
     "direction": 12
   },

@@ -56,10 +56,10 @@ struct PatternInfoView: View {
                 if let patternInfo = dataStore.patternInfo {
                     VStack(spacing: 24) {
                         // Pattern Name
-                        VStack(spacing: 8) {
+                        VStack(spacing: 12) {
                             Text(patternInfo.name)
                                 .font(.system(size: 26, weight: .bold, design: .rounded))
-                                .foregroundColor(Color("brandOrange"))
+                                .foregroundColor(.white)
 
                             Text(patternInfo.belt)
                                 .font(.system(size: 16, weight: .medium, design: .rounded))
@@ -73,10 +73,10 @@ struct PatternInfoView: View {
                         }
 
                         // Divider
-                        Rectangle()
-                            .fill(Color.orange.opacity(0.3))
-                            .frame(height: 1)
-                            .padding(.horizontal, 40)
+//                        Rectangle()
+//                            .fill(Color.orange.opacity(0.3))
+//                            .frame(height: 1)
+//                            .padding(.horizontal, 40)
 
                         // Meaning
                         Text(patternInfo.meaning)
@@ -84,7 +84,7 @@ struct PatternInfoView: View {
                             .foregroundColor(.white.opacity(0.9))
                             .multilineTextAlignment(.center)
                             .lineSpacing(6)
-                            .padding(.horizontal, 30)
+                            .padding(.horizontal, 0)
 
                         // Move Count
                         HStack(spacing: 12) {
