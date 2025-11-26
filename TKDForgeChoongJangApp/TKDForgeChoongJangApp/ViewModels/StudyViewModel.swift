@@ -12,7 +12,8 @@ import SwiftUI
 class StudyViewModel: ObservableObject {
     @Published var currentMoveIndex: Int = 0
     @Published var isVoiceControlEnabled: Bool = false
-    
+    @Published var isMovingForward: Bool = true
+
     private let dataStore: PatternDataStore
     private var cancellables = Set<AnyCancellable>()
     
@@ -35,25 +36,28 @@ class StudyViewModel: ObservableObject {
     
     func nextMove() {
         guard currentMoveIndex < dataStore.moves.count - 1 else { return }
+        isMovingForward = true
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             currentMoveIndex += 1
         }
     }
-    
+
     func previousMove() {
         guard currentMoveIndex > 0 else { return }
+        isMovingForward = false
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             currentMoveIndex -= 1
         }
     }
-    
+
     func goToMove(at index: Int) {
         guard index >= 0 && index < dataStore.moves.count else { return }
+        isMovingForward = index > currentMoveIndex
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             currentMoveIndex = index
         }
     }
-    
+
     func toggleVoiceControl() {
         isVoiceControlEnabled.toggle()
     }

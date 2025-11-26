@@ -110,8 +110,8 @@ struct StudyView: View {
 
                         MoveCard(move: move)
                             .transition(.asymmetric(
-                                insertion: .move(edge: .trailing).combined(with: .opacity),
-                                removal: .move(edge: .leading).combined(with: .opacity)
+                                insertion: .move(edge: viewModel.isMovingForward ? .trailing : .leading).combined(with: .opacity),
+                                removal: .move(edge: viewModel.isMovingForward ? .leading : .trailing).combined(with: .opacity)
                             ))
                             .id(move.id)
                     }
