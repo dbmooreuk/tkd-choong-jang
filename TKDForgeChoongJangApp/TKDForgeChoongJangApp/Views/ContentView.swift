@@ -33,6 +33,10 @@ struct ContentView: View {
                     // This should never happen, but provide a fallback
                     ProgressView()
                 }
+            case .settings:
+                SettingsView(storeManager: storeManager)
+            case .privacyPolicy:
+                PrivacyPolicyView()
             }
         }
         .onAppear {

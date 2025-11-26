@@ -44,9 +44,22 @@ struct PatternInfoView: View {
 
                     Spacer()
 
-                    // Placeholder for symmetry
-                    Color.clear
-                        .frame(width: 44, height: 44)
+                    Menu {
+                        Button("Settings") {
+                            appState.navigateToSettings()
+                        }
+                        Button("About") {
+                            appState.navigateToAbout()
+                        }
+                        Button("Privacy Policy") {
+                            appState.navigateToPrivacyPolicy()
+                        }
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(.white)
+                            .frame(width: 44, height: 44)
+                    }
                 }
                 .padding(.top, 16)
                 .padding(.horizontal, 20)

@@ -30,19 +30,36 @@ struct PatternListView: View {
                     }
 
                     Spacer()
-                    
+
                     Text("Patterns")
                         .font(.system(size: 24, weight: .bold, design: .rounded))
                         .foregroundColor(.white)
-                    
+
                     Spacer()
-                    
+
                     Button(action: {
                         Task {
                             await storeManager.restorePurchases()
                         }
                     }) {
                         Image(systemName: "arrow.clockwise")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(.white)
+                            .frame(width: 44, height: 44)
+                    }
+
+                    Menu {
+                        Button("Settings") {
+                            appState.navigateToSettings()
+                        }
+                        Button("About") {
+                            appState.navigateToAbout()
+                        }
+                        Button("Privacy Policy") {
+                            appState.navigateToPrivacyPolicy()
+                        }
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(.white)
                             .frame(width: 44, height: 44)

@@ -151,14 +151,20 @@ class VoiceControlManager: NSObject, ObservableObject {
 
     func speak(_ text: String) {
         let utterance = AVSpeechUtterance(string: text)
+
+        let defaults = UserDefaults.standard
+        let rate = defaults.double(forKey: "speechRate")
+        let pitch = defaults.double(forKey: "speechPitch")
+        let volume = defaults.double(forKey: "speechVolume")
+
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.5
-        utterance.pitchMultiplier = 1.0
-        utterance.volume = 1.0
-        
+        utterance.rate = rate == 0 ? 0.5 : Float(rate)
+        utterance.pitchMultiplier = pitch == 0 ? 1.0 : Float(pitch)
+        utterance.volume = volume == 0 ? 1.0 : Float(volume)
+
         synthesizer.speak(utterance)
     }
-    
+
     func stopSpeaking() {
         synthesizer.stopSpeaking(at: .immediate)
     }

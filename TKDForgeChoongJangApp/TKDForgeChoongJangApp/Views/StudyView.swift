@@ -13,6 +13,7 @@ struct StudyView: View {
     @ObservedObject var viewModel: StudyViewModel
     @StateObject private var voiceControl = VoiceControlManager()
     @State private var showingMoveList = false
+    @AppStorage("autoPlayMoveAudio") private var autoPlayMoveAudio: Bool = true
 
     var body: some View {
         ZStack {
@@ -52,6 +53,23 @@ struct StudyView: View {
                             showingMoveList.toggle()
                         }) {
                             Image(systemName: "list.bullet")
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(.white)
+                                .frame(width: 44, height: 44)
+                        }
+
+                        Menu {
+                            Button("Settings") {
+                                appState.navigateToSettings()
+                            }
+                            Button("About") {
+                                appState.navigateToAbout()
+                            }
+                            Button("Privacy Policy") {
+                                appState.navigateToPrivacyPolicy()
+                            }
+                        } label: {
+                            Image(systemName: "line.3.horizontal")
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundColor(.white)
                                 .frame(width: 44, height: 44)
@@ -160,9 +178,9 @@ struct StudyView: View {
                         .environmentObject(dataStore)
                 }
                 .onChange(of: viewModel.currentMove) { _, newMove in
-                    // Only speak when the user explicitly changes moves
-                    // via buttons or voice command handlers.
-                    if viewModel.isVoiceControlEnabled, let move = newMove {
+                    // Auto-play audio for each move when voice control is enabled
+                    // and the user has turned on auto-play in Settings.
+                    if viewModel.isVoiceControlEnabled && autoPlayMoveAudio, let move = newMove {
                         voiceControl.speak(move.description)
                     }
                 }

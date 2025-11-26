@@ -14,18 +14,22 @@ enum AppScreen: Equatable {
     case patternList
     case patternInfo(patternId: String)
     case study
+    case settings
+    case privacyPolicy
 }
 
 class AppState: ObservableObject {
     @Published var currentScreen: AppScreen = .splash
     @Published var showingSplash = true
     @Published var selectedPatternId: String?
+    @Published private(set) var lastMainScreen: AppScreen = .about
 
     func completeSplash() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             withAnimation(.easeInOut(duration: 0.5)) {
                 self.showingSplash = false
                 self.currentScreen = .about
+                self.lastMainScreen = .about
             }
         }
     }
@@ -33,12 +37,14 @@ class AppState: ObservableObject {
     func navigateToAbout() {
         withAnimation {
             currentScreen = .about
+            lastMainScreen = .about
         }
     }
 
     func navigateToPatternList() {
         withAnimation {
             currentScreen = .patternList
+            lastMainScreen = .patternList
         }
     }
 
@@ -46,12 +52,26 @@ class AppState: ObservableObject {
         selectedPatternId = patternId
         withAnimation {
             currentScreen = .patternInfo(patternId: patternId)
+            lastMainScreen = .patternInfo(patternId: patternId)
         }
     }
 
     func navigateToStudy() {
         withAnimation {
             currentScreen = .study
+            lastMainScreen = .study
+        }
+    }
+
+    func navigateToSettings() {
+        withAnimation {
+            currentScreen = .settings
+        }
+    }
+
+    func navigateToPrivacyPolicy() {
+        withAnimation {
+            currentScreen = .privacyPolicy
         }
     }
 
@@ -70,8 +90,14 @@ class AppState: ObservableObject {
                 currentScreen = .about
             case .about:
                 currentScreen = .splash
-            default:
+            case .settings, .privacyPolicy:
+                currentScreen = lastMainScreen
+            case .splash:
                 break
+            }
+
+            if currentScreen != .settings && currentScreen != .privacyPolicy {
+                lastMainScreen = currentScreen
             }
         }
     }
