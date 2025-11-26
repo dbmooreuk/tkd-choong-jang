@@ -14,7 +14,7 @@ struct Move: Identifiable, Codable, Equatable {
     let description: String
     let pdfPage: Int?
     let facing: Int
-    let direction: Int
+    let direction: Int?
     let stanceDetails: String?
     let text1: String?
     let text2: String?

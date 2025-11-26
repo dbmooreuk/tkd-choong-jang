@@ -26,8 +26,9 @@ struct PatternListView: View {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(.white)
+                            .frame(width: 44, height: 44)
                     }
-                    
+
                     Spacer()
                     
                     Text("Patterns")
@@ -44,11 +45,14 @@ struct PatternListView: View {
                         Image(systemName: "arrow.clockwise")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(.white)
+                            .frame(width: 44, height: 44)
                     }
                 }
-                .padding()
+                .padding(.top, 16)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 10)
                 .background(Color.black.opacity(0))
-                
+
                 // Pattern List
                 ScrollView {
                     VStack(spacing: 16) {

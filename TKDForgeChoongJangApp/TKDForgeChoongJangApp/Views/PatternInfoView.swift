@@ -26,15 +26,16 @@ struct PatternInfoView: View {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(.white)
+                            .frame(width: 44, height: 44)
                     }
 
                     Spacer()
 
                     VStack(spacing: 4) {
-                        Image("logo_tkd_forge")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 60, height: 60)
+//                        Image("logo_tkd_forge")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 44, height: 44)
 
 //                        Text("TKD FORGE")
 //                            .font(.system(size: 16, weight: .bold, design: .rounded))
@@ -47,10 +48,10 @@ struct PatternInfoView: View {
                     Color.clear
                         .frame(width: 44, height: 44)
                 }
-                .padding(.horizontal)
-                .padding(.top, 0)
-                .padding(.bottom, 20)
-                
+                .padding(.top, 16)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 10)
+
                 // Pattern Info Card
                 if let patternInfo = dataStore.patternInfo {
                     VStack(spacing: 24) {
@@ -151,7 +152,7 @@ struct PatternInfoView: View {
                     .background(Color("brandOrange"))
                   
                     .cornerRadius(30)
-                    .shadow(color: .orange.opacity(0.4), radius: 15, x: 0, y: 8)
+//                    .shadow(color: .orange.opacity(0.4), radius: 15, x: 0, y: 8)
                 }
                 .padding(.horizontal, 30)
                 .padding(.bottom, 50)

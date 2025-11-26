@@ -58,8 +58,8 @@ struct StudyView: View {
                         }
                     }
                     .padding(.horizontal, 20)
-                    .padding(.top, 50)
-                    .padding(.bottom, 20)
+                    .padding(.top, 16)
+                    .padding(.bottom, 10)
 
                     // Progress Bar
                     ProgressView(value: viewModel.progress)
@@ -135,7 +135,7 @@ struct StudyView: View {
                         }
                         .disabled(viewModel.currentMoveIndex >= dataStore.moves.count - 1)
                     }
-                    .padding(.bottom, 50)
+                    .padding(.bottom, 0)
                 }
                 .sheet(isPresented: $showingMoveList) {
                     MoveListView(viewModel: viewModel)

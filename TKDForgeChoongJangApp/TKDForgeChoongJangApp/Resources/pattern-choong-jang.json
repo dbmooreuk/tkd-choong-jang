@@ -6,26 +6,37 @@
   "numberOfMoves": 52,
   "moves": [
   {
+        "id": 0,
+    "title": "Start Position",
+    "description": "Closed Stance A",
+    "text1": null,
+    "text2": null,
+    "text3": null,
+    "text4": null,
+    "facing": 12,
+    "direction": null
+  },
+  {
     "id": 1,
     "title": "Step R, Block",
-    "description": "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
-    "text1": "Turn/Right",
+    "description": "Step right into a sitting stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
+    "text1": "Step/Right",
     "text2": "Face/12 o'clock",
-    "text3": "Slide back/6 o'clock",
-    "text4": "Jump back/6 o'clock",
+    "text3": null,
+    "text4": null,
     "facing": 12,
     "direction": 3
   },
   {
     "id": 2,
     "title": "Block",
-    "description": "Stay there. Side Front Block (Left hand).",
-    "text1": "Turn/Left",
-    "text2": "Face/12 o'clock",
-    "text3": "Slide back/6 o'clock",
-    "text4": "Jump back/6 o'clock",
+    "description": "Stay in position. Perform a Side Front Block (Left hand).",
+    "text1": "Face/12 o'clock",
+    "text2": null,
+    "text3": null,
+    "text4": null,
     "facing": 12,
-    "direction": 3
+    "direction": null
   },
   {
     "id": 3,

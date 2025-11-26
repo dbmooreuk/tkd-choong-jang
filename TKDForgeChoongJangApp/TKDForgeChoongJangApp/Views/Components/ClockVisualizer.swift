@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClockVisualizer: View {
     let facing: Int
-    let direction: Int
+    let direction: Int?
 
     private let clockSize: CGFloat = 200
 
@@ -47,7 +47,9 @@ struct ClockVisualizer: View {
                 .rotationEffect(.degrees(facingRotationAngle))
 
             // Direction arrow (Red Dashed)
-            DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: true, size: clockSize)
+            if let direction = direction {
+                DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: true, size: clockSize)
+            }
 
             // Facing arrow (Blue Solid)
             DirectionArrow(hour: facing, color: Color("brandBlue"), isDashed: false, size: clockSize)
