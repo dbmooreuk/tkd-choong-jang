@@ -14,6 +14,7 @@ struct StudyView: View {
     @StateObject private var voiceControl = VoiceControlManager()
     @State private var showingMoveList = false
     @AppStorage("autoPlayMoveAudio") private var autoPlayMoveAudio: Bool = true
+    @State private var dragOffset: CGFloat = 0
 
     var body: some View {
         ZStack {
@@ -109,6 +110,8 @@ struct StudyView: View {
                         }
 
                         MoveCard(move: move)
+                            .offset(x: dragOffset)
+                            .gesture(moveDragGesture)
                             .transition(.asymmetric(
                                 insertion: .move(edge: viewModel.isMovingForward ? .trailing : .leading).combined(with: .opacity),
                                 removal: .move(edge: viewModel.isMovingForward ? .leading : .trailing).combined(with: .opacity)
@@ -185,6 +188,25 @@ struct StudyView: View {
                     }
                 }
         }
+    }
+
+    private var moveDragGesture: some Gesture {
+        DragGesture()
+            .onChanged { value in
+                dragOffset = value.translation.width
+            }
+            .onEnded { value in
+                let translation = value.translation.width
+                let threshold: CGFloat = 60
+                if translation < -threshold {
+                    viewModel.nextMove()
+                } else if translation > threshold {
+                    viewModel.previousMove()
+                }
+                withAnimation(.spring(response: 0.25, dampingFraction: 0.7)) {
+                    dragOffset = 0
+                }
+            }
     }
 }
 
