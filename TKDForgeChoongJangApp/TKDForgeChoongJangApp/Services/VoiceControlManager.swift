@@ -150,6 +150,11 @@ class VoiceControlManager: NSObject, ObservableObject {
     }
 
     func speak(_ text: String) {
+        // Always cancel any in-progress or queued speech before starting
+        // a new utterance so that moves don't "stack up" when the user
+        // navigates quickly.
+        synthesizer.stopSpeaking(at: .immediate)
+
         let utterance = AVSpeechUtterance(string: text)
 
         let defaults = UserDefaults.standard

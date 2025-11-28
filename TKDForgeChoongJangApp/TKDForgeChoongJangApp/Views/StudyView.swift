@@ -125,6 +125,7 @@ struct StudyView: View {
                     HStack(spacing: 86) {
                         // Previous Button
                         Button(action: {
+                            voiceControl.stopSpeaking()
                             viewModel.previousMove()
                         }) {
                             Image(systemName: "chevron.left.circle.fill")
@@ -141,9 +142,11 @@ struct StudyView: View {
 
                                 // Setup voice commands inline
                                 voiceControl.onNextCommand = {
+                                    voiceControl.stopSpeaking()
                                     viewModel.nextMove()
                                 }
                                 voiceControl.onBackCommand = {
+                                    voiceControl.stopSpeaking()
                                     viewModel.previousMove()
                                 }
                                 voiceControl.onRepeatCommand = {
@@ -166,6 +169,7 @@ struct StudyView: View {
 
                         // Next Button
                         Button(action: {
+                            voiceControl.stopSpeaking()
                             viewModel.nextMove()
                         }) {
                             Image(systemName: "chevron.right.circle.fill")
@@ -199,8 +203,10 @@ struct StudyView: View {
                 let translation = value.translation.width
                 let threshold: CGFloat = 60
                 if translation < -threshold {
+                    voiceControl.stopSpeaking()
                     viewModel.nextMove()
                 } else if translation > threshold {
+                    voiceControl.stopSpeaking()
                     viewModel.previousMove()
                 }
                 withAnimation(.spring(response: 0.25, dampingFraction: 0.7)) {
