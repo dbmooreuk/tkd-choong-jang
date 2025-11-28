@@ -113,7 +113,7 @@ struct MoveCard: View {
             if let korean = move.korean, !korean.isEmpty {
                 Text(korean)
                     .font(.system(size: 18, weight: .medium, design: .rounded))
-                    .foregroundColor(.white.opacity(0.85))
+                    .foregroundColor(.white.opacity(1))
                     .multilineTextAlignment(.center)
             }
 

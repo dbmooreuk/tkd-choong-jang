@@ -132,19 +132,20 @@ class VoiceControlManager: NSObject, ObservableObject {
             return
         }
 
-        // Prevent a feedback loop where the app hears its own spoken
-        // instructions and keeps auto-advancing through the moves.
-        // Only react to other commands when the synthesizer is not speaking.
-        guard !synthesizer.isSpeaking else { return }
+        let isSpeaking = synthesizer.isSpeaking
 
         if cmd.contains("next") {
             onNextCommand?()
         } else if cmd.contains("back") || cmd.contains("previous") {
             onBackCommand?()
-        } else if cmd.contains("repeat") || cmd.contains("again") ||
-                    cmd.contains("start") || cmd.contains("play") {
-            // Treat "start" and "play" the same as "repeat":
-            // read out the current move from the current card.
+        } else if cmd.contains("repeat") || cmd.contains("again") {
+            onRepeatCommand?()
+        } else if (cmd.contains("start") || cmd.contains("play")) && !isSpeaking {
+            // Treat "start" and "play" the same as "repeat", but only
+            // when the app is not currently speaking. This avoids a
+            // feedback loop from phrases like "Start in a closed ready
+            // stance" being read out by the synthesizer and heard as a
+            // fresh command.
             onRepeatCommand?()
         }
     }
