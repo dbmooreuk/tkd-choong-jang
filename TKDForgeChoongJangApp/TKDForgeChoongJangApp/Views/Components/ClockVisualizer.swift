@@ -11,8 +11,12 @@ struct ClockVisualizer: View {
     let facing: Int
     let direction: Int?
 
+    @AppStorage("clockFigureStyle") private var clockFigureStyle: String = "male"
     private let clockSize: CGFloat = 200
 
+    private var figureImageName: String {
+        clockFigureStyle == "female" ? "female" : "man"
+    }
 
     private var facingRotationAngle: Double {
         Double(facing % 12) * 30
@@ -39,8 +43,8 @@ struct ClockVisualizer: View {
                 .frame(width: 12, height: 12)
 
 
-            // Center man figure (rotates with facing)
-            Image("man")
+            // Center figure (rotates with facing)
+            Image(figureImageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: clockSize * 0.4, height: clockSize * 0.4)
@@ -93,24 +97,12 @@ struct DirectionArrow: View {
     private var angle: Double { Double(hour) * 30 - 90 }
     private var radius: CGFloat { size / 2 - 30 }
 
+    // Small bobbing animation along the pointing direction
+    @State private var bobOffset: CGFloat = 0
+
     var body: some View {
         ZStack {
-            // Arrow line from the center of the clock outwards
-            if isDashed {
-                Path { path in
-                    path.move(to: CGPoint(x: size / 2, y: size / 2))
-                    path.addLine(to: CGPoint(x: size / 2 + radius, y: size / 2))
-                }
-                .stroke(color, style: StrokeStyle(lineWidth: 3, dash: [8, 6]))
-            } else {
-                Path { path in
-                    path.move(to: CGPoint(x: size / 2, y: size / 2))
-                    path.addLine(to: CGPoint(x: size / 2 + radius, y: size / 2))
-                }
-                .stroke(color, lineWidth: 3)
-            }
-
-            // Arrow head at the end of the line
+            // Arrow head only (no stem), positioned near the edge of the clock
             Path { path in
                 let tip = CGPoint(x: size / 2 + radius, y: size / 2)
                 path.move(to: tip)
@@ -121,7 +113,15 @@ struct DirectionArrow: View {
             .fill(color)
         }
         .frame(width: size, height: size)
+        // Offset along the x‑axis, then rotate so the bobbing is along the
+        // direction the arrow is pointing.
+        .offset(x: bobOffset)
         .rotationEffect(.degrees(angle))
+        .onAppear {
+            withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
+                bobOffset = 6
+            }
+        }
     }
 }
 

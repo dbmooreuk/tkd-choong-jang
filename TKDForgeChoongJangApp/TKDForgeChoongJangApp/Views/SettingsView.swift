@@ -17,6 +17,7 @@ struct SettingsView: View {
     @AppStorage("speechRate") private var speechRate: Double = 0.5
     @AppStorage("speechPitch") private var speechPitch: Double = 1.0
     @AppStorage("speechVolume") private var speechVolume: Double = 1.0
+    @AppStorage("clockFigureStyle") private var clockFigureStyle: String = "male"
 
     var body: some View {
         ZStack {
@@ -29,6 +30,7 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: 16) {
                         audioSection
+                        clockFigureSection
                         permissionsSection
                         purchasesSection
                     }
@@ -119,6 +121,25 @@ struct SettingsView: View {
                     .font(.caption)
                     .foregroundColor(.white.opacity(0.7))
             }
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color("brandDarkOverlay"))
+        )
+    }
+
+    private var clockFigureSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Clock Figure")
+                .font(.headline)
+                .foregroundColor(.white)
+
+            Picker("Figure", selection: $clockFigureStyle) {
+                Text("Male").tag("male")
+                Text("Female").tag("female")
+            }
+            .pickerStyle(.segmented)
         }
         .padding()
         .background(
