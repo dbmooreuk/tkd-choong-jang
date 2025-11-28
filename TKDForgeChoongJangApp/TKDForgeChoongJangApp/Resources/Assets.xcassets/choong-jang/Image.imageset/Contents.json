@@ -1,7 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "male.svg",
+      "compression-type" : "gpu-optimized-smallest",
+      "filename" : "moa-junbi-sogi-a-a.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,5 +18,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
