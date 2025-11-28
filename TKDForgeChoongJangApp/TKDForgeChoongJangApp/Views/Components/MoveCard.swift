@@ -109,6 +109,14 @@ struct MoveCard: View {
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
 
+            // Korean name (optional)
+            if let korean = move.korean, !korean.isEmpty {
+                Text(korean)
+                    .font(.system(size: 18, weight: .medium, design: .rounded))
+                    .foregroundColor(.white.opacity(0.85))
+                    .multilineTextAlignment(.center)
+            }
+
             // Move Description
             ScrollView {
                 VStack(spacing: 12) {
@@ -198,6 +206,7 @@ struct DirectionHintRow: View {
             moveNumber: "1",
             phase: "Phase 1: Opening Attacks",
             title: "Step R, Block",
+            korean: "Saju Jirugi",
             description: "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
             pdfPage: 14,
             facing: 12,

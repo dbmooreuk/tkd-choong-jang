@@ -12,6 +12,7 @@ struct Move: Identifiable, Codable, Equatable {
     let moveNumber: String?
     let phase: String?
     let title: String
+    let korean: String?
     let description: String
     let pdfPage: Int?
     let facing: Int
