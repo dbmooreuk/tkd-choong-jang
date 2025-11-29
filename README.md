@@ -149,20 +149,19 @@ Required for App Store submission. Must include:
 
 ### App Store Description Template
 ```
-Master the Choong-Jang pattern with TKD Forge!
+Master patterns with TKD Forge!
 
-Perfect for 2nd Dan Black Belt students, this app provides:
-• 52 detailed move breakdowns
+Perfect for white belts to Black Belt students, this app provides:
+• Move breakdowns
 • Innovative directional clock system
 • Hands-free voice control
 • Beautiful dark mode interface
-• Progress tracking
 
 Practice anywhere, anytime. Your path to mastery starts here.
 ```
 
 ### Pricing
-- Recommended: £5.00 (as specified)
+- Recommended: free - in app pattern purchases
 - Category: Education or Health & Fitness
 - Age Rating: 4+
 

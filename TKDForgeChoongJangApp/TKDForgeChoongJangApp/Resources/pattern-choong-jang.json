@@ -22,8 +22,9 @@
   {
     "id": 1,
     "moveNumber": "1",
-    "title": "Block",
-    "description": "Move the right foot to 3 o'clock into sitting stance while executing a right side front block with the inner forearm, at the same time executing left downward block.",
+    "title": "Side front block",
+    "description": "Move the right foot to 3 o'clock into sitting stance. Right side front block with the inner forearm, at the same time executing left downward block.",
+    "korean": "annun so an palmok yopap makgi",
     "text1": null,
     "text2": null,
     "text3": null,
@@ -34,9 +35,10 @@
   {
     "id": 2,
     "moveNumber": "2",
-    "title": "Side block",
-    "description": "Maintain a sitting stance. Execute a left side front block with the inner forearm., at the same time executing right downward block.",
-    "text1": null,
+    "title": "Side front block",
+    "description": "Stay in sitting stance. Left side front block with the inner forearm., at the same time executing right downward block.",
+     "korean": "annun so an palmok yopap makgi",
+     "text1": null,
     "text2": null,
     "text3": null,
     "text4": null,
@@ -46,32 +48,36 @@
   {
     "id": 3,
     "moveNumber": "3",
-    "title": "Slow punch",
-    "description": "Bring right foot to left foot. Slowly execute an angle punch across your chest with your left fist.",
+    "title": "Angle punch",
+     "korean": "moa so giokja jirugi",
+     "description": "Bring right foot to left foot. Slowly execute a left angle punch across your chest.",
     "facing": 12,
     "direction": 9
   },
   {
     "id": 4,
     "moveNumber": "4",
-    "title": "Double finger thrust",
-    "description": "Step forward with the left foot to a walking stance while executing a reverse high section thrust with a double finger.",
+    "title": "High double finger thrust",
+     "korean": "gunnun so doo sangarak nopunde tulgi",
+     "description": "Step forward to 12 o'clock with the left foot to a walking stance. Right reverse high section double finger thrust.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 5,
     "moveNumber": "5",
-    "title": "Double finger thrust",
-    "description": "Step forward with the right foot to a walking stance while executing a reverse high section thrust with a double finger.",
-    "facing": 12,
-    "direction": 12
+    "title": "High double finger thrust",
+     "korean": "gunnun so doo sangarak nopunde tulgi",
+     "description": "Step forward to 12 o'clock with the right foot to a walking stance. Left reverse high section double finger thrust.",
+    "direction": 12,
+    "facing": 12
   },
   {
     "id": 6,
     "moveNumber": "6",
-    "title": "Backfist",
-    "description": "Maintain your foot position while executing a right fist front strike.",
+    "title": "Backfist front strike",
+     "korean": "gunnun so dung joomuk ap taerigi",
+     "description": "Maintain your position. Right fist front strike.",
     "facing": 12,
     "direction": null
   },
@@ -79,370 +85,425 @@
     "id": 7,
     "moveNumber": "7",
     "title": "Rising block",
-    "description": "Step forward with the left foot to a walking stance while executing a outer forearm rising block",
+     "korean": "gunnun so bakat palmok chookyo makgi",
+     "description": "Step forward to 12 o'clock with the left foot to a walking stance. Left outer forearm rising block.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 8,
     "moveNumber": "8",
-    "title": "Step R, Punch",
-    "description": "Step Forward (to 12:00) with Right foot. Middle Punch (Right fist).",
+    "title": "Middle punch",
+     "korean": "gunnun so kaunde ap jirugi",
+     "description": "Step forward to 12 0'clock with right foot. Right middle punch.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 9,
     "moveNumber": "9",
-    "title": "Slide Back",
-    "description": "Slide/Step Backwards (towards 6:00). Land in an L-Stance, but keep facing the Front (12:00). Guarding Block.",
+    "title": "Forearm guarding block",
+     "korean": "niunja so palmok kaunde daebi makgi",
+     "description": "Turn left 360 degrees facing 12 o'clock. Slide back to 6 o'clock. L-stance middle section forearm guarding block.",
     "facing": 12,
     "direction": 6
   },
   {
     "id": 10,
     "moveNumber": "10",
-    "title": "Kick",
-    "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
+    "title": "Front low snap kick",
+     "korean": "najunde apcha busigi",
+     "description": "Low snap kick to 12 o'clock with the right foot.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 11,
     "moveNumber": "11",
-    "title": "Spear Hand",
-    "description": "Land forward in a Low Stance. Spear Finger Thrust to Front (12:00).",
+    "title": "High flat fingertip thrust",
+     "korean": "nachuo so opun sonkut nopunde tulgi",
+     "description": "Land after the snap kick in low stance. Right high flat fingertip thrust.",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 12,
     "moveNumber": "12",
-    "title": "Ground Kick",
-    "description": "Drop to your Left Knee. Place both hands on the floor. Execute a High Turning Kick with your Right foot towards the Front (12:00).",
+    "title": "High turning kick",
+     "korean": "nopunde dollyo chagi",
+     "description": "Drop to your left knee turning the body to 10 o'clock. Place both hands on the floor. High right turning kick to 12 o'clock.",
     "facing": 12,
-    "direction": 12,
+    "direction": null,
     "stanceDetails": "Signature Move: Keep hands planted."
   },
   {
     "id": 13,
     "moveNumber": "13",
-    "title": "Ground Punch",
-    "description": "Land the kicking foot forward. Keep Left hand on the floor. Punch high with Right Fist to Front (12:00).",
+    "title": "High punch",
+     "korean": "nopunde ap jirugi",
+     "description": "Land the kicking foot forward. Keep left hand on the floor. Right high punch to 12 o'clock.",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 14,
     "moveNumber": "14",
-    "title": "Turn & Elbow",
-    "description": "Stand up and turn Right (180°) to face the Back (6:00). Strike with your Left Elbow backwards (towards the Front/12:00). Looking over shoulder.",
+    "title": "Side elbow thrust",
+     "korean": "niunja so yop palkup tulgi",
+     "description": "Stand and pivot on right foot to face 6 o'clock. Move left foot to form an l-stance. Left side elbow thrust. Looking over left shoulder.",
     "facing": 6,
     "direction": 12
   },
   {
     "id": 15,
     "moveNumber": "15",
-    "title": "Turn & Guard",
-    "description": "Pivot on your feet, turning Right to face Front (12:00) again. L-Stance. Guarding Block.",
+    "title": "Forearm guarding block",
+     "korean": "niunja so palmok kaunde daebi makgi",
+     "description": "Pivot on right foot 180 degrees left to face 12 o'clock.  Left l-stance forearm guarding block.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 16,
     "moveNumber": "16",
-    "title": "Step Back",
-    "description": "Step Backwards (towards 6:00). L-Stance facing Front. Scooping Block (Left palm).",
+    "title": "Palm scooping block",
+     "korean": "niunja so sonbadak duro makgi",
+     "description": "Step back with the right foot to 6 o'clock into an l-stance. Left palm scooping block.",
     "facing": 12,
     "direction": 6
   },
   {
     "id": 17,
     "moveNumber": "17",
-    "title": "Step Back",
-    "description": "Step Backwards (towards 6:00). L-Stance facing Front. Knife-hand Strike (Right hand).",
+    "title": "Right knife-hand middle outward strike",
+     "korean": "niunja so sonkal kaunde bakuro taerigi",
+     "description": "Step back with the left foot to 6 o'clock into an l-stance. Right knife-hand middle section outward strike.",
     "facing": 12,
     "direction": 6
   },
   {
     "id": 18,
     "moveNumber": "18",
-    "title": "Turn X-Block",
-    "description": "Turn Left (180°) to face the Back (6:00). Step Left. X-Fist Pressing Block.",
+    "title": "X-fist pressing block",
+     "korean": "gunnun so kyocha joomuk kaunde noollo makgi",
+     "description": "Turn left by pivoting on the right foot 180 degrees to face 6 o'clock. Left foot to walking stance. X-Fist pressing block.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 19,
     "moveNumber": "19",
-    "title": "Knee Kick",
-    "description": "Grab head and smash Right Knee towards Back (6:00).",
+    "title": "Knee snap kick",
+     "korean": "moorup najunde apcha busigi",
+     "description": "Simulate grabbing head, pull hands to hip and smash right knee up.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 20,
     "moveNumber": "20",
-    "title": "Turn & Guard",
-    "description": "Land foot. Turn Left (180°) to face Front (12:00). Guarding Block.",
+    "title": "Knife-hand guarding block",
+     "korean": "niunja so sonkal kaunde daebi makgi",
+     "description": "Land foot behind left. Pivot on the right foot left 180 degrees to 12 o'clock. Right l-stance knife-hand guardng block.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 21,
     "moveNumber": "21",
-    "title": "Slide & Elbow",
-    "description": "Slide your Right foot forward. Turn your body to face the Back (6:00). Strike with Right Elbow backwards (towards Front/12:00).",
+    "title": "Right side elbow thrust",
+     "korean": "niunja so yop palkup tulgi",
+     "description": "Slide your Right foot forward. Turn your body to face 6 o'clock. Right elbow strike to 12 o'clock.",
     "facing": 6,
     "direction": 12
   },
   {
     "id": 22,
     "moveNumber": "22",
-    "title": "Turn & Guard",
-    "description": "Pivot Left to face Front (12:00). Guarding Block.",
+    "title": "Knife-hand guarding block",
+     "korean": "niunja so sonkal",
+     "description": "Pivot 180 degrees on the left foot to face 12 o'clock. Left l-stance knife-hand guarding block.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 23,
     "moveNumber": "23",
-    "title": "Side Kick",
-    "description": "Side Piercing Kick (Right foot) to Front (12:00).",
+    "title": "Side piercing kick",
+     "korean": "kaunde yopcha jirugi",
+     "description": "Right side piercing kick to 12 o'clock.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 24,
     "moveNumber": "24",
-    "title": "Land & Press",
-    "description": "Land the kick. Pivot to face the Back (6:00). Rear Foot Stance. Twin Palm Pressing Block.",
+    "title": "Twin palm pressing block",
+     "korean": "dwitbal so sang sonbadak noollo makgi",
+     "description": "Place the right leg behind the left. Pivot 180 degrees left on the right foot to 6 o'clock. Rear foot stance. Twin palm pressing block.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 25,
     "moveNumber": "25",
-    "title": "Step & Strike",
-    "description": "Step forward to Back (6:00). High Block, then Backfist Strike (Right hand).",
+    "title": "Forearm block & backfist strike",
+     "korean": "gunnun so bakat palmok/dung joomuk nopunde yop taerigi",
+     "description": "Step forward with the right foot to 6 o'clock in a walking stance. Right front high outer forearm block. Followed by a backfist high side strike.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 26,
     "moveNumber": "26",
-    "title": "Turn & Spear",
-    "description": "Turn Left (180°) to face Front (12:00). High Spear Finger Thrust (Left hand).",
+    "title": "High flat fingertip thrust",
+     "korean": "niunja so opun sonkut nopunde tulgi",
+     "description": "Pivot 180 degrees left on the right foot to 12 o'clock. L-stance high flat fingertip thrust.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 27,
     "moveNumber": "27",
-    "title": "Kick",
-    "description": "Low Front Snap Kick (Right foot) to Front (12:00).",
+    "title": "Front low snap kick",
+     "korean": "najunde apcha busigi",
+     "description": "Place the left palm on top of the back of the right hand. Front low snap kick.",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 28,
     "moveNumber": "28",
-    "title": "Land & Turn",
-    "description": "Land the kick. Pivot your feet to face the Back (6:00). Slow motion stance preparation.",
+    "title": "Right elbow thrust",
+     "korean": "gunnun so palkup dwit tulgi",
+     "description": "Retract leg. Pivot left 180 degrees on the left foot to face 6 o'clock. Pull the hands to the right hip in an elbow thrust.  Slide right leg back.",
     "facing": 6,
-    "direction": 6
+    "direction": 12
   },
   {
     "id": 29,
     "moveNumber": "29",
-    "title": "Stamp & Strike",
-    "description": "Stamp forward to Back (6:00). Back Hand Downward Strike (Left hand).",
+    "title": "Back hand downward strike",
+     "korean": "niunja so sondung naeryo taerigi",
+     "description": "Raise & stamp with the left foot into a right l-stance to 6 o'clock. Left back hand downward strike.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 30,
     "moveNumber": "30",
-    "title": "Palm Smash",
-    "description": "Stay facing Back. Smash Right Fist into Left Palm.",
+    "title": "Punch palm",
+     "korean": "niunja so jirugi",
+     "description": "Stay in position. Punch into the left palm.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 31,
     "moveNumber": "31",
-    "title": "Stamp & Strike",
-    "description": "Step and Stamp forward to Back (6:00). Back Hand Downward Strike (Right hand).",
+    "title": "Back hand downward strike",
+     "korean": "niunja so sondung naeryo taerigi",
+     "description": "Raise & stamp with the right foot into a left l-stance to 6 o'clock. Right back hand downward strike.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 32,
     "moveNumber": "32",
-    "title": "Palm Smash",
-    "description": "Stay facing Back. Smash Left Fist into Right Palm.",
+    "title": "Palm punch",
+     "korean": "niunja so jirugi",
+     "description": "Stay in position. Punch into the right palm.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 33,
     "moveNumber": "33",
-    "title": "Turn & Stamp",
-    "description": "Turn Left (180°) to face Front (12:00). Stamp. Knife Hand Strike (Left).",
+    "title": "Knife-hand outward strike",
+     "korean": "niunja so sonkal kaunde bakuro taerigi",
+     "description": "Pivot on the right foot left 180 degrees to 12 o'clock. Stamp with the left foot into a right l-stance. Knife-hand outward strike.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 34,
     "moveNumber": "34",
-    "title": "Slip & Backfist",
-    "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Right).",
+    "title": "Left backfist high side front strike",
+     "korean": "gunnun so dung joomuk nopunde yopcha taerigi",
+     "description": "Stay in place & slip the left foot to a walking stance facing 12 o'clock. Left backfist high side front strike",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 35,
     "moveNumber": "35",
-    "title": "Step & Stamp",
-    "description": "Step forward towards Front (12:00). Stamp. Knife Hand Strike (Right).",
+    "title": "Middle knife-hand outward strike.",
+     "korean": "niunja so sonkal kaunde bakuro taerigi",
+     "description": "Raise & stamp with the right foot into a left l-stance to 12 o'clock. Right knife-hand middle outward strike.",
     "facing": 12,
     "direction": 12
   },
   {
     "id": 36,
     "moveNumber": "36",
-    "title": "Slip & Backfist",
-    "description": "Slip (slide) forward towards Front (12:00). Backfist Strike (Left).",
+    "title": "Left backfist high side front strike",
+     "korean": "niunja so dung joomuk nopunde yopcha taerigi",
+     "description": "Stay in place & slip the right foot to a walking stance facing 12 o'clock. Left backfist high side front strike.  Palm on the elbow.",
     "facing": 12,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 37,
     "moveNumber": "37",
-    "title": "Turn Low Block",
-    "description": "Turn Left (180°) to face Back (6:00). Low Reverse Knife-hand Block.",
+    "title": "Low reverse knife-hand block",
+     "korean": "niunja so sonkal dung najunde daebi makgi",
+     "description": "Pivot left 180 degrees on the right foot to face 6 o'clock. Left l-stance. Low reverse knife-hand block.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 38,
     "moveNumber": "38",
-    "title": "9-Block",
-    "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
+    "title": "Right 9-shape block",
+     "korean": "gunnun so gutja makgi",
+     "description": "Stay in place & slip the left foot into walking stance. Right 9-shape block. Right arm down.",
     "facing": 6,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 39,
     "moveNumber": "39",
-    "title": "Step Low Block",
-    "description": "Step forward towards Back (6:00). Low Reverse Knife-hand Block.",
+    "title": "Low reverse knife-hand block",
+     "korean": "niunja so sonkal dung najunde daebi makgi",
+     "description": "Step forwards with the right foot to 6 o'clock. Right l-stance. Low reverse knife-hand block.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 40,
     "moveNumber": "40",
-    "title": "9-Block",
-    "description": "Slip backwards (towards 12:00) but keep facing Back (6:00). 9-Shape Block.",
+    "title": "Left 9-shape block",
+     "korean": "gunnun so gutja makgi",
+     "description": "Stay in place & slip the right foot into walking stance. Left 9-shape block. Left arm down.",
     "facing": 6,
-    "direction": 12
+    "direction": null
   },
   {
     "id": 41,
     "moveNumber": "41",
-    "title": "Twin Strike",
-    "description": "Move Right foot backwards. You are now standing at C, looking at C (Back/6:00). Twin Horizontal Knife-hand Strike.",
+    "title": "Twin horizontal knife-hand strike",
+     "korean": "gunnun so sang sonkal soopyong taerigi",
+     "description": "Step backs with the right foot to 12 o'clock. Walking stance. Twin horizontal knife-hand strike.",
     "facing": 6,
-    "direction": 6
+    "direction": 12
   },
   {
     "id": 42,
     "moveNumber": "42",
-    "title": "Arc-Hand",
-    "description": "Stay facing Back (6:00). High Arc-hand Strike (Right hand).",
+    "title": "Right high arc-hand strike",
+     "korean": "gunnun so bandal son nopunde taerigi",
+     "description": "Stay in walking stance. Right high arc-hand strike.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 43,
     "moveNumber": "43",
-    "title": "Kick",
-    "description": "Front Snap Kick (Right foot) to Back (6:00).",
+    "title": "Right low front snap kick",
+     "korean": "kaunde apcha busigi",
+     "description": "Keep hand out. Right front snap kick to 6 o'clock.  Lower kicking foot.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 44,
     "moveNumber": "44",
-    "title": "Land Arc-Hand",
-    "description": "Land forward towards Back (6:00). High Arc-hand Strike (Left hand).",
+    "title": "Left high arc-hand strike",
+     "korean": "gunnun so bandal son nopunde taerigi",
+     "description": "Lower foot into right walking stance. Left high arc-hand strike.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 45,
     "moveNumber": "45",
-    "title": "Kick",
-    "description": "Front Snap Kick (Left foot) to Back (6:00).",
+    "title": "Right low front snap kick",
+     "korean": "kaunde apcha busigi",
+     "description": "Keep hand out. left front snap kick to 6 o'clock.  Lower kicking foot.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 46,
     "moveNumber": "46",
-    "title": "Land Punch",
-    "description": "Land forward towards Back (6:00). Middle Punch (Right fist).",
+    "title": "Right middle punch",
+     "korean": "gunnun so kaunde ap jirugi",
+     "description": "Lower foot into left walking stance. Right middle punch.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 47,
     "moveNumber": "47",
-    "title": "Punch",
-    "description": "Stay there. Middle Punch (Left fist). Fast motion.",
+    "title": "Left middle punch",
+     "korean": "gunnun so kaunde ap jirugi",
+     "description": "Stay in place. Left middle punch. Fast motion.",
     "facing": 6,
-    "direction": 6
+    "direction": null
   },
   {
     "id": 48,
     "moveNumber": "48",
-    "title": "Twin Knuckle",
-    "description": "Bring Right foot to Left. Feet together facing Back (6:00). Twin Fore-knuckle Fist Punch (Crescent shape to sides).",
+    "title": "High twin fore-knuckle fist punch",
+     "korean": "moa so sang inji joomuk nopunde bandal jirugi",
+     "description": "Bring right foot forwards to left, facing 6 o'clock. High twin fore-knuckle fist punch. Crescent shape to sides.",
     "facing": 6,
     "direction": 6
   },
   {
     "id": 49,
     "moveNumber": "49",
-    "title": "Turn Left",
-    "description": "Turn Left to face the Right Wall (3:00). Step out. Low Knife-hand Block.",
-    "facing": 3,
-    "direction": 3
+    "title": "Low left knife-hand block",
+     "korean": "gunnun so sonkal najunde makgi",
+     "description": "Pivot left on the right foot 270 degrees to face 9 o'clock. Left foot into walking stance. Low left knife-hand block.",
+    "facing": 9,
+    "direction": 9
   },
   {
     "id": 50,
     "moveNumber": "50",
-    "title": "Open Punch",
-    "description": "Stay there. High Open Fist Punch to Right Wall (3:00).",
-    "facing": 3,
-    "direction": 3
+    "title": "High open fist punch",
+     "korean": "gunnun so pyon joomuk nopunde jirugi",
+     "description": "Stay in place. Right high open fist punch to 9 o'clock.",
+    "facing": 9,
+    "direction": null
   },
   {
     "id": 51,
     "moveNumber": "51",
-    "title": "Turn Right",
-    "description": "Turn Right (180°) to face the Left Wall (9:00). Step out. Low Knife-hand Block.",
-    "facing": 9,
-    "direction": 9
+    "title": "Low right knife-hand block",
+     "korean": "gunnun so sonkal najunde makgi",
+     "description": "Center line turn right 180 degrees to 3 o'clock. Low right knife-hand block.",
+    "facing": 3,
+    "direction": 3
   },
   {
     "id": 52,
     "moveNumber": "52",
-    "title": "Open Punch",
-    "description": "Stay there. High Open Fist Punch to Left Wall (9:00).",
-    "facing": 9,
-    "direction": 9
+    "title": "High open fist punch",
+     "korean": "gunnun so pyon joomuk nopunde jirugi",
+     "description": "Stay in place. Left high open fist punch to 9 o'clock.",
+    "facing": 3,
+    "direction": 3
+  },
+  {
+    "id": 53,
+    "moveNumber": "End position",
+    "title": "Close ready stance A",
+     "korean": "moa junbi sogi A",
+     "description": "Pivot on the right foot left 90 degrees to face 12 o'clock. Move the left foot to form a closed ready stance A.",
+    "facing": 12,
+    "direction": 12
   }
   ]
 }

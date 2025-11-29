@@ -5,30 +5,31 @@
 ### 1. App Metadata
 
 #### App Name
-- Primary: **TKD Forge - Choong Jang**
-- Subtitle: *Master the 2nd Dan Pattern*
+- Primary: **TKD Forge**
+- Subtitle: *Learn Taekwondo patterns from Saju Jirugi to Black Belt*
 
 #### Description
 ```
-Master the Choong-Jang pattern with TKD Forge - the ultimate study companion for 2nd Dan Black Belt Taekwondo practitioners.
+Master Taekwondo patterns from Saju Jirugi to black belt with TKD Forge – your interactive training companion.
 
 FEATURES:
-• 52 Detailed Movements - Complete breakdown of every move in the pattern
-• Innovative Clock System - Visual directional guide showing facing and direction
-• Voice Control - Hands-free navigation while you practice
-• Phase Organization - Moves grouped into 6 logical learning phases
-• Progress Tracking - See your advancement through the pattern
-• Beautiful Dark Mode - Easy on the eyes during long study sessions
-• Offline Access - Practice anywhere, no internet required
+• Saju Jirugi 1 & 2 completely free
+• Additional colour-belt and black-belt patterns available as one-time in-app purchases (£2.99 each)
+• Detailed movement breakdowns for every included pattern
+• Innovative clock system showing facing and direction
+• Voice control for hands-free navigation while you practice
+• Optional phase-based organisation of moves where helpful
+• Beautiful dark interface, ideal for long study sessions
+• Offline access – practice anywhere, no internet required
 
 PERFECT FOR:
-✓ 2nd Dan Black Belt students
+✓ White belt to black belt students
 ✓ Taekwondo instructors
 ✓ Martial arts enthusiasts
-✓ Pattern competition preparation
+✓ Pattern grading and competition preparation
 
-ABOUT CHOONG-JANG:
-Choong-Jang is the pseudonym of General Kim Duk Ryang who lived during the Lee Dynasty, 14th century. This pattern consists of 52 movements and is required for 2nd Dan Black Belt.
+ABOUT PATTERNS:
+TKD Forge is built to support your full journey, from foundational Saju Jirugi exercises through colour-belt patterns and into black-belt patterns such as Choong-Jang.
 
 VOICE CONTROL:
 Enable hands-free mode and use voice commands:
@@ -38,12 +39,12 @@ Enable hands-free mode and use voice commands:
 
 Perfect your technique. Master your pattern. Forge your path.
 
-No ads. No subscriptions. One-time purchase.
+Free to download. Optional one-time in-app purchases for additional patterns (£2.99 each). No subscriptions.
 ```
 
 #### Keywords
 ```
-taekwondo, tkd, martial arts, choong-jang, chung-jang, pattern, tul, form, black belt, 2nd dan, training, practice, study, karate, self defense
+taekwondo, tkd, martial arts, patterns, tul, forms, colour belt, black belt, saju jirugi, choong-jang, training, practice, study, self defense
 ```
 
 #### Category
@@ -55,10 +56,8 @@ taekwondo, tkd, martial arts, choong-jang, chung-jang, pattern, tul, form, black
 
 ### 2. Pricing
 
-- **UK Price**: £5.00
-- **US Price**: $5.99
-- **EU Price**: €5.99
-- **Other regions**: Equivalent pricing
+- **App Price**: Free download
+- **In-App Purchases**: Individual patterns (UK £2.99 each; other regions equivalent pricing)
 
 ### 3. Screenshots Required
 
@@ -96,12 +95,12 @@ Same layout, optimized for larger screen
 You must provide a privacy policy URL. Here's a template:
 
 ```markdown
-# Privacy Policy for TKD Forge - Choong Jang
+# Privacy Policy for TKD Forge
 
 Last updated: [Date]
 
 ## Information Collection
-TKD Forge - Choong Jang does not collect, store, or transmit any personal information.
+TKD Forge does not collect, store, or transmit any personal information.
 
 ## Speech Recognition
 When you enable voice control:
@@ -149,7 +148,7 @@ Not required (no login system)
 
 #### Notes for Reviewer
 ```
-Thank you for reviewing TKD Forge - Choong Jang.
+Thank you for reviewing TKD Forge.
 
 TESTING VOICE CONTROL:
 1. Tap the microphone icon in the study view
@@ -163,7 +162,7 @@ NAVIGATION:
 - Use arrows or swipe to navigate moves
 - Tap the list icon to jump to any move
 
-All 52 moves are included with complete descriptions.
+All moves for each included pattern have complete descriptions.
 
 Contact: [your-email@example.com]
 ```
@@ -253,9 +252,9 @@ Contact: [your-email@example.com]
 ## Pricing Strategy
 
 ### Initial Launch
-- **£5.00** - Premium positioning
-- No free trial (simple, one-time purchase)
-- No in-app purchases
+- **Free download** – lowers friction for new students
+- Saju Jirugi 1 & 2 included for free
+- Additional patterns sold as one-time in-app purchases (target £2.99 per pattern)
 
 ### Future Considerations
 - Bundle pricing for multiple patterns
@@ -300,9 +299,9 @@ Consider adding terms of service for:
 
 ## Quick Reference
 
-**Bundle ID**: com.tkdforge.choongjang
+**Bundle ID**: com.tkdforge.app
 **Version**: 1.0
-**Price**: £5.00
+**Price**: Free (with in-app purchases)
 **Category**: Education
 **Age Rating**: 4+
 **Devices**: iPhone, iPad

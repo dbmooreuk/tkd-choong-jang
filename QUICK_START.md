@@ -78,8 +78,8 @@ convert -background none -resize 1024x1024 \
 1. Select project in navigator
 2. Select target: TKDForgeChoongJang
 3. General tab:
-   - Display Name: TKD Forge - Choong Jang
-   - Bundle Identifier: com.tkdforge.choongjang
+   - Display Name: TKD Forge
+   - Bundle Identifier: com.tkdforge.app
    - Version: 1.0
    - Build: 1
    - iOS Deployment Target: 17.0

@@ -17,7 +17,7 @@
     "numberOfMoves": 21,
     "jsonFile": "pattern-dan-gun.json",
     "productId": "com.tkdforge.patterns.dangun",
-    "price": 2.99
+    "price": 1.99
   },
   {
     "id": "won-hyo",
@@ -27,7 +27,7 @@
     "numberOfMoves": 28,
     "jsonFile": "pattern-won-hyo.json",
     "productId": "com.tkdforge.patterns.wonhyo",
-    "price": 1.99
+    "price": null
   }
 ]
 

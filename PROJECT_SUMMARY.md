@@ -2,8 +2,8 @@
 
 ## 🎯 Project Overview
 
-**App Name**: TKD Forge - Choong Jang  
-**Platform**: iOS 17.0+  
+**App Name**: TKD Forge
+**Platform**: iOS 17.0+
 **Framework**: SwiftUI  
 **Architecture**: MVVM  
 **Price**: £5.00  

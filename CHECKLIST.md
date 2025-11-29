@@ -32,8 +32,8 @@ Use this checklist to track your progress from setup to App Store launch.
 - [ ] Verify logo appears in asset catalog
 
 ### Project Configuration
-- [ ] Set bundle identifier: com.tkdforge.choongjang
-- [ ] Set display name: TKD Forge - Choong Jang
+- [ ] Set bundle identifier: com.tkdforge.app
+- [ ] Set display name: TKD Forge
 - [ ] Select development team
 - [ ] Enable automatic signing
 - [ ] Set iOS deployment target: 17.0
