@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct MoveCard: View {
+    @EnvironmentObject var dataStore: PatternDataStore
     let move: Move
     let showImage: Bool
+
+    /// Resolves the correct asset name, including the pattern's namespace when available.
+    private var resolvedImageName: String? {
+        guard let baseName = move.assetImageName else { return nil }
+
+        // If the JSON already provides a namespaced name (e.g. "choong-jang/1"), use it as-is.
+        if baseName.contains("/") {
+            return baseName
+        }
+
+        // Otherwise, prefix with the current pattern's id (which matches the asset folder name)
+        if let namespace = dataStore.patternInfo?.id, !namespace.isEmpty {
+            return "\(namespace)/\(baseName)"
+        }
+
+        // Fallback to the plain name
+        return baseName
+    }
 
     var body: some View {
         VStack(spacing: 20) {
             // Top row: clock or move image + directional hints panel
             HStack(alignment: .top, spacing: 16) {
-                if showImage, let imageName = move.assetImageName {
+                if showImage, let imageName = resolvedImageName {
                     Image(imageName)
                         .resizable()
                         .scaledToFit()
@@ -206,5 +225,6 @@ struct DirectionHintRow: View {
             showImage: false
         )
     }
+    .environmentObject(PatternDataStore())
 }
 
