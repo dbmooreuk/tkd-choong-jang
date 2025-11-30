@@ -17,7 +17,10 @@ struct SettingsView: View {
     @AppStorage("speechRate") private var speechRate: Double = 0.5
     @AppStorage("speechPitch") private var speechPitch: Double = 1.0
     @AppStorage("speechVolume") private var speechVolume: Double = 1.0
+    @AppStorage("speechVoiceIdentifier") private var speechVoiceIdentifier: String = "system"
     @AppStorage("clockFigureStyle") private var clockFigureStyle: String = "male"
+
+    @State private var voiceTestSynthesizer = AVSpeechSynthesizer()
 
     var body: some View {
         ZStack {
@@ -119,6 +122,77 @@ struct SettingsView: View {
                 Slider(value: $speechVolume, in: 0.5...1.0, step: 0.05)
                 Text(String(format: "%.2f", speechVolume))
                     .font(.caption)
+                    .foregroundColor(.white.opacity(0.7))
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Voice")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.8))
+
+                let voiceOptions: [(id: String, name: String)] = {
+                    var result: [(id: String, name: String)] = [(id: "system", name: "System default")]
+
+                    let englishVoices = AVSpeechSynthesisVoice.speechVoices()
+                        .filter { $0.language.hasPrefix("en") }
+
+                    let sorted = englishVoices.sorted { lhs, rhs in
+                        if lhs.language == rhs.language {
+                            return lhs.name < rhs.name
+                        } else {
+                            return lhs.language < rhs.language
+                        }
+                    }
+
+                    for voice in sorted {
+                        let qualitySuffix = voice.quality == .enhanced ? " (Enhanced)" : ""
+                        let displayName = "\(voice.name) – \(voice.language)\(qualitySuffix)"
+                        result.append((id: voice.identifier, name: displayName))
+                    }
+
+                    return result
+                }()
+
+                Picker("Voice", selection: $speechVoiceIdentifier) {
+                    ForEach(voiceOptions, id: \.id) { option in
+                        Text(option.name).tag(option.id)
+                    }
+                }
+
+                Button {
+                    let identifier = speechVoiceIdentifier
+
+                    let utterance = AVSpeechUtterance(string: "This is how TKD Forge will sound when reading a move description.")
+
+                    if identifier == "system" {
+                        utterance.voice = nil
+                    } else if let voice = AVSpeechSynthesisVoice(identifier: identifier) {
+                        utterance.voice = voice
+                    } else {
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    }
+
+                    utterance.rate = speechRate == 0 ? 0.5 : Float(speechRate)
+                    utterance.pitchMultiplier = speechPitch == 0 ? 1.0 : Float(speechPitch)
+                    utterance.volume = speechVolume == 0 ? 1.0 : Float(speechVolume)
+
+                    voiceTestSynthesizer.stopSpeaking(at: .immediate)
+                    voiceTestSynthesizer.speak(utterance)
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "speaker.wave.2.fill")
+                        Text("Test voice")
+                    }
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(Color("brandOrange"))
+                    .cornerRadius(8)
+                }
+
+                Text("Voices marked Enhanced are higher quality. To install more voices, go to iOS Settings > Accessibility > Spoken Content > Voices.")
+                    .font(.caption2)
                     .foregroundColor(.white.opacity(0.7))
             }
         }

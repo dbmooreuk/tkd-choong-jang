@@ -162,8 +162,18 @@ class VoiceControlManager: NSObject, ObservableObject {
         let rate = defaults.double(forKey: "speechRate")
         let pitch = defaults.double(forKey: "speechPitch")
         let volume = defaults.double(forKey: "speechVolume")
+        let voiceIdentifier = defaults.string(forKey: "speechVoiceIdentifier") ?? "system"
 
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        if voiceIdentifier == "system" {
+            // Use the system's preferred voice (including any enhanced voices the user has installed)
+            utterance.voice = nil
+        } else if let voice = AVSpeechSynthesisVoice(identifier: voiceIdentifier) {
+            utterance.voice = voice
+        } else {
+            // Fallback if the selected voice is no longer available
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        }
+
         utterance.rate = rate == 0 ? 0.5 : Float(rate)
         utterance.pitchMultiplier = pitch == 0 ? 1.0 : Float(pitch)
         utterance.volume = volume == 0 ? 1.0 : Float(volume)
