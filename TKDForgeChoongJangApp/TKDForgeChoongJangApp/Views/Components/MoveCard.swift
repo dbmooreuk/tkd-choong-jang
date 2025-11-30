@@ -54,7 +54,7 @@ struct MoveCard: View {
 //                }
                 HStack(spacing: 6) {
                     Circle()
-                        .fill(Color("brandYellow"))
+                        .fill(Color.green)
                         .frame(width: 12, height: 12)
                     Text("Move direction")
                 }
@@ -106,14 +106,14 @@ struct MoveCard: View {
             // Move Title
             Text(move.title)
                 .font(.system(size: 22, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
+                .foregroundColor(Color("brandYellow"))
                 .multilineTextAlignment(.center)
 
             // Korean name (optional)
             if let korean = move.korean, !korean.isEmpty {
                 Text(korean)
                     .font(.system(size: 18, weight: .medium, design: .rounded))
-                    .foregroundColor(.white.opacity(1))
+                    .foregroundColor(.white.opacity(0.5))
                     .multilineTextAlignment(.center)
             }
 

@@ -52,7 +52,7 @@ struct ClockVisualizer: View {
 
             // Direction arrow (Red Dashed)
             if let direction = direction {
-                DirectionArrow(hour: direction, color: Color("brandYellow"), isDashed: false, size: clockSize)
+                DirectionArrow(hour: direction, color: (Color.green), isDashed: false, size: clockSize)
             }
 
             // Facing arrow (Blue Solid)
