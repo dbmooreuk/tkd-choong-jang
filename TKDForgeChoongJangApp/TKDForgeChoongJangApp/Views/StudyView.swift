@@ -15,6 +15,7 @@ struct StudyView: View {
     @State private var showingMoveList = false
     @AppStorage("autoPlayMoveAudio") private var autoPlayMoveAudio: Bool = true
     @State private var dragOffset: CGFloat = 0
+    @State private var showMoveImage: Bool = false
 
     var body: some View {
         ZStack {
@@ -89,11 +90,15 @@ struct StudyView: View {
 
                     // Main Card
                     if let move = viewModel.currentMove {
-                        
+
+                        let hasImage = move.assetImageName != nil
+
                         // Move number lozenge above the card (only if moveNumber is present)
                         if let moveNumber = move.moveNumber {
                             HStack {
                                 Spacer()
+
+                                // Lozenge
                                 Text("Move: \(moveNumber)")
                                     .font(.system(size: 16, weight: .semibold, design: .rounded))
                                     .foregroundColor(.white)
@@ -103,13 +108,34 @@ struct StudyView: View {
                                         Capsule()
                                             .fill(Color.white.opacity(0.15))
                                     )
+
                                 Spacer()
+
+                                // Toggle button in its own circle at far right
+                                if hasImage {
+                                    Button(action: {
+                                        withAnimation(.easeInOut(duration: 0.2)) {
+                                            showMoveImage.toggle()
+                                        }
+                                    }) {
+                                        Image(systemName: showMoveImage ? "clock" : "photo")
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .padding(8)
+                                            .background(
+                                                Circle()
+                                                    .fill(Color.white.opacity(0.15))
+                                            )
+                                    }
+                                    .buttonStyle(.plain)
+                                    .foregroundColor(.white)
+                                    .accessibilityLabel(showMoveImage ? "Show clock" : "Show move photo")
+                                }
                             }
                             .padding(.bottom, 8)
                             .padding(.top, 16)
                         }
 
-                        MoveCard(move: move)
+                        MoveCard(move: move, showImage: showMoveImage && hasImage)
                             .offset(x: dragOffset)
                             .gesture(moveDragGesture)
                             .transition(.asymmetric(

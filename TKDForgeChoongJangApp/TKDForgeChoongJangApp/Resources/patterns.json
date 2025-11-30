@@ -1,4 +1,24 @@
 [
+    {
+    "id": "sajo-jirugi-one",
+    "name": "Sajo Jirugi #1",
+    "belt": "White Belt",
+    "meaning": "White belt pattern",
+    "numberOfMoves": 15,
+    "jsonFile": "pattern-sajo-jirugi-one.json",
+    "productId": "com.tkdforge.patterns.sajojirugione",
+    "price": null
+  },
+      {
+    "id": "sajo-jirugi-two",
+    "name": "Sajo Jirugi #2",
+    "belt": "White Belt",
+    "meaning": "White belt pattern",
+    "numberOfMoves": 15,
+    "jsonFile": "pattern-sajo-jirugi-two.json",
+    "productId": "com.tkdforge.patterns.sajojirugitwo",
+    "price": null
+  },
   {
     "id": "choong-jang",
     "name": "Choong-Jang",

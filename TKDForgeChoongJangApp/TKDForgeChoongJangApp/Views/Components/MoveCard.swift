@@ -9,13 +9,23 @@ import SwiftUI
 
 struct MoveCard: View {
     let move: Move
+    let showImage: Bool
 
     var body: some View {
         VStack(spacing: 20) {
-            // Top row: clock + directional hints panel
+            // Top row: clock or move image + directional hints panel
             HStack(alignment: .top, spacing: 16) {
-                ClockVisualizer(facing: move.facing, direction: move.direction)
-                    .padding(.top, 4)
+                if showImage, let imageName = move.assetImageName {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 6)
+                } else {
+                    ClockVisualizer(facing: move.facing, direction: move.direction)
+                        .padding(.top, 4)
+                }
 
                 if move.text1 != nil || move.text2 != nil || move.text3 != nil || move.text4 != nil {
                     VStack(alignment: .leading, spacing: 12) {
@@ -76,32 +86,6 @@ struct MoveCard: View {
                     )
             }
 
-            // Move Image
-//            ZStack {
-//                RoundedRectangle(cornerRadius: 20)
-//                    .fill(Color.white.opacity(0.05))
-//                    .frame(height: 220)
-//
-//                // Placeholder or actual image
-//                if let image = UIImage(named: move.imageName) {
-//                    Image(uiImage: image)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(height: 220)
-//                        .cornerRadius(20)
-//                } else {
-//                    VStack(spacing: 12) {
-//                        Image(systemName: "figure.martial.arts")
-//                            .font(.system(size: 60))
-//                            .foregroundColor(.white.opacity(0.3))
-//
-//                        Text("Move \(move.id)")
-//                            .font(.system(size: 16, weight: .medium, design: .rounded))
-//                            .foregroundColor(.white.opacity(0.5))
-//                    }
-//                }
-//            }
-//            .padding(.horizontal, 8)
 
             // Move Title
             Text(move.title)
@@ -201,22 +185,26 @@ struct DirectionHintRow: View {
 #Preview {
     ZStack {
         AppBackground()
-        MoveCard(move: Move(
-            id: 1,
-            moveNumber: "1",
-            phase: "Phase 1: Opening Attacks",
-            title: "Step R, Block",
-            korean: "Saju Jirugi",
-            description: "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
-            pdfPage: 14,
-            facing: 12,
-            direction: 3,
-            stanceDetails: nil,
-            text1: "Turn/Left",
-            text2: "Face/12 o'clock",
-            text3: "Slide back/6 o'clock",
-            text4: "Jump back/6 o'clock"
-        ))
+        MoveCard(
+            move: Move(
+                id: 1,
+                moveNumber: "1",
+                phase: "Phase 1: Opening Attacks",
+                title: "Step R, Block",
+                korean: "Saju Jirugi",
+                description: "Step Right (to 3:00) into a Sitting Stance, but keep your chest facing Front (12:00). Side Front Block (Right hand).",
+                pdfPage: 14,
+                facing: 12,
+                direction: 3,
+                stanceDetails: nil,
+                text1: "Turn/Left",
+                text2: "Face/12 o'clock",
+                text3: "Slide back/6 o'clock",
+                text4: "Jump back/6 o'clock",
+                image: nil
+            ),
+            showImage: false
+        )
     }
 }
 

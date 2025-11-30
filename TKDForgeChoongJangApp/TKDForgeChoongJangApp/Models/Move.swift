@@ -22,10 +22,16 @@ struct Move: Identifiable, Codable, Equatable {
     let text2: String?
     let text3: String?
     let text4: String?
+    let image: String?
 
-    // Computed property for image name
-    var imageName: String {
-        return "move_\(id)"
+    // Computed property for image asset name (from JSON values like "1.jpeg")
+    var assetImageName: String? {
+        guard let image = image, !image.isEmpty else { return nil }
+        // Strip extension if present, so "1.jpeg" -> "1"
+        if let dotIndex = image.lastIndex(of: ".") {
+            return String(image[..<dotIndex])
+        }
+        return image
     }
 }
 
