@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "1.jpeg",
+      "filename" : "start-position.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
