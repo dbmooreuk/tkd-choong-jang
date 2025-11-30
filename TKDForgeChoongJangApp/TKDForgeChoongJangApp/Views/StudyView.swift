@@ -180,6 +180,14 @@ struct StudyView: View {
                                         voiceControl.speak(move.description)
                                     }
                                 }
+                                voiceControl.onToggleCommand = {
+                                    let hasImage = viewModel.currentMove?.assetImageName != nil
+                                    guard hasImage else { return }
+
+                                    withAnimation(.easeInOut(duration: 0.2)) {
+                                        showMoveImage.toggle()
+                                    }
+                                }
                             } else {
                                 // When the user turns voice control off, stop
                                 // both listening and any speech that is

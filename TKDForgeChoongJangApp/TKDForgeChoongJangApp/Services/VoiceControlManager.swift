@@ -25,7 +25,8 @@ class VoiceControlManager: NSObject, ObservableObject {
     var onNextCommand: (() -> Void)?
     var onBackCommand: (() -> Void)?
     var onRepeatCommand: (() -> Void)?
-    
+    var onToggleCommand: (() -> Void)?
+
     override init() {
         super.init()
         // Authorization is now requested on-demand in startListening()
@@ -77,9 +78,27 @@ class VoiceControlManager: NSObject, ObservableObject {
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.playAndRecord,
                                      mode: .spokenAudio,
-                                     options: [.duckOthers, .defaultToSpeaker])
+                                     options: [.duckOthers])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        
+
+        // Routing rule:
+        // - If headphones / AirPods / Bluetooth audio are connected, use them.
+        // - Otherwise, play through the phone's loudspeaker (not the ear piece).
+        let hasHeadphonesOrBluetooth = audioSession.currentRoute.outputs.contains { output in
+            switch output.portType {
+            case .headphones, .bluetoothA2DP, .bluetoothHFP, .bluetoothLE:
+                return true
+            default:
+                return false
+            }
+        }
+
+        if hasHeadphonesOrBluetooth {
+            try audioSession.overrideOutputAudioPort(.none)
+        } else {
+            try audioSession.overrideOutputAudioPort(.speaker)
+        }
+
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
         let inputNode = audioEngine.inputNode
@@ -134,18 +153,25 @@ class VoiceControlManager: NSObject, ObservableObject {
 
         let isSpeaking = synthesizer.isSpeaking
 
+        // To avoid the app reacting to its *own* spoken descriptions
+        // (e.g. a move that contains the word "back"), we ignore
+        // navigation commands while the synthesizer is speaking.
+        // The user can still say "Stop" at any time.
+        if isSpeaking {
+            return
+        }
+
         if cmd.contains("next") {
             onNextCommand?()
         } else if cmd.contains("back") || cmd.contains("previous") {
             onBackCommand?()
         } else if cmd.contains("repeat") || cmd.contains("again") {
             onRepeatCommand?()
-        } else if (cmd.contains("start") || cmd.contains("play")) && !isSpeaking {
-            // Treat "start" and "play" the same as "repeat", but only
-            // when the app is not currently speaking. This avoids a
-            // feedback loop from phrases like "Start in a closed ready
-            // stance" being read out by the synthesizer and heard as a
-            // fresh command.
+        } else if cmd.contains("toggle") {
+            onToggleCommand?()
+        } else if cmd.contains("start") || cmd.contains("play") {
+            // Treat "start" and "play" the same as "repeat" once the
+            // app has finished speaking.
             onRepeatCommand?()
         }
     }
