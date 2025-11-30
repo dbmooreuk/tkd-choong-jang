@@ -108,10 +108,9 @@ struct StudyView: View {
                                         Capsule()
                                             .fill(Color.white.opacity(0.15))
                                     )
-
                                 Spacer()
-
-                                // Toggle button in its own circle at far right
+                            }
+                            .overlay(alignment: .trailing) {
                                 if hasImage {
                                     Button(action: {
                                         withAnimation(.easeInOut(duration: 0.2)) {
@@ -129,6 +128,7 @@ struct StudyView: View {
                                     .buttonStyle(.plain)
                                     .foregroundColor(.white)
                                     .accessibilityLabel(showMoveImage ? "Show clock" : "Show move photo")
+                                    .padding(.trailing, 15)
                                 }
                             }
                             .padding(.bottom, 8)
