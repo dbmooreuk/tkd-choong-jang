@@ -156,7 +156,7 @@ struct StudyView: View {
                         }) {
                             Image(systemName: "chevron.left.circle.fill")
                                 .font(.system(size: 50))
-                                .foregroundColor(viewModel.currentMoveIndex > 0 ? Color("brandOrange") : Color("brandDarkOverlay"))
+                                .foregroundColor(viewModel.currentMoveIndex > 0 ? Color("brandYellow") : Color("brandDarkOverlay"))
                         }
                         .disabled(viewModel.currentMoveIndex == 0)
 
@@ -208,7 +208,7 @@ struct StudyView: View {
                         }) {
                             Image(systemName: "chevron.right.circle.fill")
                                 .font(.system(size: 50))
-                                .foregroundColor(viewModel.currentMoveIndex < dataStore.moves.count - 1 ? Color("brandOrange") : Color("brandDarkOverlay"))
+                                .foregroundColor(viewModel.currentMoveIndex < dataStore.moves.count - 1 ? Color("brandYellow") : Color("brandDarkOverlay"))
                         }
                         .disabled(viewModel.currentMoveIndex >= dataStore.moves.count - 1)
                     }

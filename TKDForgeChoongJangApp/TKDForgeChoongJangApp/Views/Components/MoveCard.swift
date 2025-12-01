@@ -38,12 +38,12 @@ struct MoveCard: View {
                     Image(imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .frame(width: 202, height: 202)
+                        .clipShape(RoundedRectangle(cornerRadius: 18))
                         .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 6)
                 } else {
                     ClockVisualizer(facing: move.facing, direction: move.direction)
-                        .padding(.top, 4)
+                        .padding(.top, 2)
                 }
 
                 if move.text1 != nil || move.text2 != nil || move.text3 != nil || move.text4 != nil {
@@ -220,7 +220,7 @@ struct DirectionHintRow: View {
                 text2: "Face/12 o'clock",
                 text3: "Slide back/6 o'clock",
                 text4: "Jump back/6 o'clock",
-                image: nil
+                image: "1.jpeg"
             ),
             showImage: false
         )

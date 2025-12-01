@@ -9,28 +9,47 @@
 import Speech
 import Foundation
 import Combine
-import AVFoundation 
+import AVFoundation
 
 class VoiceControlManager: NSObject, ObservableObject {
     @Published var isListening = false
     @Published var isAuthorized = false
     @Published var lastCommand: String = ""
-    
+
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     private let synthesizer = AVSpeechSynthesizer()
-    
+
     var onNextCommand: (() -> Void)?
     var onBackCommand: (() -> Void)?
     var onRepeatCommand: (() -> Void)?
     var onToggleCommand: (() -> Void)?
 
+    private var routeChangeObserver: NSObjectProtocol?
+
     override init() {
         super.init()
         // Authorization is now requested on-demand in startListening()
         // to avoid issues when the view is first created.
+
+        // Listen for audio route changes (e.g. AirPods connect/disconnect)
+        // so we can switch cleanly between headset and built-in mic/speaker.
+        routeChangeObserver = NotificationCenter.default.addObserver(
+            forName: AVAudioSession.routeChangeNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] notification in
+            self?.handleRouteChange(notification: notification)
+        }
+    }
+
+
+    deinit {
+        if let observer = routeChangeObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
 
     func requestAuthorization(completion: (() -> Void)? = nil) {
@@ -64,25 +83,26 @@ class VoiceControlManager: NSObject, ObservableObject {
             print("Could not start recording: \(error)")
         }
     }
-    
+
     func stopListening() {
         audioEngine.stop()
         recognitionRequest?.endAudio()
         isListening = false
     }
-    
+
     private func startRecording() throws {
         recognitionTask?.cancel()
         recognitionTask = nil
-        
+
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.playAndRecord,
                                      mode: .spokenAudio,
-                                     options: [.duckOthers])
+                                     options: [.duckOthers, .allowBluetooth, .allowBluetoothA2DP])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
 
         // Routing rule:
-        // - If headphones / AirPods / Bluetooth audio are connected, use them.
+        // - If headphones / AirPods / Bluetooth audio are connected, use them
+        //   for both input and output where possible.
         // - Otherwise, play through the phone's loudspeaker (not the ear piece).
         let hasHeadphonesOrBluetooth = audioSession.currentRoute.outputs.contains { output in
             switch output.portType {
@@ -94,23 +114,37 @@ class VoiceControlManager: NSObject, ObservableObject {
         }
 
         if hasHeadphonesOrBluetooth {
+            // Prefer a Bluetooth mic (HFP / LE) when available so that
+            // AirPods / Bluetooth headsets can be used for voice commands.
+            if let bluetoothInput = audioSession.availableInputs?.first(where: { input in
+                switch input.portType {
+                case .bluetoothHFP, .bluetoothLE:
+                    return true
+                default:
+                    return false
+                }
+            }) {
+                try audioSession.setPreferredInput(bluetoothInput)
+            }
+
             try audioSession.overrideOutputAudioPort(.none)
         } else {
+            try audioSession.setPreferredInput(nil)
             try audioSession.overrideOutputAudioPort(.speaker)
         }
 
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
+
         let inputNode = audioEngine.inputNode
         guard let recognitionRequest = recognitionRequest else {
             throw NSError(domain: "VoiceControl", code: -1, userInfo: nil)
         }
-        
+
         recognitionRequest.shouldReportPartialResults = true
-        
+
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
             guard let self = self else { return }
-            
+
             if let result = result {
                 let transcription = result.bestTranscription.formattedString.lowercased()
                 self.lastCommand = transcription
@@ -119,9 +153,10 @@ class VoiceControlManager: NSObject, ObservableObject {
                 if let lastSegment = result.bestTranscription.segments.last {
                     let lastWord = lastSegment.substring.lowercased()
                     self.processCommand(lastWord)
+
                 }
             }
-            
+
             if error != nil || result?.isFinal == true {
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
@@ -130,16 +165,66 @@ class VoiceControlManager: NSObject, ObservableObject {
                 self.isListening = false
             }
         }
-        
+
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             recognitionRequest.append(buffer)
         }
-        
+
         audioEngine.prepare()
         try audioEngine.start()
     }
-    
+    private func updateAudioRoute(for audioSession: AVAudioSession) throws {
+        // Routing rule:
+        // - If headphones / AirPods / Bluetooth audio are connected, use them
+        //   for both input and output where possible.
+        // - Otherwise, play through the phone's loudspeaker (not the ear piece).
+        let hasHeadphonesOrBluetooth = audioSession.currentRoute.outputs.contains { output in
+            switch output.portType {
+            case .headphones, .bluetoothA2DP, .bluetoothHFP, .bluetoothLE:
+                return true
+            default:
+                return false
+            }
+        }
+
+        if hasHeadphonesOrBluetooth {
+            // Prefer a Bluetooth mic (HFP / LE) when available so that
+            // AirPods / Bluetooth headsets can be used for voice commands.
+            if let bluetoothInput = audioSession.availableInputs?.first(where: { input in
+                switch input.portType {
+                case .bluetoothHFP, .bluetoothLE:
+                    return true
+                default:
+                    return false
+                }
+            }) {
+                try audioSession.setPreferredInput(bluetoothInput)
+            }
+
+            try audioSession.overrideOutputAudioPort(.none)
+        } else {
+            try audioSession.setPreferredInput(nil)
+            try audioSession.overrideOutputAudioPort(.speaker)
+        }
+    }
+
+    private func handleRouteChange(notification: Notification) {
+        let audioSession = AVAudioSession.sharedInstance()
+
+        // Only bother updating routing while we're actively listening or
+        // speaking; otherwise we let the system manage it.
+        guard isListening || synthesizer.isSpeaking else { return }
+
+        do {
+            try updateAudioRoute(for: audioSession)
+        } catch {
+            print("VoiceControlManager: failed to update audio route after change: \(error)")
+        }
+    }
+
+
+
     private func processCommand(_ command: String) {
         // Normalise for safety, although the caller already lowercases.
         let cmd = command.lowercased()
