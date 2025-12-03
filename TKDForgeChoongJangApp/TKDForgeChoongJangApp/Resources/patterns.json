@@ -2,8 +2,8 @@
     {
     "id": "sajo-jirugi-one",
     "name": "Sajo Jirugi #1",
-    "belt": "White Belt",
-    "meaning": "White belt pattern",
+    "belt": "10th kup (White Belt)",
+    "meaning": "4 directional punch",
     "numberOfMoves": 15,
     "jsonFile": "pattern-sajo-jirugi-one.json",
     "productId": "com.tkdforge.patterns.sajojirugione",
@@ -12,11 +12,41 @@
       {
     "id": "sajo-jirugi-two",
     "name": "Sajo Jirugi #2",
-    "belt": "White Belt",
-    "meaning": "White belt pattern",
+    "belt": "10th kup (White Belt)",
+    "meaning": "4 directional punch",
     "numberOfMoves": 15,
     "jsonFile": "pattern-sajo-jirugi-two.json",
     "productId": "com.tkdforge.patterns.sajojirugitwo",
+    "price": null
+  },
+      {
+    "id": "sajo-makgi",
+    "name": "Sajo Makgi",
+    "belt": "10th kup (White Belt)",
+    "meaning": "4 directional block",
+    "numberOfMoves": 18,
+    "jsonFile": "pattern-sajo-makgi.json",
+    "productId": "com.tkdforge.patterns.sajomakgi",
+    "price": null
+  },
+      {
+        "id": "chon-ji",
+        "name": "Chon-Ji",
+        "belt": "9th Kup (White Belt with Yellow Stripe)",
+        "meaning": "Chon Ji means literally the Heaven and The Earth. It is in the orient interpreted as the creation of the world or the beginning of human history. Therefore it is the initial pattern performed by the beginner. This pattern consists of two separate parts, one to represent the Heaven, the other the Earth.",
+        "numberOfMoves": 19,
+        "jsonFile": "pattern-chon-ji.json",
+        "productId": "com.tkdforge.patterns.chonji",
+        "price": null
+      },
+  {
+    "id": "dan-gun",
+    "name": "Dan-Gun",
+    "belt": "8th kup (Yellow Belt)",
+    "meaning": "Dan Gun is named after the holy Dan Gun, the legindary founder of Korea in the year 2333 B.C.",
+    "numberOfMoves": 21,
+    "jsonFile": "pattern-dan-gun.json",
+    "productId": "com.tkdforge.patterns.dangun",
     "price": null
   },
   {
@@ -30,16 +60,6 @@
     "price": null
   },
   {
-    "id": "dan-gun",
-    "name": "Dan-Gun",
-    "belt": "1st Dan Black Belt",
-    "meaning": "Dan-Gun honours the legendary founder of Korea. This is a dummy entry used as an example pattern.",
-    "numberOfMoves": 21,
-    "jsonFile": "pattern-dan-gun.json",
-    "productId": "com.tkdforge.patterns.dangun",
-    "price": 1.99
-  },
-  {
     "id": "won-hyo",
     "name": "Won-Hyo",
     "belt": "Green Belt Pattern",
@@ -47,7 +67,7 @@
     "numberOfMoves": 28,
     "jsonFile": "pattern-won-hyo.json",
     "productId": "com.tkdforge.patterns.wonhyo",
-    "price": null
+    "price": 1.99
   }
 ]
 

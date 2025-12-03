@@ -1,0 +1,199 @@
+{
+  "id": "sajo-makgi",
+  "name": "Sajo Makgi",
+  "belt": "10th Kup (White Belt)",
+  "meaning": "4 directional block",
+  "numberOfMoves": 18,
+  "moves": [
+    {
+      "id": 0,
+      "moveNumber": "Start Position",
+      "title": "parallel ready stance",
+      "description": "Parallel ready stance facing 12 o'clock.",
+      "korean": "narani junbi sogi",
+      "image": "start-position.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 1,
+      "moveNumber": "1",
+      "title": "walking stance block",
+      "description": "Step back into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "1.jpeg",
+      "facing": 12,
+      "direction": 6
+    },
+    {
+      "id": 2,
+      "moveNumber": "2",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "2.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 3,
+      "moveNumber": "3",
+      "title": "walking stance block",
+      "description": "Turn 90° left into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "3.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 4,
+      "moveNumber": "4",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "4.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 5,
+      "moveNumber": "5",
+      "title": "walking stance block",
+      "description": "Turn 90° left into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "5.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+    {
+      "id": 6,
+      "moveNumber": "6",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "6.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+    {
+      "id": 7,
+      "moveNumber": "7",
+      "title": "walking stance block",
+      "description": "Turn 90° left into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "7.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 8,
+      "moveNumber": "8",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "8.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 9,
+      "moveNumber": "9",
+      "title": "parallel ready stance",
+      "description": "Pivot 90° left on the left foot to face 12 o'clock. Return to parallel ready stance.",
+      "korean": "narani junbi sogi",
+      "image": "9.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 10,
+      "moveNumber": "10",
+      "title": "walking stance block",
+      "description": "Step back into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "10.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+    {
+      "id": 11,
+      "moveNumber": "11",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "11.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 12,
+      "moveNumber": "12",
+      "title": "walking stance block",
+      "description": "Turn 90° right into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "12.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 13,
+      "moveNumber": "13",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "13.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 14,
+      "moveNumber": "14",
+      "title": "walking stance block",
+      "description": "Turn 90° right into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "14.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+    {
+      "id": 15,
+      "moveNumber": "15",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "15.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+    {
+      "id": 16,
+      "moveNumber": "16",
+      "title": "walking stance block",
+      "description": "Turn 90° right into left walking stance. Low knife-hand block.",
+      "korean": "gunnun so makgi",
+      "image": "16.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 17,
+      "moveNumber": "17",
+      "title": "walking stance block",
+      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "korean": "gunnun so makgi",
+      "image": "17.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 18,
+      "moveNumber": "End Position",
+      "title": "parallel ready stance",
+      "description": "Return the left foot to parallel ready stance facing 12 o'clock.",
+      "korean": "narani junbi sogi",
+      "image": "end-position.jpeg",
+      "facing": 12,
+      "direction": 12
+    }
+  ]
+}
