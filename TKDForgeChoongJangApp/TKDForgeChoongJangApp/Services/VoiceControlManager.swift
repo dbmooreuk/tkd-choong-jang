@@ -11,7 +11,7 @@ import Foundation
 import Combine
 import AVFoundation
 
-class VoiceControlManager: NSObject, ObservableObject {
+class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     @Published var isListening = false
     @Published var isAuthorized = false
     @Published var lastCommand: String = ""
@@ -28,11 +28,16 @@ class VoiceControlManager: NSObject, ObservableObject {
     var onToggleCommand: (() -> Void)?
 
     private var routeChangeObserver: NSObjectProtocol?
+    private var lastSpeechFinishedAt: Date?
 
     override init() {
         super.init()
         // Authorization is now requested on-demand in startListening()
         // to avoid issues when the view is first created.
+
+        // Use this manager as the delegate for spoken move descriptions so
+        // we can pause/resume the microphone around speech.
+        synthesizer.delegate = self
 
         // Listen for audio route changes (e.g. AirPods connect/disconnect)
         // so we can switch cleanly between headset and built-in mic/speaker.
@@ -236,14 +241,21 @@ class VoiceControlManager: NSObject, ObservableObject {
             return
         }
 
-        let isSpeaking = synthesizer.isSpeaking
-
         // To avoid the app reacting to its *own* spoken descriptions
         // (e.g. a move that contains the word "back"), we ignore
-        // navigation commands while the synthesizer is speaking.
-        // The user can still say "Stop" at any time.
-        if isSpeaking {
+        // navigation commands while the synthesizer is speaking, and
+        // for a short moment after speech has finished. This allows
+        // any buffered audio from the phone's speaker to "clear" from
+        // the recogniser.
+        if synthesizer.isSpeaking {
             return
+        }
+
+        if let lastEnd = lastSpeechFinishedAt {
+            let sinceEnd = Date().timeIntervalSince(lastEnd)
+            if sinceEnd < 0.75 {
+                return
+            }
         }
 
         if cmd.contains("next") {
@@ -294,6 +306,16 @@ class VoiceControlManager: NSObject, ObservableObject {
 
     func stopSpeaking() {
         synthesizer.stopSpeaking(at: .immediate)
+    }
+
+    // MARK: - AVSpeechSynthesizerDelegate
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        lastSpeechFinishedAt = Date()
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        lastSpeechFinishedAt = Date()
     }
 }
 
