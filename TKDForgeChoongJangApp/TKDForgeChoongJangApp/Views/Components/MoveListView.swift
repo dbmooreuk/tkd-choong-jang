@@ -16,18 +16,19 @@ struct MoveListView: View {
         NavigationView {
             ZStack {
                 // Background
-                Color(red: 0.12, green: 0.14, blue: 0.17)
+//                Color(red: 0.12, green: 0.14, blue: 0.17)
+                Color("brandDarkOverlay")
                     .ignoresSafeArea()
                 
                 ScrollView {
                     LazyVStack(spacing: 12) {
-                        ForEach(dataStore.moves) { move in
+                        ForEach(Array(dataStore.moves.enumerated()), id: \.element.id) { index, move in
                             MoveListItem(
                                 move: move,
-                                isSelected: move.id == viewModel.currentMove?.id
+                                isSelected: index == viewModel.currentMoveIndex
                             )
                             .onTapGesture {
-                                viewModel.goToMove(at: move.id - 1)
+                                viewModel.goToMove(at: index)
                                 dismiss()
                             }
                         }
@@ -42,7 +43,7 @@ struct MoveListView: View {
                     Button("Done") {
                         dismiss()
                     }
-                    .foregroundColor(.orange)
+                    .foregroundColor(Color("brandOrange"))
                 }
             }
         }
@@ -58,7 +59,7 @@ struct MoveListItem: View {
             // Move Number
             ZStack {
                 Circle()
-                    .fill(isSelected ? Color.orange : Color.white.opacity(0.1))
+                    .fill(isSelected ? Color("brandOrange") : Color.white.opacity(0.1))
                     .frame(width: 50, height: 50)
                 
                 Text("\(move.id)")
@@ -92,7 +93,7 @@ struct MoveListItem: View {
                 .fill(Color.white.opacity(isSelected ? 0.1 : 0.05))
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(isSelected ? Color.orange.opacity(0.5) : Color.clear, lineWidth: 2)
+                        .stroke(isSelected ? Color("brandOrange") : Color.clear, lineWidth: 2)
                 )
         )
     }
