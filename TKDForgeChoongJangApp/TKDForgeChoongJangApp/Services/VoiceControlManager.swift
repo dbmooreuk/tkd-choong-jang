@@ -19,16 +19,18 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
+    private var audioEngine = AVAudioEngine()
     private let synthesizer = AVSpeechSynthesizer()
 
     var onNextCommand: (() -> Void)?
     var onBackCommand: (() -> Void)?
     var onRepeatCommand: (() -> Void)?
     var onToggleCommand: (() -> Void)?
+    var onForceVoiceControlOff: (() -> Void)?
 
     private var routeChangeObserver: NSObjectProtocol?
     private var lastSpeechFinishedAt: Date?
+    private var isInputTapInstalled = false
 
     override init() {
         super.init()
@@ -76,6 +78,8 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
             return
         }
 
+        // If we're already running, treat this as a toggle to turn
+        // listening off.
         if audioEngine.isRunning {
             stopListening()
             return
@@ -86,13 +90,31 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
             isListening = true
         } catch {
             print("Could not start recording: \(error)")
+            isListening = false
         }
     }
 
     func stopListening() {
+        // Stop the current engine and tear down any existing tap.
         audioEngine.stop()
+
+        let inputNode = audioEngine.inputNode
+        if isInputTapInstalled {
+            inputNode.removeTap(onBus: 0)
+            isInputTapInstalled = false
+        }
+
+        audioEngine.reset()
         recognitionRequest?.endAudio()
+        recognitionRequest = nil
+        recognitionTask?.cancel()
+        recognitionTask = nil
         isListening = false
+
+        // Recreate the engine so that the next time we start listening we
+        // always have a fresh graph that matches the current hardware route
+        // (important when AirPods connect or disconnect).
+        audioEngine = AVAudioEngine()
     }
 
     private func startRecording() throws {
@@ -118,33 +140,47 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
         recognitionRequest.shouldReportPartialResults = true
 
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
-            guard let self = self else { return }
+            // Always hop back to the main queue before mutating any
+            // AVAudioEngine state to avoid races with UI actions.
+            DispatchQueue.main.async {
+                guard let self = self else { return }
 
-            if let result = result {
-                let transcription = result.bestTranscription.formattedString.lowercased()
-                self.lastCommand = transcription
+                if let result = result {
+                    let transcription = result.bestTranscription.formattedString.lowercased()
+                    self.lastCommand = transcription
 
-                // Use only the most recently spoken word to decide the command
-                if let lastSegment = result.bestTranscription.segments.last {
-                    let lastWord = lastSegment.substring.lowercased()
-                    self.processCommand(lastWord)
-
+                    // Use only the most recently spoken word to decide the command
+                    if let lastSegment = result.bestTranscription.segments.last {
+                        let lastWord = lastSegment.substring.lowercased()
+                        self.processCommand(lastWord)
+                    }
                 }
-            }
 
-            if error != nil || result?.isFinal == true {
-                self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
-                self.isListening = false
+                if error != nil || result?.isFinal == true {
+                    // When the speech task finishes or errors, tear everything
+                    // down cleanly. The user can re-enable voice control with
+                    // the mic button.
+                    self.stopListening()
+                }
             }
         }
 
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        // Make sure there is no stale tap left around from a previous
+        // recording session (for example before/after a Bluetooth route
+        // change) before installing a new one.
+        if isInputTapInstalled {
+            inputNode.removeTap(onBus: 0)
+            isInputTapInstalled = false
+        }
+
+        // Use the input format for the current route so that the tap
+        // always matches the hardware configuration (built-in mic vs
+        // AirPods, etc.).
+        let recordingFormat = inputNode.inputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             recognitionRequest.append(buffer)
         }
+        isInputTapInstalled = true
 
         audioEngine.prepare()
         try audioEngine.start()
@@ -177,14 +213,27 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     private func handleRouteChange(notification: Notification) {
         let audioSession = AVAudioSession.sharedInstance()
 
-        // Only bother updating routing while we're actively listening or
-        // speaking; otherwise we let the system manage it.
-        guard isListening || synthesizer.isSpeaking else { return }
-
+        // Always keep output routing up to date so spoken descriptions go to
+        // the right place (speaker vs AirPods).
         do {
             try updateAudioRoute(for: audioSession)
         } catch {
             print("VoiceControlManager: failed to update audio route after change: \(error)")
+        }
+
+        // Only auto-disable voice control for real device changes (e.g.
+        // AirPods/headphones plugged in or removed). Ignore route changes
+        // caused by us changing the audio category, otherwise the mic
+        // appears to "bounce" off as soon as the user enables it.
+        guard isListening else { return }
+
+        if let reasonValue = notification.userInfo?[AVAudioSessionRouteChangeReasonKey] as? UInt,
+           let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue),
+           reason == .newDeviceAvailable || reason == .oldDeviceUnavailable {
+            stopListening()
+            DispatchQueue.main.async { [weak self] in
+                self?.onForceVoiceControlOff?()
+            }
         }
     }
 

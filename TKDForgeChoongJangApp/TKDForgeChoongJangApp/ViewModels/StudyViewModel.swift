@@ -61,5 +61,9 @@ class StudyViewModel: ObservableObject {
     func toggleVoiceControl() {
         isVoiceControlEnabled.toggle()
     }
+
+    func setVoiceControlEnabled(_ enabled: Bool) {
+        isVoiceControlEnabled = enabled
+    }
 }
 

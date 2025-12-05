@@ -225,6 +225,18 @@ struct StudyView: View {
                         voiceControl.speak(move.description)
                     }
                 }
+                .onAppear {
+                    // If the audio route changes while we're listening (e.g. AirPods
+                    // connect or disconnect), the VoiceControlManager will call this
+                    // to force the mic button off. The user can then tap it again to
+                    // restart with a clean audio configuration.
+                    voiceControl.onForceVoiceControlOff = { [weak viewModel] in
+                        viewModel?.setVoiceControlEnabled(false)
+                    }
+                }
+                .onDisappear {
+                    voiceControl.onForceVoiceControlOff = nil
+                }
         }
     }
 
