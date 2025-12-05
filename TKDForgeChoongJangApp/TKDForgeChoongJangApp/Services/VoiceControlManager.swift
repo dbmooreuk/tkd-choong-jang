@@ -105,38 +105,8 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
                                      options: [.duckOthers, .allowBluetooth, .allowBluetoothA2DP])
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
 
-        // Routing rule:
-        // - If headphones / AirPods / Bluetooth audio are connected, use them
-        //   for both input and output where possible.
-        // - Otherwise, play through the phone's loudspeaker (not the ear piece).
-        let hasHeadphonesOrBluetooth = audioSession.currentRoute.outputs.contains { output in
-            switch output.portType {
-            case .headphones, .bluetoothA2DP, .bluetoothHFP, .bluetoothLE:
-                return true
-            default:
-                return false
-            }
-        }
-
-        if hasHeadphonesOrBluetooth {
-            // Prefer a Bluetooth mic (HFP / LE) when available so that
-            // AirPods / Bluetooth headsets can be used for voice commands.
-            if let bluetoothInput = audioSession.availableInputs?.first(where: { input in
-                switch input.portType {
-                case .bluetoothHFP, .bluetoothLE:
-                    return true
-                default:
-                    return false
-                }
-            }) {
-                try audioSession.setPreferredInput(bluetoothInput)
-            }
-
-            try audioSession.overrideOutputAudioPort(.none)
-        } else {
-            try audioSession.setPreferredInput(nil)
-            try audioSession.overrideOutputAudioPort(.speaker)
-        }
+        // Apply our standard routing rule based on the current route.
+        try updateAudioRoute(for: audioSession)
 
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
 
@@ -181,8 +151,8 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
     }
     private func updateAudioRoute(for audioSession: AVAudioSession) throws {
         // Routing rule:
-        // - If headphones / AirPods / Bluetooth audio are connected, use them
-        //   for both input and output where possible.
+        // - If headphones / AirPods / Bluetooth audio are connected, let iOS
+        //   route audio to them naturally.
         // - Otherwise, play through the phone's loudspeaker (not the ear piece).
         let hasHeadphonesOrBluetooth = audioSession.currentRoute.outputs.contains { output in
             switch output.portType {
@@ -194,22 +164,12 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
         }
 
         if hasHeadphonesOrBluetooth {
-            // Prefer a Bluetooth mic (HFP / LE) when available so that
-            // AirPods / Bluetooth headsets can be used for voice commands.
-            if let bluetoothInput = audioSession.availableInputs?.first(where: { input in
-                switch input.portType {
-                case .bluetoothHFP, .bluetoothLE:
-                    return true
-                default:
-                    return false
-                }
-            }) {
-                try audioSession.setPreferredInput(bluetoothInput)
-            }
-
+            // Clear any previous speaker override so audio follows the
+            // currently selected route (e.g. AirPods, wired headphones).
             try audioSession.overrideOutputAudioPort(.none)
         } else {
-            try audioSession.setPreferredInput(nil)
+            // No external outputs – explicitly use the loudspeaker instead of
+            // the phone earpiece.
             try audioSession.overrideOutputAudioPort(.speaker)
         }
     }
