@@ -50,6 +50,16 @@
     "price": null
   },
   {
+    "id": "do-san",
+    "name": "Do-San",
+    "belt": "7th Kup (Yellow Belt with Green Stripe)",
+    "meaning": "Do San is the pseudonym of the patriot Ahn Chang-Ho (1876-1938). The 24 movements represent his entire life which he devoted to furthering the education of Korea and its independence movement.",
+    "numberOfMoves": 24,
+    "jsonFile": "pattern-do-san.json",
+    "productId": "com.tkdforge.patterns.dosan",
+    "price": null
+  },
+  {
     "id": "choong-jang",
     "name": "Choong-Jang",
     "belt": "2nd Dan Black Belt",

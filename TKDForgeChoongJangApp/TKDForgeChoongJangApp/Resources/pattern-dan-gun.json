@@ -8,27 +8,27 @@
     {
       "id": 0,
       "moveNumber": "Start Position",
-      "title": "parallel ready stance",
+      "title": "Parallel ready stance",
       "description": "Parallel ready stance facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "start-position.jpeg",
       "facing": 12,
-      "direction": 12
+      "direction": null
     },
     {
       "id": 1,
       "moveNumber": "1",
-      "title": "l-stance guarding block",
-      "description": "Turn 90° left to 9 o'clock into right L-stance. Middle knife-hand guarding block.",
+      "title": "Knife-hand guarding block",
+      "description": "Turn 90° left to 9 o'clock into right l-stance. Middle knife-hand guarding block.",
       "korean": "niunja so sonkal daebi makgi",
       "image": "1.jpeg",
       "facing": 9,
-      "direction": 9
+      "direction": null
     },
     {
       "id": 2,
       "moveNumber": "2",
-      "title": "walking stance punch",
+      "title": "High stance punch",
       "description": "Step forward into right walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "2.jpeg",
@@ -38,17 +38,17 @@
     {
       "id": 3,
       "moveNumber": "3",
-      "title": "l-stance guarding block",
-      "description": "Pivot 180° right to 3 o'clock into left L-stance. Knife-hand guarding block.",
+      "title": "Knife-hand guarding block",
+      "description": "Pivot 180° right to 3 o'clock into left l-stance. Knife-hand guarding block.",
       "korean": "niunja so sonkal daebi makgi",
       "image": "3.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
     {
       "id": 4,
       "moveNumber": "4",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into left walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "4.jpeg",
@@ -58,17 +58,17 @@
     {
       "id": 5,
       "moveNumber": "5",
-      "title": "walking stance block",
-      "description": "Turn 90° left to 12 o'clock into left walking stance. Low outer forearm block.",
+      "title": "Low outer forearm block",
+      "description": "Pivot on thr right foot 90° left to 12 o'clock into left walking stance. Low outer forearm block.",
       "korean": "gunnun so najunde bakat palmok makgi",
       "image": "5.jpeg",
       "facing": 12,
-      "direction": 12
+      "direction": null
     },
     {
       "id": 6,
       "moveNumber": "6",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into right walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "6.jpeg",
@@ -78,7 +78,7 @@
     {
       "id": 7,
       "moveNumber": "7",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into left walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "7.jpeg",
@@ -88,7 +88,7 @@
     {
       "id": 8,
       "moveNumber": "8",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into right walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "8.jpeg",
@@ -98,107 +98,107 @@
     {
       "id": 9,
       "moveNumber": "9",
-      "title": "l-stance twin block",
-      "description": "Pivot 270° left to 9 o'clock into right L-stance. Twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Pivot 270° left to 3 o'clock into right l-stance. Twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "9.jpeg",
-      "facing": 9,
-      "direction": 9
+      "facing": 3,
+      "direction": null
     },
     {
       "id": 10,
       "moveNumber": "10",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into right walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "10.jpeg",
-      "facing": 9,
-      "direction": 9
+      "facing": 3,
+      "direction": 3
     },
     {
       "id": 11,
       "moveNumber": "11",
-      "title": "l-stance twin block",
-      "description": "Pivot 180° right to 3 o'clock into left L-stance. Twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Pivot 180° right to 9 o'clock into left l-stance. Twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "11.jpeg",
-      "facing": 3,
-      "direction": 3
+      "facing": 9,
+      "direction": null
     },
     {
       "id": 12,
       "moveNumber": "12",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into left walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "12.jpeg",
-      "facing": 3,
-      "direction": 3
+      "facing": 9,
+      "direction": 9
     },
     {
       "id": 13,
       "moveNumber": "13",
-      "title": "walking stance block",
-      "description": "Turn 90° left to 12 o'clock into left walking stance. Low outer forearm block.",
+      "title": "Low outer forearm block",
+      "description": "Turn 90° left to 6 o'clock into left walking stance. Low outer forearm block.",
       "korean": "gunnun so najunde bakat palmok makgi",
       "image": "13.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": null
     },
     {
       "id": 14,
       "moveNumber": "14",
-      "title": "walking stance rising block",
+      "title": "Rising block",
       "description": "Rising outer forearm block on the spot in left walking stance.",
       "korean": "gunnun so chookyo makgi",
       "image": "14.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
     {
       "id": 15,
       "moveNumber": "15",
-      "title": "walking stance rising block",
-      "description": "Step forward into right walking stance. Rising outer forearm block.",
+      "title": "Rising block",
+      "description": "Step forward to 6 o'clock into right walking stance. Rising outer forearm block.",
       "korean": "gunnun so chookyo makgi",
       "image": "15.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
     {
       "id": 16,
       "moveNumber": "16",
-      "title": "walking stance rising block",
-      "description": "Step forward into left walking stance. Rising outer forearm block.",
+      "title": "Rising block",
+      "description": "Step forward to 6 o'clock into left walking stance. Rising outer forearm block.",
       "korean": "gunnun so chookyo makgi",
       "image": "16.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
     {
       "id": 17,
       "moveNumber": "17",
-      "title": "walking stance rising block",
-      "description": "Step forward into right walking stance. Rising outer forearm block.",
+      "title": "Rising block",
+      "description": "Step forward to 6 o'clock into right walking stance. Rising outer forearm block.",
       "korean": "gunnun so chookyo makgi",
       "image": "17.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
     {
       "id": 18,
       "moveNumber": "18",
-      "title": "l-stance knifehand strike",
-      "description": "Pivot 270° left to 3 o'clock into right L-stance. Knife-hand side strike.",
+      "title": "Knifehand strike",
+      "description": "Pivot 270° left to 3 o'clock into right l-stance. Knife-hand side strike.",
       "korean": "niunja so sonkal taerigi",
       "image": "18.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
     {
       "id": 19,
       "moveNumber": "19",
-      "title": "walking stance punch",
+      "title": "High punch",
       "description": "Step forward into right walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "19.jpeg",
@@ -208,8 +208,8 @@
     {
       "id": 20,
       "moveNumber": "20",
-      "title": "l-stance knifehand strike",
-      "description": "Pivot 180° right to 9 o'clock into left L-stance. Knife-hand side strike.",
+      "title": "Knifehand strike",
+      "description": "Pivot 180° right to 9 o'clock into left l-stance. Knife-hand side strike.",
       "korean": "niunja so sonkal taerigi",
       "image": "20.jpeg",
       "facing": 9,
@@ -218,8 +218,8 @@
     {
       "id": 21,
       "moveNumber": "21",
-      "title": "walking stance punch",
-      "description": "Step forward into left walking stance. High punch.",
+      "title": "High punch",
+      "description": "Step forward to 9 o'clock into left walking stance. High punch.",
       "korean": "gunnun so nopunde jirugi",
       "image": "21.jpeg",
       "facing": 9,
@@ -228,8 +228,8 @@
     {
       "id": 22,
       "moveNumber": "End Position",
-      "title": "parallel ready stance",
-      "description": "Return the left foot to parallel ready stance facing 12 o'clock.",
+      "title": "Parallel ready stance",
+      "description": "Pivot on the right foot 90° left to face 12 o'clock. Return the left foot to parallel ready stance",
       "korean": "narani junbi sogi",
       "image": "end-position.jpeg",
       "facing": 12,

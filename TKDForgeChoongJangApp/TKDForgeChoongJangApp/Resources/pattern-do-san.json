@@ -1,0 +1,269 @@
+{
+  "id": "do-san",
+  "name": "Do-San",
+  "belt": "7th Kup (Yellow Belt with Green Stripe)",
+  "meaning": "Do San is the pseudonym of the patriot Ahn Chang-Ho (1876-1938). The 24 movements represent his entire life which he devoted to furthering the education of Korea and its independence movement.",
+  "numberOfMoves": 24,
+  "moves": [
+    {
+      "id": 0,
+      "moveNumber": "Start Position",
+      "title": "Parallel Ready Stance",
+      "description": "Start position.",
+      "korean": "narani junbi sogi",
+      "image": "start-position.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+    {
+      "id": 1,
+      "moveNumber": "1",
+      "title": "High outer forearm side block",
+      "description": "Turn 90° left to 9 o'clock into left walking stance with high outer forearm side block.",
+      "korean": "gunnun so bakat palmok nopunde yop makgi",
+      "image": "1.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 2,
+      "moveNumber": "2",
+      "title": "Middle front punch",
+      "description": "Stay in left walking stance. Middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "2.jpeg",
+      "facing": 9,
+      "direction": null
+    },
+    {
+      "id": 3,
+      "moveNumber": "3",
+      "title": "High outer forearm side block",
+      "description": "Centre point turn right 180° to 3 o'clock into right walking stance. High outer forearm side block.",
+      "korean": "gunnun so bakat palmok nopunde yop makgi",
+      "image": "3.jpeg",
+      "facing": 3,
+      "direction": null
+    },
+    {
+      "id": 4,
+      "moveNumber": "4",
+      "title": "Middle front punch",
+      "description": "Stay in right walking stance. Middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "4.jpeg",
+      "facing": 3,
+      "direction": null
+    },
+    {
+      "id": 5,
+      "moveNumber": "5",
+      "title": "Knife-hand guarding block",
+      "description": "Turn 90° left to 12 o'clock into right l-stance. Middle knife-hand guarding block.",
+      "korean": "niunja so sonkal kaunde daebi makgi",
+      "image": "5.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+    {
+      "id": 6,
+      "moveNumber": "6",
+      "title": "Walking Stance Thrust",
+      "description": "Step forward into right walking stance. Middle straight fingertip thrust.",
+      "korean": "gunnun so tulgi",
+      "image": "6.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 7,
+      "moveNumber": "7",
+      "title": "Walking Stance Strike",
+      "description": "Turn 360° left to face 12 o'clock into left walking stance. High backfist side strike.",
+      "korean": "gunnun so dung joomuk taerigi",
+      "image": "7.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 8,
+      "moveNumber": "8",
+      "title": "Walking Stance Strike",
+      "description": "Step forward into right walking stance. High backfist side strike.",
+      "korean": "gunnun so dung joomuk taerigi",
+      "image": "8.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 9,
+      "moveNumber": "9",
+      "title": "Walking Stance Block",
+      "description": "Pivot 270° left to 3 o'clock into left walking stance. High outer forearm side block.",
+      "korean": "gunnun so makgi",
+      "image": "9.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 10,
+      "moveNumber": "10",
+      "title": "Walking Stance Punch",
+      "description": "Stay in left walking stance. Middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "10.jpeg",
+      "facing": 12,
+      "direction": 6
+    },
+    {
+      "id": 11,
+      "moveNumber": "11",
+      "title": "Walking Stance Block",
+      "description": "Centre point turn right 180° to 3 o'clock into right walking stance. High outer forearm side block.",
+      "korean": "gunnun so makgi",
+      "image": "11.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 12,
+      "moveNumber": "12",
+      "title": "Walking Stance Punch",
+      "description": "Stay in right walking stance. Middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "12.jpeg",
+      "facing": 12,
+      "direction": 6
+    },
+    {
+      "id": 13,
+      "moveNumber": "13",
+      "title": "Walking Stance Block",
+      "description": "Bring the left foot in then out to face  5 o'clock into left walking stance with high outer forearm wedging block.",
+      "korean": "gunnun so hechyo makgi",
+      "image": "13.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 14,
+      "moveNumber": "14",
+      "title": "Snap Kick",
+      "description": "Stay in place. Right middle front snap kick.",
+      "korean": "apcha busigi",
+      "image": "14.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 15,
+      "moveNumber": "15",
+      "title": "Walking Stance Punch",
+      "description": "Land kicking foot in front into right walking stance with middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "15.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 16,
+      "moveNumber": "16",
+      "title": "Walking Stance Punch",
+      "description": "Stay in right walking stance with middle reverse punch.",
+      "korean": "gunnun so jirugi",
+      "image": "16.jpeg",
+      "facing": 12,
+      "direction": 6
+    },
+    {
+      "id": 17,
+      "moveNumber": "17",
+      "title": "Walking Stance Block",
+      "description": "bring the right foot in and then step out to face 7 o'clock in to a right walking stance with high wedging block.",
+      "korean": "gunnun so hechyo makgi",
+      "image": "17.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 18,
+      "moveNumber": "18",
+      "title": "Snap Kick",
+      "description": "Stay in place. Left middle front snap kick.",
+      "korean": "apcha busigi",
+      "image": "18.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 19,
+      "moveNumber": "19",
+      "title": "Walking Stance Punch",
+      "description": "Land kicking foot in front into left walking stance with middle front punch.",
+      "korean": "gunnun so jirugi",
+      "image": "19.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 20,
+      "moveNumber": "20",
+      "title": "Walking Stance Punch",
+      "description": "Stay in left walking stance with middle reverse punch.",
+      "korean": "gunnun so jirugi",
+      "image": "20.jpeg",
+      "facing": 12,
+      "direction": 6
+    },
+    {
+      "id": 21,
+      "moveNumber": "21",
+      "title": "Walking Stance Block",
+      "description": "Pivot left on the right foot to face 6 o'clock into left walking stance. Rising outer forearm block.",
+      "korean": "gunnun so chookyo makgi",
+      "image": "21.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 22,
+      "moveNumber": "22",
+      "title": "Walking Stance Block",
+      "description": "Step forward to 6 o'clock into right walking stance. Rising outer forearm block.",
+      "korean": "gunnun so chookyo makgi",
+      "image": "22.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+    {
+      "id": 23,
+      "moveNumber": "23",
+      "title": "Sitting Stance Strike",
+      "description": "Turn 270° left to face 9 o'clock into sitting stance with left nifehand side strike.",
+      "korean": "annun so sonkal taerigi",
+      "image": "23.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+    {
+      "id": 24,
+      "moveNumber": "24",
+      "title": "Sitting Stance Strike",
+      "description": "Step foot-to-foot to face 3 o'clock into sitting stance with right knifehand side strike.",
+      "korean": "annun so sonkal taerigi",
+      "image": "24.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+    {
+      "id": 25,
+      "moveNumber": "End Position",
+      "title": "Parallel Ready Stance",
+      "description": "Move the right foot to return to parallel ready stance facing 12 o'clock.",
+      "korean": "narani junbi sogi",
+      "image": "end-position.jpeg",
+      "facing": 12,
+      "direction": null
+    }
+  ]
+}

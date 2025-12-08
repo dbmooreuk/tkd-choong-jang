@@ -105,7 +105,7 @@
       "title": "Forearm guarding block",
       "korean": "niunja so palmok kaunde daebi makgi",
       "image": "9.jpeg",
-      "description": "Pivot left 360° on the left foot to face 12 o'clock. Slide back to 6 o'clock into L-stance. Middle forearm guarding block.",
+      "description": "Pivot left 360° on the left foot to face 12 o'clock. Slide backwards to 6 o'clock into l-stance. Middle forearm guarding block.",
       "facing": 12,
       "direction": 6
     },
@@ -155,7 +155,7 @@
       "title": "Side elbow thrust",
       "korean": "niunja so yop palkup tulgi",
       "image": "14.jpeg",
-      "description": "Stand and pivot on the right foot to face 6 o'clock. Move left foot to L-stance. Left side elbow thrust, looking over left shoulder.",
+      "description": "Stand and pivot on the right foot to face 6 o'clock. Move left foot to l-stance. Left side elbow thrust, looking over left shoulder.",
       "facing": 6,
       "direction": 12
     },
@@ -165,7 +165,7 @@
       "title": "Forearm guarding block",
       "korean": "niunja so palmok kaunde daebi makgi",
       "image": "15.jpeg",
-      "description": "Pivot 180° left on the right foot to face 12 o'clock. Left L-stance middle forearm guarding block.",
+      "description": "Pivot 180° left on the right foot to face 12 o'clock. Left l-stance middle forearm guarding block.",
       "facing": 12,
       "direction": 12
     },
@@ -175,7 +175,7 @@
       "title": "Palm scooping block",
       "korean": "niunja so sonbadak duro makgi",
       "image": "16.jpeg",
-      "description": "Step back with right foot to 6 o'clock into L-stance. Left palm scooping block.",
+      "description": "Step backwards with right foot to 6 o'clock into l-stance. Left palm scooping block.",
       "facing": 12,
       "direction": 6
     },
@@ -185,7 +185,7 @@
       "title": "Right knife-hand middle outward strike",
       "korean": "niunja so sonkal kaunde bakuro taerigi",
       "image": "17.jpeg",
-      "description": "Step back with left foot to 6 o'clock into L-stance. Right middle knife-hand outward strike.",
+      "description": "Step backwards with left foot to 6 o'clock into l-stance. Right middle knife-hand outward strike.",
       "facing": 12,
       "direction": 6
     },
@@ -215,7 +215,7 @@
       "title": "Knife-hand guarding block",
       "korean": "niunja so sonkal kaunde daebi makgi",
       "image": "20.jpeg",
-      "description": "Land behind left foot. Pivot 180° left on the right foot to face 12 o'clock. Right L-stance knife-hand guarding block.",
+      "description": "Land behind left foot. Pivot 180° left on the right foot to face 12 o'clock. Right l-stance knife-hand guarding block.",
       "facing": 12,
       "direction": 12
     },
@@ -235,7 +235,7 @@
       "title": "Knife-hand guarding block",
       "korean": "niunja so sonkal",
       "image": "22.jpeg",
-      "description": "Pivot 180° on the left foot to face 12 o'clock. Left L-stance knife-hand guarding block.",
+      "description": "Pivot 180° on the left foot to face 12 o'clock. Left l-stance knife-hand guarding block.",
       "facing": 12,
       "direction": 12
     },
@@ -275,7 +275,7 @@
       "title": "High flat fingertip thrust",
       "korean": "niunja so opun sonkut nopunde tulgi",
       "image": "26.jpeg",
-      "description": "Pivot 180° left on the right foot to face 12 o'clock into L-stance. High flat fingertip thrust.",
+      "description": "Pivot 180° left on the right foot to face 12 o'clock into l-stance. High flat fingertip thrust.",
       "facing": 12,
       "direction": 12
     },
@@ -295,7 +295,7 @@
       "title": "Right elbow thrust",
       "korean": "gunnun so palkup dwit tulgi",
       "image": "28.jpeg",
-      "description": "Retract leg. Pivot 180° left on the left foot to face 6 o'clock. Pull hands to right hip for elbow thrust. Slide right leg back.",
+      "description": "Retract leg. Pivot 180° left on the left foot to face 6 o'clock. Pull hands to right hip for elbow thrust. Slide right leg to 12 o'clock.",
       "facing": 6,
       "direction": 12
     },
@@ -305,7 +305,7 @@
       "title": "Back hand downward strike",
       "korean": "niunja so sondung naeryo taerigi",
       "image": "29.jpeg",
-      "description": "Raise and stamp left foot into right L-stance facing 6 o'clock. Left back-hand downward strike.",
+      "description": "Raise and stamp left foot into right l-stance facing 6 o'clock. Left back-hand downward strike.",
       "facing": 6,
       "direction": null
     },
@@ -325,7 +325,7 @@
       "title": "Back hand downward strike",
       "korean": "niunja so sondung naeryo taerigi",
       "image": "31.jpeg",
-      "description": "Raise and stamp right foot into left L-stance facing 6 o'clock. Right back-hand downward strike.",
+      "description": "Raise and stamp right foot into left l-stance facing 6 o'clock. Right back-hand downward strike.",
       "facing": 6,
       "direction": 6
     },
@@ -345,7 +345,7 @@
       "title": "Knife-hand outward strike",
       "korean": "niunja so sonkal kaunde bakuro taerigi",
       "image": "33.jpeg",
-      "description": "Pivot 180° left on the right foot to face 12 o'clock. Stamp left foot into right L-stance. Knife-hand outward strike.",
+      "description": "Pivot 180° left on the right foot to face 12 o'clock. Stamp left foot into right l-stance. Knife-hand outward strike.",
       "facing": 12,
       "direction": 12
     },
@@ -365,7 +365,7 @@
       "title": "Middle knife-hand outward strike",
       "korean": "niunja so sonkal kaunde bakuro taerigi",
       "image": "35.jpeg",
-      "description": "Raise and stamp right foot into left L-stance facing 12 o'clock. Right middle knife-hand outward strike.",
+      "description": "Raise and stamp right foot into left l-stance facing 12 o'clock. Right middle knife-hand outward strike.",
       "facing": 12,
       "direction": 12
     },
@@ -385,7 +385,7 @@
       "title": "Low reverse knife-hand block",
       "korean": "niunja so sonkal dung najunde daebi makgi",
       "image": "37.jpeg",
-      "description": "Pivot 180° left on the right foot to face 6 o'clock into left L-stance. Low reverse knife-hand block.",
+      "description": "Pivot 180° left on the right foot to face 6 o'clock into left l-stance. Low reverse knife-hand block.",
       "facing": 6,
       "direction": 6
     },
@@ -405,7 +405,7 @@
       "title": "Low reverse knife-hand block",
       "korean": "niunja so sonkal dung najunde daebi makgi",
       "image": "39.jpeg",
-      "description": "Step forward with right foot to 6 o'clock into right L-stance. Low reverse knife-hand block.",
+      "description": "Step forward with right foot to 6 o'clock into right l-stance. Low reverse knife-hand block.",
       "facing": 6,
       "direction": 6
     },
@@ -425,7 +425,7 @@
       "title": "Twin horizontal knife-hand strike",
       "korean": "gunnun so sang sonkal soopyong taerigi",
       "image": "41.jpeg",
-      "description": "Step back with right foot to 12 o'clock into walking stance. Twin horizontal knife-hand strike.",
+      "description": "Step behind with right foot to 12 o'clock into walking stance. Twin horizontal knife-hand strike.",
       "facing": 6,
       "direction": 12
     },

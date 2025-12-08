@@ -262,7 +262,7 @@ class VoiceControlManager: NSObject, ObservableObject, AVSpeechSynthesizerDelega
 
         if let lastEnd = lastSpeechFinishedAt {
             let sinceEnd = Date().timeIntervalSince(lastEnd)
-            if sinceEnd < 0.75 {
+            if sinceEnd < 0.40{
                 return
             }
         }

@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct StudyView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var dataStore: PatternDataStore
     @ObservedObject var viewModel: StudyViewModel
@@ -226,6 +228,9 @@ struct StudyView: View {
                     }
                 }
                 .onAppear {
+                    // Keep the screen awake while the Study view is visible.
+                    UIApplication.shared.isIdleTimerDisabled = true
+
                     // If the audio route changes while we're listening (e.g. AirPods
                     // connect or disconnect), the VoiceControlManager will call this
                     // to force the mic button off. The user can then tap it again to
@@ -235,7 +240,17 @@ struct StudyView: View {
                     }
                 }
                 .onDisappear {
+                    // Allow the device to sleep again when leaving the Study view.
+                    UIApplication.shared.isIdleTimerDisabled = false
                     voiceControl.onForceVoiceControlOff = nil
+                }
+                .onChange(of: scenePhase) { newPhase in
+                    // Ensure the idle timer state matches app foreground/background state.
+                    if newPhase == .active {
+                        UIApplication.shared.isIdleTimerDisabled = true
+                    } else {
+                        UIApplication.shared.isIdleTimerDisabled = false
+                    }
                 }
         }
     }
