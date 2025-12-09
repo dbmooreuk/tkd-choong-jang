@@ -165,7 +165,7 @@
       "title": "Forearm guarding block",
       "korean": "niunja so palmok kaunde daebi makgi",
       "image": "15.jpeg",
-      "description": "Pivot 180° left on the right foot to face 12 o'clock. Left l-stance middle forearm guarding block.",
+      "description": "Pivot 180° right on the right foot to face 12 o'clock. Left l-stance middle forearm guarding block.",
       "facing": 12,
       "direction": 12
     },
@@ -205,7 +205,7 @@
       "title": "Knee snap kick",
       "korean": "moorup najunde apcha busigi",
       "image": "19.jpeg",
-      "description": "Simulate grabbing the head. Pull hands to hip and execute right knee snap kick.",
+      "description": "Pull hands to hip and execute right knee snap kick.",
       "facing": 6,
       "direction": null
     },

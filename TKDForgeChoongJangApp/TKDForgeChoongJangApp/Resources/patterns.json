@@ -60,6 +60,16 @@
     "price": null
   },
   {
+    "id": "won-hyo",
+    "name": "Won-Hyo",
+    "belt": "Green Belt Pattern",
+    "meaning": "Won-Hyo is named after the monk who introduced Buddhism to the Silla Dynasty. This is a dummy entry used as an example pattern.",
+    "numberOfMoves": 28,
+    "jsonFile": "pattern-won-hyo.json",
+    "productId": "com.tkdforge.patterns.wonhyo",
+    "price": null
+  },
+  {
     "id": "choong-jang",
     "name": "Choong-Jang",
     "belt": "2nd Dan Black Belt",
@@ -68,16 +78,7 @@
     "jsonFile": "pattern-choong-jang.json",
     "productId": "com.tkdforge.patterns.choongjang",
     "price": null
-  },
-  {
-    "id": "won-hyo",
-    "name": "Won-Hyo",
-    "belt": "Green Belt Pattern",
-    "meaning": "Won-Hyo is named after the monk who introduced Buddhism to the Silla Dynasty. This is a dummy entry used as an example pattern.",
-    "numberOfMoves": 28,
-    "jsonFile": "pattern-won-hyo.json",
-    "productId": "com.tkdforge.patterns.wonhyo",
-    "price": 1.99
+
   }
 ]
 
