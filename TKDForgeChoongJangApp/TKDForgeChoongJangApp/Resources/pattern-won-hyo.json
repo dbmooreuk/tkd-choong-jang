@@ -8,8 +8,8 @@
     {
       "id": 0,
       "moveNumber": "Start Position",
-      "title": "parallel ready stance",
-      "description": "Start position.",
+      "title": "Close ready stance A",
+      "description": "Close ready stance A, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "start-position.jpeg",
       "facing": 12,
@@ -19,41 +19,41 @@
     {
       "id": 1,
       "moveNumber": "1",
-      "title": "l-stance block",
-      "description": "Turn 90° left into right L-stance with twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Turn left 90 degrees to face 9 o'clock. Form right L-stance. Perform twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "1.jpeg",
       "facing": 9,
-      "direction": 9
+      "direction": null
     },
 
     {
       "id": 2,
       "moveNumber": "2",
-      "title": "l-stance strike",
-      "description": "On the spot in right L-stance with high knifehand inward strike.",
+      "title": "Knifehand inward strike",
+      "description": "Remain facing 9 o'clock. Perform right high knifehand inward strike.",
       "korean": "niunja so sonkal anuro taerigi",
       "image": "2.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 9,
+      "direction": null
     },
 
     {
       "id": 3,
       "moveNumber": "3",
-      "title": "fixed stance punch",
-      "description": "Move the left foot into left fixed stance with middle punch.",
-      "korean": "gojung so jirugi",
+      "title": "Middle side punch",
+      "description": "Slip into left fixed stance. Perform middle side punch.",
+      "korean": "gojung so yop jirugi",
       "image": "3.jpeg",
       "facing": 9,
-      "direction": 9
+      "direction": null
     },
 
     {
       "id": 4,
       "moveNumber": "4",
-      "title": "l-stance block",
-      "description": "Step foot-to-foot right into left L-stance with twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Bring left foot to right foot. Turn to face 3 o'clock into left L-stance. Perform twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "4.jpeg",
       "facing": 3,
@@ -63,53 +63,53 @@
     {
       "id": 5,
       "moveNumber": "5",
-      "title": "l-stance strike",
-      "description": "On the spot in left L-stance with high knifehand inward strike.",
+      "title": "High knifehand inward strike",
+      "description": "Remain facing 3 o'clock. Perform left high knifehand inward strike.",
       "korean": "niunja so sonkal anuro taerigi",
       "image": "5.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 3,
+      "direction": null
     },
 
     {
       "id": 6,
       "moveNumber": "6",
-      "title": "fixed stance punch",
-      "description": "Move the right foot into right fixed stance with middle punch.",
-      "korean": "gojung so jirugi",
+      "title": "Middle side punch",
+      "description": "Slip into right fixed stance. Perform middle side punch.",
+      "korean": "gojung so yop jirugi",
       "image": "6.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
 
     {
       "id": 7,
       "moveNumber": "7",
-      "title": "bending ready stance guarding block",
-      "description": "Right foot to left foot into bending ready stance A with outer forearm guarding block.",
+      "title": "Bending ready stance guarding block",
+      "description": "Bring right foot to left foot. Form right bending ready stance A facing 12 o'clock. Perform outer forearm guarding block.",
       "korean": "guburyo junbi sogi bakat palmok daebi makgi",
       "image": "7.jpeg",
-      "facing": 9,
-      "direction": 9
+      "facing": 12,
+      "direction": null
     },
 
     {
       "id": 8,
       "moveNumber": "8",
-      "title": "piercing kick",
-      "description": "Left middle side piercing kick.",
-      "korean": "balkal yopcha jirugi",
+      "title": "Middle side piercing kick",
+      "description": "Facing 12 o'clock, perform left middle side piercing kick.",
+      "korean": "kaunde yopcha jirugi",
       "image": "8.jpeg",
       "facing": 12,
-      "direction": 12
+      "direction": null
     },
 
     {
       "id": 9,
       "moveNumber": "9",
-      "title": "l-stance guarding block",
-      "description": "Step forward into right L-stance with knifehand guarding block.",
-      "korean": "niunja so sonkal daebi makgi",
+      "title": "Middle knifehand guarding block",
+      "description": "Lower the kicking leg into right L-stance. Perform middle knifehand guarding block facing 12 o'clock.",
+      "korean": "niunja so sonkal kaunde daebi makgi",
       "image": "9.jpeg",
       "facing": 12,
       "direction": 12
@@ -118,8 +118,8 @@
     {
       "id": 10,
       "moveNumber": "10",
-      "title": "l-stance guarding block",
-      "description": "Step forward into left L-stance with knifehand guarding block.",
+      "title": "Middle knifehand guarding block",
+      "description": "Step forward into left L-stance. Perform middle knifehand guarding block facing 12 o'clock.",
       "korean": "niunja so sonkal daebi makgi",
       "image": "10.jpeg",
       "facing": 12,
@@ -129,9 +129,9 @@
     {
       "id": 11,
       "moveNumber": "11",
-      "title": "l-stance guarding block",
-      "description": "Step forward into right L-stance with knifehand guarding block.",
-      "korean": "niunja so sonkal daebi makgi",
+      "title": "Middle knifehand guarding block",
+      "description": "Step forward into right L-stance. Perform middle knifehand guarding block facing 12 o'clock.",
+      "korean": "niunja so sonkal kaunde daebi makgi",
       "image": "11.jpeg",
       "facing": 12,
       "direction": 12
@@ -140,9 +140,9 @@
     {
       "id": 12,
       "moveNumber": "12",
-      "title": "walking stance thrust",
-      "description": "Step forward into right walking stance with middle fingertip straight thrust.",
-      "korean": "gunnun so sun sonkut tulgi",
+      "title": "Middle straight fingertip thrust",
+      "description": "Step forward into right walking stance. Perform right middle straight fingertip thrust facing 12 o'clock.",
+      "korean": "gunnun so kaunde sun sonkut tulgi",
       "image": "12.jpeg",
       "facing": 12,
       "direction": 12
@@ -151,162 +151,162 @@
     {
       "id": 13,
       "moveNumber": "13",
-      "title": "l-stance block",
-      "description": "Pivot 270° anti-clockwise into right L-stance with twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Pivot left 270 degrees to face 3 o'clock. Form right L-stance. Perform twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "13.jpeg",
-      "facing": 9,
-      "direction": 9
+      "facing": 3,
+      "direction": null
     },
 
     {
       "id": 14,
       "moveNumber": "14",
-      "title": "l-stance strike",
-      "description": "On the spot in right L-stance with knifehand inward strike.",
+      "title": "High knifehand inward strike",
+      "description": "Remain facing 3 o'clock. Perform right high knifehand inward strike.",
       "korean": "niunja so sonkal anuro taerigi",
       "image": "14.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 3,
+      "direction": null
     },
 
     {
       "id": 15,
       "moveNumber": "15",
-      "title": "fixed stance punch",
-      "description": "Move left foot to left fixed stance with middle punch.",
-      "korean": "gojung so jirugi",
+      "title": "Middle side punch",
+      "description": "Slip into left fixed stance. Perform middle side punch.",
+      "korean": "gojung so yop jirugi",
       "image": "15.jpeg",
-      "facing": 9,
-      "direction": 9
+      "facing": 3,
+      "direction": null
     },
 
     {
       "id": 16,
       "moveNumber": "16",
-      "title": "l-stance block",
-      "description": "Step foot-to-foot right into left L-stance with twin outer forearm block.",
+      "title": "Twin outer forearm block",
+      "description": "Bring left foot to right foot. Pivot left to face 9 o'clock. Step into left L-stance. Perform twin outer forearm block.",
       "korean": "niunja so sang palmok makgi",
       "image": "16.jpeg",
-      "facing": 3,
-      "direction": 3
-    },
-
-    {
-      "id": 17,
-      "moveNumber": "17",
-      "title": "l-stance strike",
-      "description": "On the spot in left L-stance with knifehand inward strike.",
-      "korean": "niunja so sonkal anuro taerigi",
-      "image": "17.jpeg",
-      "facing": 12,
-      "direction": 12
-    },
-
-    {
-      "id": 18,
-      "moveNumber": "18",
-      "title": "fixed stance punch",
-      "description": "Move left foot into right fixed stance with middle punch.",
-      "korean": "gojung so jirugi",
-      "image": "18.jpeg",
-      "facing": 3,
-      "direction": 3
-    },
-
-    {
-      "id": 19,
-      "moveNumber": "19",
-      "title": "walking stance circular block",
-      "description": "Right foot to left foot into left walking stance with middle circular block.",
-      "korean": "gunnun so an palmok dollimyo makgi",
-      "image": "19.jpeg",
       "facing": 9,
       "direction": 9
     },
 
     {
+      "id": 17,
+      "moveNumber": "17",
+      "title": "High knifehand inward strike",
+      "description": "Remain facing 9 o'clock. Perform left high knifehand inward strike.",
+      "korean": "niunja so sonkal anuro taerigi",
+      "image": "17.jpeg",
+      "facing": 9,
+      "direction": null
+    },
+
+    {
+      "id": 18,
+      "moveNumber": "18",
+      "title": "Middle side punch",
+      "description": "Slip into right fixed stance. Perform middle side punch.",
+      "korean": "gojung so yop jirugi",
+      "image": "18.jpeg",
+      "facing": 9,
+      "direction": null
+    },
+
+    {
+      "id": 19,
+      "moveNumber": "19",
+      "title": "Right middle circular block",
+      "description": "Bring right foot to left foot. Turn left 90 degrees to face 6 o'clock into left walking stance. Perform right middle circular block.",
+      "korean": "gunnun so an palmok kaunde dollimyo makgi",
+      "image": "19.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+
+    {
       "id": 20,
       "moveNumber": "20",
-      "title": "snap kick",
-      "description": "Right low front snap kick.",
+      "title": "Low front snap kick",
+      "description": "Facing 6 o'clock, perform right low front snap kick.",
       "korean": "najunde apcha busigi",
       "image": "20.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": null
     },
 
     {
       "id": 21,
       "moveNumber": "21",
-      "title": "walking stance punch",
-      "description": "Step forward into right walking stance with middle reverse punch.",
+      "title": "Middle reverse punch",
+      "description": "Lower the right foot into walking stance. Perform middle reverse punch facing 6 o'clock.",
       "korean": "gunnun so bandae jirugi",
       "image": "21.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
 
     {
       "id": 22,
       "moveNumber": "22",
-      "title": "walking stance circular block",
-      "description": "On the spot in right walking stance with middle circular block.",
+      "title": "Middle circular block",
+      "description": "Remain facing 6 o'clock. Perform left middle circular block.",
       "korean": "gunnun so an palmok dollimyo makgi",
       "image": "22.jpeg",
-      "facing": 12,
-      "direction": 6
+      "facing": 6,
+      "direction": null
     },
 
     {
       "id": 23,
       "moveNumber": "23",
-      "title": "snap kick",
-      "description": "Left low front snap kick.",
+      "title": "Low front snap kick",
+      "description": "Facing 6 o'clock, perform left low front snap kick.",
       "korean": "najunde apcha busigi",
       "image": "23.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": null
     },
 
     {
       "id": 24,
       "moveNumber": "24",
-      "title": "walking stance punch",
-      "description": "Step forward into left walking stance with middle reverse punch.",
+      "title": "Middle reverse punch",
+      "description": "Lower the left foot into walking stance. Perform middle reverse punch facing 6 o'clock.",
       "korean": "gunnun so bandae jirugi",
       "image": "24.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": null
     },
 
     {
       "id": 25,
       "moveNumber": "25",
-      "title": "bending ready stance guarding block",
-      "description": "Into left bending ready stance A with middle guarding block.",
+      "title": "Bending ready stance guarding block",
+      "description": "Bring right foot to left foot. Form left bending ready stance A facing 6 o'clock. Perform middle guarding block.",
       "korean": "guburyo junbi sogi bakat palmok daebi makgi",
       "image": "25.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": 6
     },
 
     {
       "id": 26,
       "moveNumber": "26",
-      "title": "piercing kick",
-      "description": "Right middle side piercing kick.",
-      "korean": "yopcha jirugi",
+      "title": "Middle side piercing kick",
+      "description": "Facing 6 o'clock, perform right middle side piercing kick.",
+      "korean": "kaunde yopcha jirugi",
       "image": "26.jpeg",
-      "facing": 12,
-      "direction": 12
+      "facing": 6,
+      "direction": null
     },
 
     {
       "id": 27,
       "moveNumber": "27",
-      "title": "l-stance guarding block",
-      "description": "Lower right foot and step left into right L-stance with middle guarding block.",
+      "title": "Middle guarding block",
+      "description": "Lower right foot next to left foot. Pivot left 270 degrees to face 3 o'clock into right L-stance. Perform middle guarding block.",
       "korean": "niunja so bakat palmok daebi makgi",
       "image": "27.jpeg",
       "facing": 9,
@@ -316,8 +316,8 @@
     {
       "id": 28,
       "moveNumber": "28",
-      "title": "l-stance guarding block",
-      "description": "Step foot-to-foot right into left L-stance with guarding block.",
+      "title": "Middle guarding block",
+      "description": "Step foot-to-foot into left L-stance. Perform guarding block facing 9 o'clock.",
       "korean": "niunja so bakat palmok daebi makgi",
       "image": "28.jpeg",
       "facing": 3,
@@ -327,8 +327,8 @@
     {
       "id": 29,
       "moveNumber": "End Position",
-      "title": "parallel ready stance",
-      "description": "Return to ready stance.",
+      "title": "Close ready stance A",
+      "description": "Turn left 90 degrees to face 12 o'clock. Move right foot into close ready stance A.",
       "korean": "narani junbi sogi",
       "image": "end-position.jpeg",
       "facing": 12,

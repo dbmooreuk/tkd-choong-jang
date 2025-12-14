@@ -1,0 +1,448 @@
+{
+  "id": "yul-gok",
+  "name": "Yul-Gok",
+  "belt": "5th Kup (Green Belt with Blue Stripe)",
+  "meaning": "Yul-Gok is the pseudonym of a great philosopher and scholar Yi I (1536-1584) nicknamed the ‘Confucius of Korea’. The 38 movements of this pattern represent his birthplace on 38 degrees latitude and the diagram represents the word scholar.",
+  "numberOfMoves": 38,
+  "moves": [
+    {
+      "id": 0,
+      "moveNumber": "Start Position",
+      "title": "Parallel ready stance",
+      "description": "Parallel ready stance, facing 12 o'clock.",
+      "korean": "narani junbi sogi",
+      "image": "start-position.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 1,
+      "moveNumber": "1",
+      "title": "Middle punch",
+      "description": "Step left to 9 o'clock into sitting stance. Extend left arm to a middle punch position.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "1.jpeg",
+      "facing": 12,
+      "direction": 9
+    },
+
+    {
+      "id": 2,
+      "moveNumber": "2",
+      "title": "Middle punch",
+      "description": "Remain in sitting stance. Perform right middle punch.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "2.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 3,
+      "moveNumber": "3",
+      "title": "Middle punch",
+      "description": "Remain in sitting stance. Perform left middle punch.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "3.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 4,
+      "moveNumber": "4",
+      "title": "Middle punch",
+      "description": "Shift left foot to right foot. Step right foot into sitting stance to 3 o'clock. Perform right middle punch.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "4.jpeg",
+      "facing": 12,
+      "direction": 3
+    },
+
+    {
+      "id": 5,
+      "moveNumber": "5",
+      "title": "Middle punch",
+      "description": "Remain in sitting stance. Perform left middle punch.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "5.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 6,
+      "moveNumber": "6",
+      "title": "Middle punch",
+      "description": "Remain in sitting stance. Perform right middle punch.",
+      "korean": "annun so kaunde ap jirugi",
+      "image": "6.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 7,
+      "moveNumber": "7",
+      "title": "Middle inner forearm block",
+      "description": "Move the right leg in and out to 2 o'clock. Right walking stance. Perform right middle inner forearm block.",
+      "korean": "gunnun so an palmok kaunde makgi",
+      "image": "7.jpeg",
+      "facing": 2,
+      "direction": null
+    },
+
+    {
+      "id": 8,
+      "moveNumber": "8",
+      "title": "Low front snap kick",
+      "description": "Keep arms in place. Perform left low front snap kick.",
+      "korean": "najunde apcha busigi",
+      "image": "8.jpeg",
+      "facing": 2,
+      "direction": null
+    },
+
+    {
+      "id": 9,
+      "moveNumber": "9",
+      "title": "Middle punch",
+      "description": "Lower into left walking stance. Perform left middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "9.jpeg",
+      "facing": 2,
+      "direction": 2
+    },
+
+    {
+      "id": 10,
+      "moveNumber": "10",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform right middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "10.jpeg",
+      "facing": 2,
+      "direction": null
+    },
+
+    {
+      "id": 11,
+      "moveNumber": "11",
+      "title": "Middle inner forearm block",
+      "description": "Bring the left leg in and then out to 10 o'clock. Left walking stance. Perform middle inner forearm block.",
+      "korean": "gunnun so an palmok kaunde makgi",
+      "image": "11.jpeg",
+      "facing": 10,
+      "direction": null
+    },
+
+    {
+      "id": 12,
+      "moveNumber": "12",
+      "title": "Low front snap kick",
+      "description": "Keep arms in place. Perform right low front snap kick.",
+      "korean": "najunde apcha busigi",
+      "image": "12.jpeg",
+      "facing": 10,
+      "direction": null
+    },
+
+    {
+      "id": 13,
+      "moveNumber": "13",
+      "title": "Middle punch",
+      "description": "Lower into right walking stance. Perform right middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "13.jpeg",
+      "facing": 10,
+      "direction": 10
+    },
+
+    {
+      "id": 14,
+      "moveNumber": "14",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform left middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "14.jpeg",
+      "facing": 10,
+      "direction": null
+    },
+
+    {
+      "id": 15,
+      "moveNumber": "15",
+      "title": "Middle palm hooking block",
+      "description": "Bring the right leg in then out to 12 o'clock. Right walking stance. Perform right middle palm hooking block.",
+      "korean": "gunnun so sonbadak golcho makgi",
+      "image": "15.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 16,
+      "moveNumber": "16",
+      "title": "Middle reverse palm hooking block",
+      "description": "Remain in walking stance. Perform reverse palm hooking block.",
+      "korean": "gunnun so sonbadak golcho makgi",
+      "image": "16.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 17,
+      "moveNumber": "17",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform left middle punch, driving the rear heel down.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "17.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 18,
+      "moveNumber": "18",
+      "title": "Middle palm hooking block",
+      "description": "Step forward into left walking stance. Perform middle palm hooking block.",
+      "korean": "gunnun so sonbadak golcho makgi",
+      "image": "18.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+
+    {
+      "id": 19,
+      "moveNumber": "19",
+      "title": "Middle reverse palm hooking block",
+      "description": "Remain in walking stance. Perform reverse palm hooking block.",
+      "korean": "gunnun so sonbadak golcho makgi",
+      "image": "19.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 20,
+      "moveNumber": "20",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform left middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "20.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 21,
+      "moveNumber": "21",
+      "title": "Middle punch",
+      "description": "Step forward to 12 o'clock into right walking stance. Perform middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "21.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+
+    {
+      "id": 22,
+      "moveNumber": "22",
+      "title": "Middle guarding block",
+      "description": "Bring left leg into right bending ready stance A faceing 12 o'clock. Perform middle outer forearm guarding block.",
+      "korean": "guburyo junbi sogi bakat palmok daebi makgi",
+      "image": "22.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+
+    {
+      "id": 23,
+      "moveNumber": "23",
+      "title": "Middle side piercing kick",
+      "description": "Perform left middle side piercing kick to 12 o'clock.",
+      "korean": "kaunde yopcha jirugi",
+      "image": "23.jpeg",
+      "facing": 12,
+      "direction": null
+    },
+
+    {
+      "id": 24,
+      "moveNumber": "24",
+      "title": "Middle elbow strike",
+      "description": "Lower into left walking stance to 12 o'clock. Perform right middle elbow front strike.",
+      "korean": "gunnun so palkup taerigi",
+      "image": "24.jpeg",
+      "facing": 12,
+      "direction": 12
+    },
+
+    {
+      "id": 25,
+      "moveNumber": "25",
+      "title": "Middle guarding block",
+      "description": "Draw the right leg into a left bending ready stance A. Pivoting 180 degrees to the right on the left foot to face 6 o'clock. Perform middle outer forearm guarding block.",
+      "korean": "guburyo junbi sogi bakat palmok daebi makgi",
+      "image": "25.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 26,
+      "moveNumber": "26",
+      "title": "Middle side piercing kick",
+      "description": "Perform right middle side piercing kick to 6 o'clock.",
+      "korean": "kaunde yopcha jirugi",
+      "image": "26.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 27,
+      "moveNumber": "27",
+      "title": "Middle elbow strike",
+      "description": "Lower into right walking stance. Perform left middle elbow front strike.",
+      "korean": "gunnun so palkup taerigi",
+      "image": "27.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 28,
+      "moveNumber": "28",
+      "title": "Twin knifehand block",
+      "description": "Turn left 90 degrees, move the left foot to right L-stance facing 3 o'clock. Perform twin knifehand block.",
+      "korean": "niunja so sang sonkal makgi",
+      "image": "28.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+
+    {
+      "id": 29,
+      "moveNumber": "29",
+      "title": "Middle straight fingertip thrust",
+      "description": "Step forward to 3 o'clock into right walking stance. Perform middle straight fingertip thrust.",
+      "korean": "gunnun so sun sonkut tulgi",
+      "image": "29.jpeg",
+      "facing": 3,
+      "direction": null
+    },
+
+    {
+      "id": 30,
+      "moveNumber": "30",
+      "title": "Twin knifehand block",
+      "description": "Draw right foot to left foot. Turn right 180 degrees to face 9 o'clock into left L-stance. Perform twin knifehand block.",
+      "korean": "niunja so sang sonkal makgi",
+      "image": "30.jpeg",
+      "facing": 9,
+      "direction": 9
+    },
+
+    {
+      "id": 31,
+      "moveNumber": "31",
+      "title": "Middle straight fingertip thrust",
+      "description": "Step forward into left walking stance. Perform middle straight fingertip thrust.",
+      "korean": "gunnun so sun sonkut tulgi",
+      "image": "31.jpeg",
+      "facing": 9,
+      "direction": null
+    },
+
+    {
+      "id": 32,
+      "moveNumber": "32",
+      "title": "High outer forearm side block",
+      "description": "Pivot on the right foot left 90 degrees to face 6 o'clock. Left walking stance. Perform left high outer forearm side block.",
+      "korean": "gunnun so bakat palmok nopunde yop makgi",
+      "image": "32.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+
+    {
+      "id": 33,
+      "moveNumber": "33",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "33.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 34,
+      "moveNumber": "34",
+      "title": "High outer forearm side block",
+      "description": "Step forward to 6 o'clock to a right walking stance. Perform right high outer forearm side block.",
+      "korean": "gunnun so bakat palmok nopunde yop makgi",
+      "image": "34.jpeg",
+      "facing": 6,
+      "direction": 6
+    },
+
+    {
+      "id": 35,
+      "moveNumber": "35",
+      "title": "Middle punch",
+      "description": "Remain in walking stance. Perform middle punch.",
+      "korean": "gunnun so kaunde ap jirugi",
+      "image": "35.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 36,
+      "moveNumber": "36",
+      "title": "High backfist side strike",
+      "description": "Jump to 6 o'clock back to the starting position. Form left X-stance. Perform high backfist side strike.",
+      "korean": "kyocha so dung joomuk nopunde yop taerigi",
+      "image": "36.jpeg",
+      "facing": 6,
+      "direction": null
+    },
+
+    {
+      "id": 37,
+      "moveNumber": "37",
+      "title": "High double forearm block",
+      "description": "Pivot 180 degrees right to 3 o'clock. Step forward into right walking stance. Perform high double forearm block.",
+      "korean": "gunnun so doo palmok nopunde makgi",
+      "image": "37.jpeg",
+      "facing": 3,
+      "direction": 3
+    },
+
+    {
+      "id": 38,
+      "moveNumber": "38",
+      "title": "High double forearm block",
+      "description": "Bring right foot to left and turn 180 degrees left to 9 o'clock. Step forward into left walking stance. Perform high double forearm block.",
+      "korean": "gunnun so doo palmok nopunde makgi",
+      "image": "38.jpeg",
+      "facing": 9,
+      "direction": null
+    },
+
+    {
+      "id": 39,
+      "moveNumber": "End Position",
+      "title": "Parallel ready stance",
+      "description": "Bring the left foot back to parallel ready stance, facing 12 o'clock.",
+      "korean": "narani junbi sogi",
+      "image": "end-position.jpeg",
+      "facing": 12,
+      "direction": null
+    }
+  ]
+}

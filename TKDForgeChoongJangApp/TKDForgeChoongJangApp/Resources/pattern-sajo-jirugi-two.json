@@ -9,167 +9,183 @@
       "id": 0,
       "moveNumber": "Start Position",
       "title": "Parallel ready stance",
-      "description": "Parallel ready stance.",
+      "description": "Parallel ready stance, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "start-position.jpeg",
       "facing": 12,
       "direction": null
     },
+
     {
       "id": 1,
       "moveNumber": "1",
       "title": "Front punch",
-      "description": "Step forward to 12 o'clock into right walking stance. Middle right front punch.",
+      "description": "Step forward to 12 o'clock into right walking stance. Perform middle right front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "1.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 2,
       "moveNumber": "2",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° left on the left foot to face 9 o'clock. Bring the right foot backwards into walking stance. Left inner forearm middle block.",
+      "description": "Turn left 90 degrees to face 9 o'clock. Step back into walking stance. Perform left middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "2.jpeg",
       "facing": 9,
       "direction": null
     },
+
     {
       "id": 3,
       "moveNumber": "3",
       "title": "Front punch",
-      "description": "Step forward to 9 o'clock with right foot into walking stance. Middle right front punch.",
+      "description": "Step forward to 9 o'clock into walking stance. Perform middle right front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "3.jpeg",
       "facing": 9,
       "direction": 9
     },
+
     {
       "id": 4,
       "moveNumber": "4",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° left on the left foot to face 6 o'clock. Bring the right foot backwards into walking stance. Left inner forearm middle block.",
+      "description": "Turn left 90 degrees to face 6 o'clock. Step back into walking stance. Perform left middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "4.jpeg",
       "facing": 6,
       "direction": null
     },
+
     {
       "id": 5,
       "moveNumber": "5",
       "title": "Front punch",
-      "description": "Step forward to 6 o'clock with right foot into walking stance. Middle right front punch.",
+      "description": "Step forward to 6 o'clock into walking stance. Perform middle right front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "5.jpeg",
       "facing": 6,
       "direction": 6
     },
+
     {
       "id": 6,
       "moveNumber": "6",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° left on the left foot to face 3 o'clock. Bring the right foot backwards into walking stance. Left inner forearm middle block.",
+      "description": "Turn left 90 degrees to face 3 o'clock. Step back into walking stance. Perform left middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "6.jpeg",
       "facing": 3,
       "direction": null
     },
+
     {
       "id": 7,
       "moveNumber": "7",
       "title": "Front punch",
-      "description": "Step forward to 3 o'clock with right foot into walking stance. Middle front punch with kihap.",
+      "description": "Step forward to 3 o'clock into walking stance. Perform middle right front punch. Kihap.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "7.jpeg",
       "facing": 3,
       "direction": 3
     },
+
     {
       "id": 8,
       "moveNumber": "8",
       "title": "Parallel ready stance",
-      "description": "Step the right foot backwards to parallel ready stance facing 12 o'clock.",
+      "description": "Step back to parallel ready stance, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "8.jpeg",
       "facing": 12,
       "direction": null
     },
+
     {
       "id": 9,
       "moveNumber": "9",
       "title": "Front punch",
-      "description": "Step forward to 12 o'clock with left foot into walking stance. Middle left front punch.",
+      "description": "Step forward to 12 o'clock into walking stance. Perform middle left front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "9.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 10,
       "moveNumber": "10",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° right on the right foot to face 3 o'clock. Bring the left foot backwards into walking stance. Right inner forearm middle block.",
+      "description": "Turn right 90 degrees to face 3 o'clock. Step back into walking stance. Perform right middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "10.jpeg",
       "facing": 3,
       "direction": null
     },
+
     {
       "id": 11,
       "moveNumber": "11",
       "title": "Front punch",
-      "description": "Step forward to 3 o'clock with left foot into walking stance. Middle left front punch.",
+      "description": "Step forward to 3 o'clock into walking stance. Perform middle left front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "11.jpeg",
       "facing": 3,
       "direction": 3
     },
+
     {
       "id": 12,
       "moveNumber": "12",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° right on the right foot to face 6 o'clock. Bring the left foot backwards into walking stance. Right inner forearm middle block.",
+      "description": "Turn right 90 degrees to face 6 o'clock. Step back into walking stance. Perform right middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "12.jpeg",
       "facing": 6,
       "direction": null
     },
+
     {
       "id": 13,
       "moveNumber": "13",
       "title": "Front punch",
-      "description": "Step forward to 6 o'clock with left foot into walking stance. Middle left front punch.",
+      "description": "Step forward to 6 o'clock into walking stance. Perform middle left front punch.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "13.jpeg",
       "facing": 6,
       "direction": 6
     },
+
     {
       "id": 14,
       "moveNumber": "14",
       "title": "Middle inner forearm block",
-      "description": "Pivot 90° right on the right foot to face 9 o'clock. Bring the left foot backwards into walking stance. Right inner forearm middle block.",
+      "description": "Turn right 90 degrees to face 9 o'clock. Step back into walking stance. Perform right middle inner forearm block.",
       "korean": "gunnun so an palmok kaunde makgi",
       "image": "14.jpeg",
       "facing": 9,
       "direction": null
     },
+
     {
       "id": 15,
       "moveNumber": "15",
       "title": "Front punch",
-      "description": "Step forward to 9 o'clock with left foot into walking stance. Middle left front punch with kihap.",
+      "description": "Step forward to 9 o'clock into walking stance. Perform middle left front punch. Kihap.",
       "korean": "gunnun so kaunde ap jirugi",
       "image": "15.jpeg",
       "facing": 9,
       "direction": 9
     },
+
     {
       "id": 16,
       "moveNumber": "End Position",
       "title": "Parallel ready stance",
-      "description": "Bring left foot backwards to parallel ready stance.",
+      "description": "Step back to parallel ready stance, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "end-position.jpeg",
       "facing": 12,

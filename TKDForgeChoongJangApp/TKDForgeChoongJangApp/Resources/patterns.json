@@ -62,11 +62,21 @@
   {
     "id": "won-hyo",
     "name": "Won-Hyo",
-    "belt": "Green Belt Pattern",
+    "belt": "6th Kup (Green Belt)",
     "meaning": "Won-Hyo is named after the monk who introduced Buddhism to the Silla Dynasty. This is a dummy entry used as an example pattern.",
     "numberOfMoves": 28,
     "jsonFile": "pattern-won-hyo.json",
     "productId": "com.tkdforge.patterns.wonhyo",
+    "price": null
+  },
+  {
+    "id": "yul-gok",
+    "name": "Yul-Gok",
+    "belt": "5th Kup (Green Belt with Blue Stripe)",
+    "meaning": "Yul-Gok is the pseudonym of a great philosopher and scholar Yi I (1536-1584) nicknamed the ‘Confucius of Korea’. The 38 movements of this pattern represent his birthplace on 38 degrees latitude and the diagram represents the word scholar.",
+    "numberOfMoves": 38,
+    "jsonFile": "pattern-yul-gok.json",
+    "productId": "com.tkdforge.patterns.yulgok",
     "price": null
   },
   {

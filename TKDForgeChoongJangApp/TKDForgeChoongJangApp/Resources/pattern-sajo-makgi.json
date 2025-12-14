@@ -9,191 +9,209 @@
       "id": 0,
       "moveNumber": "Start Position",
       "title": "Parallel ready stance",
-      "description": "Parallel ready stance facing 12 o'clock.",
+      "description": "Parallel ready stance, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "start-position.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 1,
       "moveNumber": "1",
       "title": "Low knife-hand block",
-      "description": "Step backwards into left walking stance. Low knife-hand block.",
+      "description": "Step back to 6 o'clock into left walking stance. Perform low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "1.jpeg",
       "facing": 12,
       "direction": 6
     },
+
     {
       "id": 2,
       "moveNumber": "2",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward to 12 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "2.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 3,
       "moveNumber": "3",
       "title": "Low knife-hand block",
-      "description": "Turn 90° left to 9 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn left 90 degrees to face 9 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "3.jpeg",
       "facing": 9,
-      "direction": 9
+      "direction": null
     },
+
     {
       "id": 4,
       "moveNumber": "4",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 9 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "4.jpeg",
       "facing": 9,
       "direction": 9
     },
+
     {
       "id": 5,
       "moveNumber": "5",
       "title": "Low knife-hand block",
-      "description": "Turn 90° left to 6 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn left 90 degrees to face 6 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "5.jpeg",
       "facing": 6,
-      "direction": 6
+      "direction": null
     },
+
     {
       "id": 6,
       "moveNumber": "6",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 6 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "6.jpeg",
       "facing": 6,
       "direction": 6
     },
+
     {
       "id": 7,
       "moveNumber": "7",
       "title": "Low knife-hand block",
-      "description": "Turn 90° left to 3 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn left 90 degrees to face 3 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "7.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
+
     {
       "id": 8,
       "moveNumber": "8",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 3 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "8.jpeg",
       "facing": 3,
       "direction": 3
     },
+
     {
       "id": 9,
       "moveNumber": "9",
       "title": "Parallel ready stance",
-      "description": "Pivot 90° left on the left foot to face 12 o'clock. Return to parallel ready stance.",
+      "description": "Turn left 90 degrees to face 12 o'clock. Return to parallel ready stance.",
       "korean": "narani junbi sogi",
       "image": "9.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 10,
       "moveNumber": "10",
       "title": "Low knife-hand block",
-      "description": "Step backwards into left walking stance. Low knife-hand block.",
+      "description": "Step back to 6 o'clock into left walking stance. Perform low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "10.jpeg",
       "facing": 12,
       "direction": 6
     },
+
     {
       "id": 11,
       "moveNumber": "11",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward to 12 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "11.jpeg",
       "facing": 12,
       "direction": 12
     },
+
     {
       "id": 12,
       "moveNumber": "12",
       "title": "Low knife-hand block",
-      "description": "Turn 90° right to 3 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn right 90 degrees to face 3 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "12.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
+
     {
       "id": 13,
       "moveNumber": "13",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 3 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "13.jpeg",
       "facing": 3,
       "direction": 3
     },
+
     {
       "id": 14,
       "moveNumber": "14",
       "title": "Low knife-hand block",
-      "description": "Turn 90° right to 6 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn right 90 degrees to face 6 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "14.jpeg",
       "facing": 6,
-      "direction": 6
+      "direction": null
     },
+
     {
       "id": 15,
       "moveNumber": "15",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 6 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "15.jpeg",
       "facing": 6,
       "direction": 6
     },
+
     {
       "id": 16,
       "moveNumber": "16",
       "title": "Low knife-hand block",
-      "description": "Turn 90° right to 3 o'clock into left walking stance. Low knife-hand block.",
+      "description": "Turn right 90 degrees to face 3 o'clock. Step into left walking stance with low knife-hand block.",
       "korean": "gunnun so makgi",
       "image": "16.jpeg",
       "facing": 3,
-      "direction": 3
+      "direction": null
     },
+
     {
       "id": 17,
       "moveNumber": "17",
       "title": "Middle inner forearm block",
-      "description": "Step forward into right walking stance. Middle inner forearm block.",
+      "description": "Step forward facing 3 o'clock into right walking stance. Perform middle inner forearm block.",
       "korean": "gunnun so makgi",
       "image": "17.jpeg",
       "facing": 3,
       "direction": 3
     },
+
     {
       "id": 18,
       "moveNumber": "End Position",
       "title": "Parallel ready stance",
-      "description": "Return the left foot to parallel ready stance facing 12 o'clock.",
+      "description": "Return to parallel ready stance, facing 12 o'clock.",
       "korean": "narani junbi sogi",
       "image": "end-position.jpeg",
       "facing": 12,
-      "direction": 12
+      "direction": null
     }
   ]
 }
